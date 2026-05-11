@@ -929,10 +929,11 @@ h3 {
 
 @media (max-width: 640px) {
   .top-strip {
-    display: grid;
-    gap: 2px;
-    text-align: center;
-    font-size: 0.82rem;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 6px 12px;
+    font-size: 0.72rem;
+    white-space: nowrap;
   }
 
   .brand small {
