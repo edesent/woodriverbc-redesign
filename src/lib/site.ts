@@ -2,6 +2,8 @@ export const site = {
   name: "Wood River Baptist Church",
   shortName: "Wood River",
   tagline: "Preaching God's Word Since 1723",
+  verse: "Casting all your care upon him; for he careth for you.",
+  verseReference: "1 Peter 5:7",
   address: "246 Kingstown Rd, Wyoming, RI 02898",
   mailingAddress: "P.O. Box 213, Wyoming, RI 02898",
   phone: "(401) 539-2642",

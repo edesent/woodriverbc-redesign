@@ -88,15 +88,15 @@ function HomePage() {
     <>
       <section className="hero">
         <div className="hero-media">
-          <Image src="/woodriver/cross-sky.jpg" alt="" fill priority sizes="100vw" />
+          <Image src="/wood-river-baptist-church.jpg" alt="" fill priority sizes="100vw" />
         </div>
         <div className="hero-content">
           <p className="eyebrow">Wyoming, Rhode Island</p>
           <h1>{site.name}</h1>
-          <p>
-            A historic Baptist church preaching God&apos;s Word, inviting families to worship,
-            pray, and learn of the Lord Jesus Christ.
-          </p>
+          <blockquote className="hero-verse">
+            <p>&ldquo;{site.verse}&rdquo;</p>
+            <cite>{site.verseReference}</cite>
+          </blockquote>
           <div className="button-row">
             <Link className="button primary" href="/services">
               Service Times <ArrowRight size={18} />
