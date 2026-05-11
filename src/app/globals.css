@@ -204,9 +204,9 @@ main {
 
 .hero {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 400px);
-  align-items: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   min-height: calc(100vh - 112px);
   isolation: isolate;
   overflow: hidden;
@@ -334,35 +334,6 @@ h3 {
 
 .button.inline {
   margin-top: 22px;
-}
-
-.hero-panel {
-  width: min(100% - 24px, 390px);
-  margin: 0 max(24px, calc((100vw - 1320px) / 2)) 40px 0;
-  padding: 24px;
-  background: rgba(251, 250, 246, 0.94);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
-  color: var(--ink);
-  box-shadow: var(--shadow);
-}
-
-.hero-panel h2 {
-  margin-bottom: 14px;
-  font-size: 1.45rem;
-}
-
-.service-line {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 11px 0;
-  border-top: 1px solid var(--line);
-}
-
-.service-line strong {
-  color: var(--cranberry);
-  white-space: nowrap;
 }
 
 .section {
@@ -937,17 +908,11 @@ h3 {
   }
 
   .hero {
-    grid-template-columns: 1fr;
     min-height: auto;
   }
 
   .hero-content {
-    padding: 80px 22px 30px;
-  }
-
-  .hero-panel {
-    width: auto;
-    margin: 0 22px 34px;
+    padding: 80px 22px 60px;
   }
 
   .split,

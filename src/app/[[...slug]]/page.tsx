@@ -106,15 +106,6 @@ function HomePage() {
             </Link>
           </div>
         </div>
-        <aside className="hero-panel" aria-label="Weekly services">
-          <h2>Weekly Services</h2>
-          {services.map((service) => (
-            <div className="service-line" key={service.title}>
-              <span>{service.title}</span>
-              <strong>{service.time}</strong>
-            </div>
-          ))}
-        </aside>
       </section>
 
       <section className="section split">
