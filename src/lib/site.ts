@@ -443,7 +443,6 @@ export const textPages: Record<string, TextPage> = {
   "pastor": {
     title: "Juneau Family",
     eyebrow: "Pastor Jon Juneau",
-    image: "/woodriver/juneau-family.jpg",
     intro:
       "Pastor Jon Juneau came to Rhode Island with a burden for the people of his home state and has served Wood River Baptist Church since 2011.",
     paragraphs: [

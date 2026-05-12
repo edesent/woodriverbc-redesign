@@ -76,6 +76,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   if (key === "bible-reading-tracker") return <BibleTrackerPage />;
   if (key === "daily-worship") return <DailyWorshipPage />;
   if (key === "romans-14-9") return <RomansDetailPage />;
+  if (key === "pastor") return <PastorPage />;
 
   const page = textPages[key];
   if (page) return <TextPage page={page} pageKey={key} />;
@@ -451,6 +452,33 @@ function DailyWorshipPage() {
         <FeatureLink icon={<HeartHandshake />} title="Prayer" href="/prayer-2" />
         <FeatureLink icon={<HeartHandshake />} title="Prayer Request" href="/prayer" />
         <FeatureLink icon={<MessageCircleQuestion />} title="Ask A Question" href="/ask-a-question" />
+      </div>
+    </PageShell>
+  );
+}
+
+function PastorPage() {
+  const page = textPages["pastor"];
+  return (
+    <PageShell eyebrow={page.eyebrow} title={page.title} intro={page.intro}>
+      <div className="pastor-feature">
+        <div className="pastor-photo">
+          <Image
+            src="/woodriver/juneau-family.jpg"
+            alt="Pastor Jon Juneau with his wife Heather and their five children"
+            width={900}
+            height={900}
+            sizes="(max-width: 880px) 100vw, 50vw"
+            priority
+          />
+        </div>
+        <div className="pastor-bio">
+          {page.paragraphs?.map((paragraph) => (
+            <p className="body-copy" key={paragraph}>
+              {paragraph}
+            </p>
+          ))}
+        </div>
       </div>
     </PageShell>
   );
