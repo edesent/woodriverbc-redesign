@@ -444,7 +444,7 @@ export const textPages: Record<string, TextPage> = {
     title: "Juneau Family",
     eyebrow: "Pastor Jon Juneau",
     intro:
-      "Pastor Jon Juneau came to Rhode Island with a burden for the people of his home state and has served Wood River Baptist Church since 2011.",
+      "I came to Rhode Island with a burden for the people of my home state and have served Wood River Baptist Church since 2011.",
     paragraphs: [
       "I grew up having parents who loved me and taught me right from wrong; yet both were unsaved. Interestingly the four things I remember being instilled in me were don’t lie, smoke, drink, or do drugs. I determined to keep each of these painstakingly through my childhood yet for the approval of men I broke them, one by one in my high school years. I praise God for these four teachings of my parents because I could not deny having broken the law of my conscience and the laws of God. I believe without these teachings, I very well may not be saved today.",
       "I went to college in North Carolina fully expecting to continue living the way I had. But God quickly put within my life Christians, men whose lives where nothing like mine but seemed far better than mine. I heard the Gospel from them numerous times my freshman year and I was invited to church over and over again but I never went.",
