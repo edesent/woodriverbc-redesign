@@ -1,15 +1,21 @@
 import {
   ArrowRight,
+  BookMarked,
+  BookmarkCheck,
   BookOpenText,
   CalendarDays,
   Check,
   Clock,
   ExternalLink,
+  HandHelping,
   HeartHandshake,
+  ListChecks,
+  Mail,
   MessageCircleQuestion,
   NotebookPen,
   Radio,
   Send,
+  Sparkles,
 } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -22,6 +28,7 @@ import {
   devotionals,
   events,
   homeLinks,
+  navGroups,
   prayerSections,
   radioLinks,
   romansRoad,
@@ -31,6 +38,20 @@ import {
   textPages,
   thyWordPosts,
 } from "@/lib/site";
+
+const dailyWalkIcons: Record<string, React.ReactNode> = {
+  "/devotionals": <NotebookPen />,
+  "/scripture-memory-1": <BookmarkCheck />,
+  "/bible-reading-tracker": <ListChecks />,
+  "/bible-studies": <BookOpenText />,
+  "/missions-prayer-email-signup": <Mail />,
+  "/prayer-2": <HeartHandshake />,
+  "/prayer": <Send />,
+  "/ask-a-question": <MessageCircleQuestion />,
+  "/opportunities-to-serve": <HandHelping />,
+  "/christian-radio": <Radio />,
+  "/the-bible": <BookMarked />,
+};
 
 type Params = {
   slug?: string[];
@@ -137,16 +158,22 @@ function HomePage() {
 
       <ServicesBand />
       <EventsPreview />
-      <section className="section resource-band">
-        <div>
-          <p className="eyebrow">Our Daily Walk</p>
-          <h2>Scripture, prayer, Bible study, and devotional resources in one place.</h2>
+      <section className="section">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">Our Daily Walk</p>
+            <h2>Scripture, prayer, Bible study, and devotional resources in one place.</h2>
+          </div>
         </div>
-        <div className="resource-cards">
-          <FeatureLink icon={<NotebookPen />} title="Devotionals" href="/devotionals" />
-          <FeatureLink icon={<BookOpenText />} title="Bible Studies" href="/bible-studies" />
-          <FeatureLink icon={<HeartHandshake />} title="Prayer" href="/prayer-2" />
-          <FeatureLink icon={<MessageCircleQuestion />} title="Ask A Question" href="/ask-a-question" />
+        <div className="resource-cards wide">
+          {navGroups[0].items.map(([title, href]) => (
+            <FeatureLink
+              key={href}
+              icon={dailyWalkIcons[href] ?? <Sparkles />}
+              title={title}
+              href={href}
+            />
+          ))}
         </div>
       </section>
     </>
@@ -591,11 +618,11 @@ function PageShell({
 
 function FeatureLink({ icon, title, href }: { icon: React.ReactNode; title: string; href: string }) {
   return (
-    <Link className="feature-link" href={href}>
+    <SmartLink className="feature-link" href={href}>
       {icon}
       <span>{title}</span>
       <ArrowRight size={16} />
-    </Link>
+    </SmartLink>
   );
 }
 
