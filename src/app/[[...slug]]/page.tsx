@@ -91,6 +91,9 @@ function HomePage() {
         <div className="hero-media">
           <Image src="/wood-river-baptist-church.jpg" alt="" fill priority sizes="100vw" />
         </div>
+        <div className="hero-crosses" aria-hidden>
+          <Image src="/woodriver/wood-riverctosses.png" alt="" width={620} height={620} />
+        </div>
         <div className="hero-content">
           <p className="eyebrow">Wyoming, Rhode Island</p>
           <h1>{site.name}</h1>

@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="footer-grid">
         <section>
-          <Image className="footer-logo" src="/woodriver/logo.jpg" alt="" width={140} height={140} />
+          <Image className="footer-logo" src="/woodriver/wood-riverctosses-teal.png" alt="" width={260} height={260} />
           <h2>{site.name}</h2>
           <p>{site.tagline}</p>
         </section>
