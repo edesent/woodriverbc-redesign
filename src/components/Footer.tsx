@@ -48,7 +48,7 @@ export function Footer() {
         </section>
       </div>
       <div className="footer-bottom">
-        <span>Wood River Baptist Church</span>
+        <span>&copy; {new Date().getFullYear()} {site.name}. All rights reserved.</span>
         <div>
           {navGroups[1].items.slice(0, 4).map(([label, href]) => (
             <Link href={href} key={href}>
