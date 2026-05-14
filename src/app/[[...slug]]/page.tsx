@@ -157,6 +157,7 @@ function HomePage() {
         </div>
       </section>
 
+      <PastorPreview />
       <ServicesBand />
       <EventsPreview />
       <section className="section">
@@ -205,6 +206,33 @@ function ServicesBand() {
         the church enjoys a fellowship dinner after Morning Worship and does not hold
         Evening Worship.
       </p>
+    </section>
+  );
+}
+
+function PastorPreview() {
+  const pastor = textPages["pastor"];
+  return (
+    <section className="section">
+      <div className="pastor-feature">
+        <div className="pastor-photo">
+          <Image
+            src="/woodriver/juneau-family.jpg"
+            alt="Pastor Jon Juneau with his wife Heather and their five children"
+            width={900}
+            height={900}
+            sizes="(max-width: 880px) 100vw, 50vw"
+          />
+        </div>
+        <div className="pastor-bio">
+          <p className="eyebrow">{pastor.eyebrow}</p>
+          <h2>Meet our pastor</h2>
+          <p className="body-copy">{pastor.intro}</p>
+          <Link className="button primary inline" href="/pastor">
+            Read his testimony <ArrowRight size={18} />
+          </Link>
+        </div>
+      </div>
     </section>
   );
 }
