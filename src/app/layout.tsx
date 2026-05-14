@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Libre_Baskerville, Source_Sans_3 } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   },
   description:
     "A redesigned website for Wood River Baptist Church in Wyoming, Rhode Island, with services, events, Bible resources, prayer, gospel pages, and church information.",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#5bdae1",
 };
 
 export default function RootLayout({
