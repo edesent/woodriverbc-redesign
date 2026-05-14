@@ -212,8 +212,9 @@ function ServicesBand() {
 
 function PastorPreview() {
   const pastor = textPages["pastor"];
+  const excerpt = pastor.paragraphs?.slice(0, 2) ?? [];
   return (
-    <section className="section">
+    <section className="section pastor-band">
       <div className="pastor-feature">
         <div className="pastor-photo">
           <Image
@@ -228,8 +229,13 @@ function PastorPreview() {
           <p className="eyebrow">{pastor.eyebrow}</p>
           <h2>Meet our pastor</h2>
           <p className="body-copy">{pastor.intro}</p>
+          {excerpt.map((paragraph) => (
+            <p className="body-copy" key={paragraph}>
+              {paragraph}
+            </p>
+          ))}
           <Link className="button primary inline" href="/pastor">
-            Read his testimony <ArrowRight size={18} />
+            Read his full testimony <ArrowRight size={18} />
           </Link>
         </div>
       </div>
