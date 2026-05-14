@@ -54,7 +54,7 @@ export const navGroups = [
 
 export const primaryNav = [
   ["Home", "/"],
-  ["Services", "/services"],
+  ["Services", "/#services"],
   ["Events", "/events"],
   ["Thy Word", "/thy-word-is-a-lamp-unto-my-feet"],
   ["Who Is Jesus", "/who-is-jesus"],
@@ -506,21 +506,11 @@ export const textPages: Record<string, TextPage> = {
     intro:
       "To join the prayer chain and receive pressing prayer needs of the church, text PRAY to (844) 868-2871.",
   },
-  "services": {
-    title: "Services",
-    image: "/woodriver/cross-sky.jpg",
-    intro:
-      "You and your family are invited to join us for any of our services. You will be greeted by warm and kind people who have had their lives changed by Christ and will pray for you.",
-    paragraphs: [
-      "On fellowship dinner Sundays, the church eats and fellowships together after Morning Worship and does not hold Evening Worship.",
-      "Wednesday evenings include Patch the Pirate, Youth Group, and Adult Prayer Meeting at 6:30 PM.",
-    ],
-  },
   "worship": {
     title: "Worship",
     intro:
       "Gather with Wood River Baptist Church for Sunday worship, preaching, prayer, and fellowship centered on the Word of God.",
-    cta: ["View service times", "/services"],
+    cta: ["View service times", "/#services"],
   },
 };
 

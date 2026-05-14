@@ -437,6 +437,7 @@ h3 {
 .services-band {
   max-width: none;
   background: var(--mist);
+  scroll-margin-top: 100px;
 }
 
 .services-band > * {

@@ -20,7 +20,7 @@ import {
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import {
   aliases,
   bibleBooks,
@@ -84,6 +84,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   const key = aliases[rawKey] ?? rawKey;
 
   if (key === "home") return <HomePage />;
+  if (key === "services") redirect("/#services");
   if (key === "events" || key.startsWith("events/")) return <EventsPage archive={key !== "events"} />;
   if (key === "thy-word-is-a-lamp-unto-my-feet") return <ThyWordPage />;
   if (key === "devotionals") return <LinkCollection title="Devotionals" intro="A curated set of daily devotional readings and trusted Bible helps." links={devotionals} icon={<NotebookPen />} />;
@@ -123,7 +124,7 @@ function HomePage() {
             <cite>{site.verseReference}</cite>
           </blockquote>
           <div className="button-row">
-            <Link className="button primary" href="/services">
+            <Link className="button primary" href="/#services">
               Service Times <ArrowRight size={18} />
             </Link>
             <Link className="button secondary" href="/who-is-jesus">
@@ -182,7 +183,7 @@ function HomePage() {
 
 function ServicesBand() {
   return (
-    <section className="section services-band">
+    <section className="section services-band" id="services">
       <div className="section-heading">
         <p className="eyebrow">Gather With Us</p>
         <h2>Our Weekly Services</h2>

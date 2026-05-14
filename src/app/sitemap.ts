@@ -2,7 +2,6 @@ import type { MetadataRoute } from "next";
 
 const routes = [
   "",
-  "services",
   "events",
   "thy-word-is-a-lamp-unto-my-feet",
   "who-is-jesus",
