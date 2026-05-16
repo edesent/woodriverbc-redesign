@@ -98,14 +98,13 @@ main {
 }
 
 .brand img {
-  width: 52px;
-  height: 52px;
+  width: 72px;
+  height: 72px;
   object-fit: contain;
 }
 
 .brand span {
   display: grid;
-  margin-top: 6px;
   line-height: 1.15;
 }
 
@@ -1093,8 +1092,8 @@ h3 {
   }
 
   .brand img {
-    width: 42px;
-    height: 42px;
+    width: 56px;
+    height: 56px;
   }
 
   .hero h1 {

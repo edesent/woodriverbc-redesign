@@ -21,7 +21,7 @@ export function Header() {
       </div>
       <nav className="main-nav" aria-label="Primary navigation">
         <Link className="brand" href="/" onClick={close}>
-          <Image src="/woodriver/wood-riverctosses.png" alt="" width={96} height={96} priority />
+          <Image src="/woodriver/wood-riverctosses-tight.png" alt="" width={140} height={140} priority />
           <span>
             <strong>{site.name}</strong>
             <small>{site.tagline}</small>
