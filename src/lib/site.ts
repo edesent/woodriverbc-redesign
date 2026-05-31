@@ -193,6 +193,13 @@ export const bibleStudies = [
 
 export const events = [
   {
+    title: "RS testing",
+    date: "Sunday, July 4, 2026",
+    time: "12:30 PM - 2:30 PM",
+    description:
+      "Simple test.",
+  },
+  {
     title: "Resurrection Day Services and Easter Breakfast",
     date: "Sunday, April 5, 2026",
     time: "6:30 AM - 11:30 PM",
