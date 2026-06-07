@@ -193,13 +193,6 @@ export const bibleStudies = [
 
 export const events = [
   {
-    title: "Test Event — Lorem Ipsum",
-    date: "Monday, June 8, 2026",
-    time: "10:00 AM - 11:00 AM",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-  },
-  {
     title: "Resurrection Day Services and Easter Breakfast",
     date: "Sunday, April 5, 2026",
     time: "6:30 AM - 11:30 PM",
