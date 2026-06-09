@@ -58,6 +58,7 @@ export const primaryNav = [
   ["Events", "/events"],
   ["Thy Word", "/thy-word-is-a-lamp-unto-my-feet"],
   ["Who Is Jesus", "/who-is-jesus"],
+  ["Give", "/give"],
 ] as const;
 
 export const services = [

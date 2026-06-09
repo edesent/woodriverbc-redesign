@@ -74,6 +74,7 @@ export async function generateMetadata({
   if (key === "the-romans-road") return { title: "The Romans Road" };
   if (key === "who-is-jesus") return { title: "Who Is Jesus" };
   if (key === "prayer-2") return { title: "Prayer" };
+  if (key === "give") return { title: "Give" };
   if (key === "daily-worship") return { title: "Daily Worship" };
   const page = textPages[key];
   return { title: page?.title ?? "Wood River Baptist Church" };
@@ -99,6 +100,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   if (key === "daily-worship") return <DailyWorshipPage />;
   if (key === "romans-14-9") return <RomansDetailPage />;
   if (key === "pastor") return <PastorPage />;
+  if (key === "give") return <GivePage />;
 
   const page = textPages[key];
   if (page) return <TextPage page={page} pageKey={key} />;
@@ -544,6 +546,34 @@ function PastorPage() {
             </p>
           ))}
         </div>
+      </div>
+    </PageShell>
+  );
+}
+
+function GivePage() {
+  return (
+    <PageShell
+      eyebrow="Giving"
+      title="Support the work of the gospel"
+      intro="Your generosity helps Wood River Baptist Church preach the gospel, disciple believers, and minister to families in Rhode Island and beyond."
+    >
+      <div className="give-card">
+        <blockquote>
+          <p>
+            &ldquo;Every man according as he purposeth in his heart, so let him give; not
+            grudgingly, or of necessity: for God loveth a cheerful giver.&rdquo;
+          </p>
+          <cite>2 Corinthians 9:7</cite>
+        </blockquote>
+        <button
+          className="tithely-give-button"
+          data-form="072ae9f0-c681-413f-9c3d-306612ba9a35"
+          type="button"
+        >
+          Give
+        </button>
+        <p className="note">Secure online giving through Tithely. A short Tithely form will open after you tap Give.</p>
       </div>
     </PageShell>
   );

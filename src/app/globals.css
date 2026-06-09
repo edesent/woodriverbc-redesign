@@ -838,6 +838,64 @@ h3 {
   max-width: 860px;
 }
 
+.give-card {
+  max-width: 720px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+  padding: 36px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.give-card blockquote {
+  margin: 0 0 28px;
+  padding: 0;
+  font-family: var(--font-serif), Georgia, serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.give-card blockquote cite {
+  display: block;
+  margin-top: 12px;
+  color: var(--copper);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.86rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.give-card .note {
+  margin: 20px auto 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.tithely-give-button {
+  display: inline-block;
+  background-color: var(--gold) !important;
+  background-image: none !important;
+  color: var(--pine-dark) !important;
+  text-shadow: none !important;
+  font-family: inherit !important;
+  font-weight: 800 !important;
+  font-size: 1.05rem !important;
+  padding: 16px 56px !important;
+  border-radius: 8px !important;
+  border: none !important;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.tithely-give-button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
 .pastor-band {
   max-width: none;
   background: var(--pine-dark);

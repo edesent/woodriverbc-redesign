@@ -30,6 +30,7 @@ export function Footer() {
           <Link href="/events">Events</Link>
           <Link href="/thy-word-is-a-lamp-unto-my-feet">Thy Word</Link>
           <Link href="/who-is-jesus">Who Is Jesus</Link>
+          <Link href="/give">Give</Link>
         </section>
         <section>
           <h2>Connect</h2>
