@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { thyWordPosts, thyWordSlug } from "@/lib/site";
 
 const routes = [
   "",
@@ -31,8 +32,13 @@ const routes = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://woodriverbc-redesign.local";
-  return routes.map((route) => ({
+  const staticEntries = routes.map((route) => ({
     url: `${base}/${route}`.replace(/\/$/, ""),
     lastModified: new Date(),
   }));
+  const thyWordEntries = thyWordPosts.map((post) => ({
+    url: `${base}/thy-word-is-a-lamp-unto-my-feet/${thyWordSlug(post)}`,
+    lastModified: new Date(`${post.date}T12:00:00Z`),
+  }));
+  return [...staticEntries, ...thyWordEntries];
 }

@@ -901,6 +901,15 @@ export const textPages: Record<string, TextPage> = {
   },
 };
 
+export function thyWordSlug(post: { date: string; title: string }): string {
+  const titleSlug = post.title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "")
+    .slice(0, 60);
+  return `${post.date}-${titleSlug}`;
+}
+
 export const aliases: Record<string, string> = {
   "daily-worship": "daily-worship",
   "new-page-1": "romans-14-9",

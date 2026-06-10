@@ -42,6 +42,7 @@ import {
   site,
   textPages,
   thyWordPosts,
+  thyWordSlug,
 } from "@/lib/site";
 
 const dailyWalkIcons: Record<string, React.ReactNode> = {
@@ -76,6 +77,11 @@ export async function generateMetadata({
   if (key === "home") return {};
   if (key.startsWith("events/")) return { title: "Events" };
   if (key === "thy-word-is-a-lamp-unto-my-feet") return { title: "Thy Word" };
+  if (key.startsWith("thy-word-is-a-lamp-unto-my-feet/")) {
+    const slug = key.slice("thy-word-is-a-lamp-unto-my-feet/".length);
+    const post = thyWordPosts.find((p) => thyWordSlug(p) === slug);
+    return { title: post?.title ?? "Thy Word" };
+  }
   if (key === "the-romans-road") return { title: "The Romans Road" };
   if (key === "who-is-jesus") return { title: "Who Is Jesus" };
   if (key === "prayer-2") return { title: "Prayer" };
@@ -94,6 +100,12 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   if (key === "find-us" || key === "contact-us") redirect("/connect-with-us");
   if (key === "events" || key.startsWith("events/")) return <EventsPage archive={key !== "events"} />;
   if (key === "thy-word-is-a-lamp-unto-my-feet") return <ThyWordPage />;
+  if (key.startsWith("thy-word-is-a-lamp-unto-my-feet/")) {
+    const slug = key.slice("thy-word-is-a-lamp-unto-my-feet/".length);
+    const post = thyWordPosts.find((p) => thyWordSlug(p) === slug);
+    if (post) return <ThyWordPostPage post={post} />;
+    notFound();
+  }
   if (key === "devotionals") return <LinkCollection title="Devotionals" intro="A curated set of daily devotional readings and trusted Bible helps." links={devotionals} icon={<NotebookPen />} />;
   if (key === "scripture-memory-1") return <SimpleListPage title="Scripture Memory Selections" intro="Selected passages for hiding God's Word in your heart." items={scriptureMemory} icon={<BookOpenText />} />;
   if (key === "bible-studies") return <BibleStudiesPage />;
@@ -319,7 +331,7 @@ function ThyWordPage() {
       <section className="section">
         <div className="thyword-list">
           {thyWordPosts.map((post) => (
-            <ThyWordCard key={`${post.date}-${post.title}`} post={post} />
+            <ThyWordPreviewCard key={thyWordSlug(post)} post={post} />
           ))}
         </div>
       </section>
@@ -329,28 +341,42 @@ function ThyWordPage() {
 
 type ThyWordPost = (typeof thyWordPosts)[number];
 
-function ThyWordCard({ post }: { post: ThyWordPost }) {
+function ThyWordPreviewCard({ post }: { post: ThyWordPost }) {
   const formattedDate = formatThyWordDate(post.date);
+  const author = "author" in post && post.author ? post.author : null;
   return (
-    <article className="thyword-card">
-      <div className="thyword-mark" aria-hidden>
-        <Image src="/woodriver/wood-riverctosses-teal.png" alt="" width={56} height={56} />
-      </div>
-      <div className="thyword-body">
-        <p className="meta">
-          {formattedDate}
-          {"author" in post && post.author ? <span> · {post.author}</span> : null}
-        </p>
-        <h2>{post.title}</h2>
-        {"reference" in post && post.reference ? <p className="ref">{post.reference}</p> : null}
-        {"body" in post && post.body ? <p className="text">{post.body}</p> : null}
+    <Link className="thyword-preview" href={`/thy-word-is-a-lamp-unto-my-feet/${thyWordSlug(post)}`}>
+      <p className="meta">
+        {formattedDate}
+        {author ? <span> · {author}</span> : null}
+      </p>
+      <h2>{post.title}</h2>
+      <span className="read-more">Read more <ArrowRight size={14} /></span>
+    </Link>
+  );
+}
+
+function ThyWordPostPage({ post }: { post: ThyWordPost }) {
+  const formattedDate = formatThyWordDate(post.date);
+  const author = "author" in post && post.author ? post.author : null;
+  return (
+    <PageShell
+      eyebrow={`${formattedDate}${author ? ` · ${author}` : ""}`}
+      title={post.title}
+      intro={"reference" in post && post.reference ? post.reference : undefined}
+    >
+      <div className="thyword-post">
         {"audio" in post && post.audio ? (
           <audio className="thyword-audio" controls preload="none" src={post.audio}>
             Your browser does not support the audio element.
           </audio>
         ) : null}
+        {"body" in post && post.body ? <p className="body-copy">{post.body}</p> : null}
+        <Link className="thyword-back" href="/thy-word-is-a-lamp-unto-my-feet">
+          ← Back to all entries
+        </Link>
       </div>
-    </article>
+    </PageShell>
   );
 }
 
@@ -359,6 +385,7 @@ function formatThyWordDate(iso: string): string {
   if (Number.isNaN(d.getTime())) return iso;
   return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
 }
+
 
 function LinkCollection({
   title,
