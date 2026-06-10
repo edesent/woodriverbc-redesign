@@ -439,10 +439,9 @@ export const textPages: Record<string, TextPage> = {
   "covenant": {
     title: "Church Covenant",
     intro:
-      "Having, as we trust, been brought by Divine Grace to give ourselves in faith, love, and holy obedience to God, we covenant to walk together in church relationship with brotherly love.",
+      "Having as we trust, been brought by Divine Grace seriously and forever to give up ourselves in faith and love and holy obedience to God the Father, Son and Holy Ghost, and having been baptized upon profession of our faith, we do now solemnly and joyfully covenant with each other to walk together in church relationship with brotherly love to the Honor and Glory of God.",
     paragraphs: [
-      "We engage, by God's strength, to exercise Christian care and watchfulness over one another; to faithfully admonish and entreat one another; to not forsake the assembling of ourselves together; and to pray for ourselves and others.",
-      "We will endeavor to bring up those under our care in the nurture and admonition of the Lord, to bear one another's burdens, to live carefully and watchfully in the world, and to support a faithful evangelical ministry among us.",
+      "And we do in His strength engage that we will exercise a Christian care and watchfulness over each other, and faithfully admonish and entreat one another, and require; that we will not forsake the assembling of ourselves together or neglect the great duty of prayer for ourselves and others: that we will endeavor to bring up such as may at anytime be under our care, in the nurture and admonition of the Lord, and by a pure and lovely example to win our kindred and acquaintances to the Savior, to holiness and to eternal life; that we will participate in each other’s joys and endeavor with tenderness and sympathy to bear each other’s burdens and sorrows; that we will seek divine aid to enable us to live carefully and watchfully in the world, deny ungodliness and worldly lusts, and remembering that as we have been voluntarily been buried by Baptism and raised up from the emblematic grave, so there is on us a special obligation henceforth to lead a new and holy life; that we will strive together for the support of a faithful evangelical ministry among us; and that through life amidst evil and good report, we will seek to live to the glory of Him who hath called us out of darkness and into His marvelous light.",
     ],
   },
   "mission": {
