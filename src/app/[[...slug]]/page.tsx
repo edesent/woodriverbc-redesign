@@ -26,6 +26,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
+import { BibleSearch } from "./bible-search";
 import {
   aliases,
   bibleBooks,
@@ -549,16 +550,7 @@ function WhoIsJesusPage() {
 function BibleSearchPage() {
   return (
     <PageShell title="The Bible" intro="Search the Bible by book, chapter, verse, word, or phrase.">
-      <form className="search-panel" action="https://www.blueletterbible.org/search/search.cfm" method="get">
-        <label htmlFor="criteria">Search Scripture</label>
-        <div>
-          <input id="criteria" name="Criteria" placeholder="e.g. John 3:16 or grace" />
-          <button type="submit">
-            Search <Send size={16} />
-          </button>
-        </div>
-        <p>Powered by BlueLetterBible.org</p>
-      </form>
+      <BibleSearch />
     </PageShell>
   );
 }
