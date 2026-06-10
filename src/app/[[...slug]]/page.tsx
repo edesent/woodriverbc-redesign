@@ -298,6 +298,7 @@ function EventsPage({ archive }: { archive: boolean }) {
 }
 
 function EventCard({ event }: { event: (typeof events)[number] }) {
+  const url = "url" in event ? event.url : undefined;
   return (
     <article className="event-card">
       <div className="event-date">
@@ -309,6 +310,11 @@ function EventCard({ event }: { event: (typeof events)[number] }) {
         <Clock size={16} /> {event.time}
       </p>
       <p>{event.description}</p>
+      {url ? (
+        <a className="text-link" href={url} target="_blank" rel="noopener noreferrer">
+          Learn more &amp; register <ExternalLink size={14} />
+        </a>
+      ) : null}
     </article>
   );
 }

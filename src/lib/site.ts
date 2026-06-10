@@ -210,6 +210,15 @@ export const bibleStudies = [
 
 export const events = [
   {
+    title: "Vacation Bible School — Emerald Crossing",
+    date: "Monday, June 29 – Friday, July 3, 2027",
+    time: "6:00 PM – 8:00 PM",
+    description:
+      "A week of Bible lessons, songs, crafts, games, and snacks for kids in Wyoming, Rhode Island. Bring your family and friends — registration is open.",
+    image: "/woodriver/vbs.jpg",
+    url: "https://woodriverbc.myanswers.com/emerald-crossing/",
+  },
+  {
     title: "Resurrection Day Services and Easter Breakfast",
     date: "Sunday, April 5, 2026",
     time: "6:30 AM - 11:30 PM",
