@@ -19,7 +19,7 @@ export default function ChatWidget() {
     <Script
       src="https://slackwebsitechat.vercel.app/widget/wbc-chat.js"
       data-api="https://slackwebsitechat.vercel.app"
-      data-key="WBC_CHAT_KEY_REPLACE_ME"
+      data-key="wbc_422afd7825c1a05f6d82ebf47816500fca0421f5874b4b6c"
       strategy="afterInteractive"
     />
   );
