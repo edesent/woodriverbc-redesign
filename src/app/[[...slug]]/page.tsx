@@ -651,29 +651,39 @@ function ConnectPage() {
 }
 
 function GivePage() {
+  const tithelyFormId = "072ae9f0-c681-413f-9c3d-306612ba9a35";
+  const tithelyEmbedUrl = `https://tithe.ly/give_new/www/#/tithely/give-one-time/${tithelyFormId}`;
   return (
     <PageShell
       eyebrow="Giving"
       title="Support the work of the gospel"
       intro="Your generosity helps Wood River Baptist Church preach the gospel, disciple believers, and minister to families in Rhode Island and beyond."
     >
-      <div className="give-card">
-        <blockquote>
-          <p>
-            &ldquo;Every man according as he purposeth in his heart, so let him give; not
-            grudgingly, or of necessity: for God loveth a cheerful giver.&rdquo;
-          </p>
-          <cite>2 Corinthians 9:7</cite>
-        </blockquote>
-        <button
-          className="tithely-give-button"
-          data-form="072ae9f0-c681-413f-9c3d-306612ba9a35"
-          type="button"
-        >
-          Give
-        </button>
-        <p className="note">Secure online giving through Tithely. A short Tithely form will open after you tap Give.</p>
+      <blockquote className="give-verse">
+        <p>
+          &ldquo;Every man according as he purposeth in his heart, so let him give; not
+          grudgingly, or of necessity: for God loveth a cheerful giver.&rdquo;
+        </p>
+        <cite>2 Corinthians 9:7</cite>
+      </blockquote>
+
+      <div className="give-embed">
+        <iframe
+          src={tithelyEmbedUrl}
+          title="Wood River Baptist Church online giving"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allow="payment"
+        />
       </div>
+
+      <p className="note give-fallback">
+        Having trouble with the form?{" "}
+        <a href={tithelyEmbedUrl} target="_blank" rel="noopener noreferrer">
+          Open the giving form in a new tab
+        </a>
+        .
+      </p>
     </PageShell>
   );
 }
