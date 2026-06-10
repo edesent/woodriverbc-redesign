@@ -6,6 +6,7 @@ import {
   CalendarDays,
   Check,
   Clock,
+  Download,
   ExternalLink,
   Facebook,
   HandHelping,
@@ -447,12 +448,18 @@ function BibleStudiesPage() {
           <section className="study-card" key={section.book}>
             <h2>{section.book}</h2>
             <ul>
-              {section.lessons.map((lesson) => (
-                <li key={lesson}>
-                  <Check size={15} />
-                  <span>{lesson}</span>
-                </li>
-              ))}
+              {section.lessons.map((lesson) => {
+                const isPdf = lesson.url.toLowerCase().endsWith(".pdf");
+                return (
+                  <li key={lesson.url}>
+                    <a href={lesson.url} target="_blank" rel="noopener noreferrer">
+                      <Download size={15} />
+                      <span>{lesson.title}</span>
+                      <em>{isPdf ? "PDF" : "DOCX"}</em>
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </section>
         ))}

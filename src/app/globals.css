@@ -659,24 +659,59 @@ h3 {
 .prayer-card ul,
 .check-list {
   display: grid;
-  gap: 10px;
+  gap: 4px;
   padding: 0;
   margin: 18px 0 0;
   list-style: none;
 }
 
-.study-card li,
 .check-list li {
   display: flex;
   align-items: flex-start;
   gap: 9px;
 }
 
-.study-card svg,
 .check-list svg {
   flex: 0 0 auto;
   color: var(--copper);
   margin-top: 4px;
+}
+
+.study-card li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  color: var(--ink);
+  font-weight: 600;
+  transition: background 140ms ease;
+}
+
+.study-card li a:hover {
+  background: var(--mist);
+}
+
+.study-card li svg {
+  flex: 0 0 auto;
+  color: var(--copper);
+}
+
+.study-card li span {
+  flex: 1;
+  min-width: 0;
+}
+
+.study-card li em {
+  flex: 0 0 auto;
+  font-style: normal;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  padding: 3px 7px;
+  border-radius: 4px;
+  background: var(--mist);
 }
 
 .prayer-card li {
