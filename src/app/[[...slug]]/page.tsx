@@ -86,6 +86,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
   if (key === "home") return <HomePage />;
   if (key === "services") redirect("/#services");
+  if (key === "find-us" || key === "contact-us") redirect("/connect-with-us");
   if (key === "events" || key.startsWith("events/")) return <EventsPage archive={key !== "events"} />;
   if (key === "thy-word-is-a-lamp-unto-my-feet") return <ThyWordPage />;
   if (key === "devotionals") return <LinkCollection title="Devotionals" intro="A curated set of daily devotional readings and trusted Bible helps." links={devotionals} icon={<NotebookPen />} />;
@@ -459,7 +460,7 @@ function WhoIsJesusPage() {
           <Link className="button primary" href="/the-romans-road">
             The Romans Road
           </Link>
-          <Link className="button secondary" href="/contact-us">
+          <Link className="button secondary" href="/connect-with-us">
             Contact the church
           </Link>
         </div>

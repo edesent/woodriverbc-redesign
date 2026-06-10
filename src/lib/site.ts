@@ -42,8 +42,7 @@ export const navGroups = [
     label: "About WRBC",
     items: [
       ["About", "/about"],
-      ["Find Us", "/find-us"],
-      ["Contact Us", "/contact-us"],
+      ["Connect With Us", "/connect-with-us"],
       ["Pastor", "/pastor"],
       ["Covenant", "/covenant"],
       ["Mission", "/mission"],
@@ -422,24 +421,19 @@ export const textPages: Record<string, TextPage> = {
     intro: "Wood River Baptist Church exists to worship God, preach His Word, and serve Rhode Island with the gospel of Jesus Christ.",
     cta: ["Learn more about our mission", "/mission"],
   },
-  "find-us": {
-    title: "Find Us",
-    intro: site.address,
-    paragraphs: [
-      "Wood River Baptist Church meets at 246 Kingstown Rd in Wyoming, Rhode Island.",
-      "Visitors are welcome at every regular service and special fellowship day.",
-    ],
-    cta: ["Open directions", "https://maps.google.com/?q=246+Kingstown+Rd,+Wyoming,+RI+02898"],
-  },
-  "contact-us": {
-    title: "Contact Us",
-    intro: "We would be glad to hear from you.",
+  "connect-with-us": {
+    title: "Connect With Us",
+    intro: "We would be glad to hear from you, and visitors are welcome at every regular service and special fellowship day.",
     bullets: [
       `Phone: ${site.phone} or ${site.secondaryPhone}`,
       `Email: ${site.email}`,
       `Physical address: ${site.address}`,
       `Mailing address: ${site.mailingAddress}`,
     ],
+    paragraphs: [
+      "Wood River Baptist Church meets at 246 Kingstown Rd in Wyoming, Rhode Island.",
+    ],
+    cta: ["Open directions", "https://maps.google.com/?q=246+Kingstown+Rd,+Wyoming,+RI+02898"],
   },
   "pastor": {
     title: "Juneau Family",
@@ -489,7 +483,7 @@ export const textPages: Record<string, TextPage> = {
     title: "Opportunities To Serve",
     intro:
       "There is room to serve through worship, outreach, hospitality, children's ministry, missions prayer, visitation, and practical care for the church family.",
-    cta: ["Ask how to serve", "/contact-us"],
+    cta: ["Ask how to serve", "/connect-with-us"],
   },
   "missions-prayer-email-signup": {
     title: "Missionary Prayer Email Newsletter",
