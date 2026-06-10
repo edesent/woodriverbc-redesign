@@ -301,19 +301,63 @@ function EventCard({ event }: { event: (typeof events)[number] }) {
 
 function ThyWordPage() {
   return (
-    <PageShell eyebrow="Pastor Jon Juneau" title="Thy Word" intro="Thoughts on selected passages from the Word of God.">
-      <div className="article-list">
-        {thyWordPosts.map((post) => (
-          <article className="article-card" key={post.title}>
-            <p className="meta">{post.date}</p>
-            <h2>{post.title}</h2>
-            {"reference" in post ? <strong>{post.reference}</strong> : null}
-            <p>{post.body}</p>
-          </article>
-        ))}
-      </div>
-    </PageShell>
+    <>
+      <section className="page-hero with-image">
+        <Image
+          src="/woodriver/cross-sky.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+        />
+        <div>
+          <p className="eyebrow">Pastor Jon Juneau</p>
+          <h1>Thy Word</h1>
+          <p>Thoughts on selected passages from the Word of God — sermons, devotionals, and Bible studies preached at Wood River Baptist Church.</p>
+        </div>
+      </section>
+      <section className="section">
+        <div className="thyword-list">
+          {thyWordPosts.map((post) => (
+            <ThyWordCard key={`${post.date}-${post.title}`} post={post} />
+          ))}
+        </div>
+      </section>
+    </>
   );
+}
+
+type ThyWordPost = (typeof thyWordPosts)[number];
+
+function ThyWordCard({ post }: { post: ThyWordPost }) {
+  const formattedDate = formatThyWordDate(post.date);
+  return (
+    <article className="thyword-card">
+      <div className="thyword-mark" aria-hidden>
+        <Image src="/woodriver/wood-riverctosses-teal.png" alt="" width={56} height={56} />
+      </div>
+      <div className="thyword-body">
+        <p className="meta">
+          {formattedDate}
+          {"author" in post && post.author ? <span> · {post.author}</span> : null}
+        </p>
+        <h2>{post.title}</h2>
+        {"reference" in post && post.reference ? <p className="ref">{post.reference}</p> : null}
+        {"body" in post && post.body ? <p className="text">{post.body}</p> : null}
+        {"audio" in post && post.audio ? (
+          <audio className="thyword-audio" controls preload="none" src={post.audio}>
+            Your browser does not support the audio element.
+          </audio>
+        ) : null}
+      </div>
+    </article>
+  );
+}
+
+function formatThyWordDate(iso: string): string {
+  const d = new Date(`${iso}T12:00:00Z`);
+  if (Number.isNaN(d.getTime())) return iso;
+  return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
 }
 
 function LinkCollection({
