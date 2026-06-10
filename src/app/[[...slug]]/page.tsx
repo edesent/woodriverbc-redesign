@@ -696,7 +696,7 @@ function ConnectPage() {
 
 function GivePage() {
   const tithelyFormId = "072ae9f0-c681-413f-9c3d-306612ba9a35";
-  const tithelyEmbedUrl = `https://tithe.ly/give_new/www/#/tithely/give-one-time/${tithelyFormId}`;
+  const tithelyEmbedUrl = `https://give.tithe.ly/?formId=${tithelyFormId}`;
   return (
     <PageShell
       eyebrow="Giving"
