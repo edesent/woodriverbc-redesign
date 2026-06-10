@@ -7,12 +7,17 @@ import {
   Check,
   Clock,
   ExternalLink,
+  Facebook,
   HandHelping,
   HeartHandshake,
+  Instagram,
   ListChecks,
   Mail,
+  MapPin,
   MessageCircleQuestion,
+  Mic2,
   NotebookPen,
+  Phone,
   Radio,
   Send,
   Sparkles,
@@ -102,6 +107,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   if (key === "romans-14-9") return <RomansDetailPage />;
   if (key === "pastor") return <PastorPage />;
   if (key === "give") return <GivePage />;
+  if (key === "connect-with-us") return <ConnectPage />;
 
   const page = textPages[key];
   if (page) return <TextPage page={page} pageKey={key} />;
@@ -547,6 +553,98 @@ function PastorPage() {
             </p>
           ))}
         </div>
+      </div>
+    </PageShell>
+  );
+}
+
+function ConnectPage() {
+  const mapsEmbed = `https://maps.google.com/maps?q=${encodeURIComponent(site.address)}&output=embed`;
+  const directionsHref = `https://maps.google.com/?q=${encodeURIComponent(site.address)}`;
+  const phoneHref = `tel:${site.phone.replace(/[^0-9]/g, "")}`;
+  const secondaryPhoneHref = `tel:${site.secondaryPhone.replace(/[^0-9]/g, "")}`;
+  const emailHref = `mailto:${site.email}`;
+  return (
+    <PageShell
+      eyebrow="Visit"
+      title="Connect With Us"
+      intro="We would be glad to hear from you, and visitors are welcome at every regular service and special fellowship day."
+    >
+      <div className="connect-grid">
+        <div className="connect-card">
+          <h2>Where we meet</h2>
+          <p className="connect-address">
+            <MapPin size={18} aria-hidden /> {site.address}
+          </p>
+          <div className="map-frame">
+            <iframe
+              src={mapsEmbed}
+              title="Map to Wood River Baptist Church"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+          <a className="button primary" href={directionsHref} target="_blank" rel="noopener noreferrer">
+            Open directions <ArrowRight size={18} />
+          </a>
+        </div>
+
+        <div className="connect-card">
+          <h2>Reach the church</h2>
+          <ul className="connect-list">
+            <li>
+              <Phone size={18} aria-hidden />
+              <span>
+                <a href={phoneHref}>{site.phone}</a>
+                <small> or <a href={secondaryPhoneHref}>{site.secondaryPhone}</a></small>
+              </span>
+            </li>
+            <li>
+              <Mail size={18} aria-hidden />
+              <a href={emailHref}>{site.email}</a>
+            </li>
+            <li>
+              <MapPin size={18} aria-hidden />
+              <span>
+                Mailing: {site.mailingAddress}
+              </span>
+            </li>
+          </ul>
+          <h2 className="connect-subhead">Follow along</h2>
+          <ul className="connect-social">
+            <li><a href={site.facebook} target="_blank" rel="noopener noreferrer"><Facebook size={18} aria-hidden /> Facebook</a></li>
+            <li><a href={site.instagram} target="_blank" rel="noopener noreferrer"><Instagram size={18} aria-hidden /> Instagram</a></li>
+            <li><a href={site.podcast} target="_blank" rel="noopener noreferrer"><Mic2 size={18} aria-hidden /> Podcast</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="connect-services">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">When we gather</p>
+            <h2>Service times</h2>
+          </div>
+          <Link className="text-link" href="/#services">
+            See all services <ArrowRight size={16} />
+          </Link>
+        </div>
+        <ul className="connect-times">
+          {services.map((service) => (
+            <li key={service.title}>
+              <Clock size={18} aria-hidden />
+              <div>
+                <strong>{service.title}</strong>
+                <span>{service.day} · {service.time}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <p className="note">
+          First time visiting? You&apos;ll be greeted warmly. Dress is what you&apos;re comfortable in,
+          and there&apos;s no expectation to give or sign anything &mdash; just come and worship with us.
+        </p>
       </div>
     </PageShell>
   );

@@ -421,20 +421,6 @@ export const textPages: Record<string, TextPage> = {
     intro: "Wood River Baptist Church exists to worship God, preach His Word, and serve Rhode Island with the gospel of Jesus Christ.",
     cta: ["Learn more about our mission", "/mission"],
   },
-  "connect-with-us": {
-    title: "Connect With Us",
-    intro: "We would be glad to hear from you, and visitors are welcome at every regular service and special fellowship day.",
-    bullets: [
-      `Phone: ${site.phone} or ${site.secondaryPhone}`,
-      `Email: ${site.email}`,
-      `Physical address: ${site.address}`,
-      `Mailing address: ${site.mailingAddress}`,
-    ],
-    paragraphs: [
-      "Wood River Baptist Church meets at 246 Kingstown Rd in Wyoming, Rhode Island.",
-    ],
-    cta: ["Open directions", "https://maps.google.com/?q=246+Kingstown+Rd,+Wyoming,+RI+02898"],
-  },
   "pastor": {
     title: "Juneau Family",
     eyebrow: "Pastor Jon Juneau",
