@@ -319,7 +319,7 @@ function EventCard({ event }: { event: (typeof events)[number] }) {
       </p>
       <p>{event.description}</p>
       {url ? (
-        <a className="text-link" href={url} target="_blank" rel="noopener noreferrer">
+        <a className="button primary inline" href={url} target="_blank" rel="noopener noreferrer">
           Learn more &amp; register <ExternalLink size={14} />
         </a>
       ) : null}
