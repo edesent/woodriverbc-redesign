@@ -237,7 +237,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   if (key === "the-bible") return <BibleSearchPage />;
   if (key === "bible-reading-tracker") return <BibleTrackerPage />;
   if (key === "daily-worship") return <DailyWorshipPage />;
-  if (key === "romans-14-9") return <RomansDetailPage />;
+  if (romansRoadDetails[key]) return <RomansDetailPage detail={romansRoadDetails[key]} />;
   if (key === "pastor") return <PastorPage />;
   if (key === "give") return <GivePage />;
   if (key === "connect-with-us") return <ConnectPage />;
