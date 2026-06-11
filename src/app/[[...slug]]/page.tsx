@@ -217,8 +217,8 @@ function ServicesBand() {
   return (
     <section className="section services-band" id="services">
       <div className="section-heading">
-        <p className="eyebrow">Gather With Us</p>
         <h2>Our Weekly Services</h2>
+        <p className="eyebrow section-heading-eyebrow">Gather With Us</p>
       </div>
       <div className="service-cards">
         {services.map((service) => (
