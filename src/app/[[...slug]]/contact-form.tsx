@@ -3,13 +3,11 @@
 import { Send } from "lucide-react";
 import { useState, type FormEvent } from "react";
 
-const ENDPOINT = "https://slackwebsitechat.vercel.app/api/chat/contact-form";
-const API_KEY = "wbc_422afd7825c1a05f6d82ebf47816500fca0421f5874b4b6c";
 const RECIPIENT_EMAIL = "pastor@woodriverbc.org";
 
 export function ContactForm({ mode }: { mode: string }) {
   const isPrayer = mode === "prayer";
-  const subject = isPrayer ? "🙏 Prayer Request from Website" : "❓ Question from Website";
+  const subject = isPrayer ? "Prayer Request from Website" : "Question from Website";
   const messageLabel = isPrayer ? "Prayer request" : "Question";
 
   const [name, setName] = useState("");
@@ -19,50 +17,44 @@ export function ContactForm({ mode }: { mode: string }) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  async function onSubmit(e: FormEvent) {
+  function onSubmit(e: FormEvent) {
     e.preventDefault();
     if (status === "sending" || status === "sent") return;
+    if (website.trim()) {
+      setStatus("sent");
+      return;
+    }
     if (!name.trim() || !contact.trim() || !message.trim()) {
       setStatus("error");
       setErrorMsg("Please fill in your name, contact, and message.");
       return;
     }
+
     setStatus("sending");
     setErrorMsg(null);
-    try {
-      const res = await fetch(ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          apiKey: API_KEY,
-          subject,
-          name,
-          contact,
-          message,
-          website, // honeypot — server silently 200s if non-empty
-        }),
-      });
-      if (!res.ok) {
-        const data = await res.json().catch(() => null);
-        throw new Error(data?.error || `Send failed (${res.status})`);
-      }
-      setStatus("sent");
-      setName("");
-      setContact("");
-      setMessage("");
-    } catch (err) {
-      setStatus("error");
-      setErrorMsg(err instanceof Error ? err.message : "Something went wrong. Please try again.");
-    }
+
+    const emailBody = [
+      `Name: ${name.trim()}`,
+      `Email or phone: ${contact.trim()}`,
+      "",
+      `${messageLabel}:`,
+      message.trim(),
+    ].join("\n");
+
+    window.location.href = `mailto:${RECIPIENT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+    setStatus("sent");
+    setName("");
+    setContact("");
+    setMessage("");
   }
 
   if (status === "sent") {
     return (
       <div className="contact-form-success">
-        <h2>{isPrayer ? "Prayer request received." : "Question received."}</h2>
+        <h2>{isPrayer ? "Prayer request ready to send." : "Question ready to send."}</h2>
         <p>
-          Thank you. Someone from Wood River Baptist Church will reach out to you at the
-          contact you provided.
+          Your email app should open a message addressed to Pastor Jon at {RECIPIENT_EMAIL}.
+          Please send that email to complete your submission.
         </p>
       </div>
     );
@@ -118,7 +110,7 @@ export function ContactForm({ mode }: { mode: string }) {
       </div>
 
       <button type="submit" disabled={status === "sending"}>
-        {status === "sending" ? "Sending…" : (<>Send to church <Send size={16} /></>)}
+        {status === "sending" ? "Opening email…" : (<>Send to church <Send size={16} /></>)}
       </button>
 
       {status === "error" && errorMsg ? (
