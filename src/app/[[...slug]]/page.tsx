@@ -895,16 +895,44 @@ function GivePage() {
 
 function RomansDetailPage({ detail }: { detail: (typeof romansRoadDetails)[string] }) {
   return (
-    <PageShell title={detail.reference} intro={detail.verse}>
-      <article className="callout romans-detail-card">
-        <h2>{detail.title}</h2>
-        {detail.paragraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
-        ))}
-      </article>
-      <Link className="text-link" href="/the-romans-road">
-        Back to The Romans Road <ArrowRight size={16} />
-      </Link>
+    <PageShell title={detail.reference} intro="A Romans Road Bible verse explained in three parts.">
+      <div className="romans-detail-sections">
+        <article className="romans-detail-card scripture-card">
+          <p className="eyebrow">Part 1</p>
+          <h2>The Scripture</h2>
+          <blockquote>
+            <p>&ldquo;{detail.verse}&rdquo;</p>
+            <cite>{detail.reference}</cite>
+          </blockquote>
+        </article>
+
+        <article className="romans-detail-card meaning-card">
+          <p className="eyebrow">Part 2</p>
+          <h2>What does this mean?</h2>
+          <h3>{detail.title}</h3>
+          {detail.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </article>
+
+        <article className="romans-detail-card response-card">
+          <p className="eyebrow">Part 3</p>
+          <h2>What should I do?</h2>
+          <p>
+            Take God at His Word. Do not pass by this truth as mere information. Let it
+            bring you honestly before the Lord, and call upon Jesus Christ for the mercy,
+            forgiveness, and new life that only He can give.
+          </p>
+          <div className="button-row">
+            <Link className="button primary" href="/ask-a-question">
+              Ask a Bible question
+            </Link>
+            <Link className="button secondary dark" href="/the-romans-road">
+              Back to The Romans Road <ArrowRight size={16} />
+            </Link>
+          </div>
+        </article>
+      </div>
     </PageShell>
   );
 }
