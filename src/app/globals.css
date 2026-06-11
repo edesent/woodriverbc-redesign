@@ -789,14 +789,21 @@ h3 {
 .meaning-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
-  margin-top: 10px;
-  color: var(--cranberry);
+  margin-top: 12px;
+  border-radius: 8px;
+  background: var(--cranberry);
+  color: var(--white);
+  padding: 9px 13px;
+  font-size: 0.9rem;
   font-weight: 900;
+  line-height: 1.1;
 }
 
 .meaning-link:hover {
-  color: var(--pine-dark);
+  background: var(--pine-dark);
+  color: var(--white);
 }
 
 .callout {
