@@ -510,12 +510,22 @@ function RomansRoadPage() {
   return (
     <PageShell title="The Romans Road" intro="God's way of salvation, traced through the book of Romans.">
       <div className="road">
-        {romansRoad.map(([reference, summary]) => (
-          <article className="road-step" key={reference}>
-            <span>{reference}</span>
-            <p>{summary}</p>
-          </article>
-        ))}
+        {romansRoad.map(([reference, summary]) => {
+          const meaningHref = romansRoadMeaningLinks[reference];
+          return (
+            <article className="road-step" key={reference}>
+              <span>{reference}</span>
+              <div>
+                <p>{summary}</p>
+                {meaningHref ? (
+                  <SmartLink className="meaning-link" href={meaningHref}>
+                    What does this mean? <ArrowRight size={14} />
+                  </SmartLink>
+                ) : null}
+              </div>
+            </article>
+          );
+        })}
       </div>
       <div className="callout">
         <h2>What should I do?</h2>
