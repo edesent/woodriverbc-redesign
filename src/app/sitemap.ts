@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { thyWordPosts, thyWordSlug } from "@/lib/site";
+import { romansRoadDetails, thyWordPosts, thyWordSlug } from "@/lib/site";
 
 const routes = [
   "",
@@ -40,5 +40,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${base}/thy-word-is-a-lamp-unto-my-feet/${thyWordSlug(post)}`,
     lastModified: new Date(`${post.date}T12:00:00Z`),
   }));
-  return [...staticEntries, ...thyWordEntries];
+  const romansEntries = romansRoadDetails.map((d) => ({
+    url: `${base}/${d.slug}`,
+    lastModified: new Date(),
+  }));
+  return [...staticEntries, ...thyWordEntries, ...romansEntries];
 }

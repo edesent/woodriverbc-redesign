@@ -40,6 +40,8 @@ import {
   prayerSections,
   radioLinks,
   romansRoad,
+  romansRoadDetails,
+  romansRoadSlug,
   scriptureMemory,
   services,
   site,
@@ -62,123 +64,6 @@ const dailyWalkIcons: Record<string, React.ReactNode> = {
   "/the-bible": <BookMarked />,
 };
 
-const romansRoadMeaningLinks: Record<string, string> = {
-  "Romans 3:19": "/romans-319",
-  "Romans 3:23": "/romans-323",
-  "Romans 5:8": "/romans-58",
-  "Romans 6:23": "/romans-623",
-  "Romans 4:25": "/romans-425",
-  "Romans 14:9": "/romans-14-9",
-  "Romans 10:9": "/romans-109",
-  "Romans 10:13": "/romans-1013",
-  "Romans 6:4": "/new-page-2",
-  "Romans 12:1": "/romans-121",
-};
-
-const romansRoadDetails: Record<
-  string,
-  {
-    reference: string;
-    verse: string;
-    title: string;
-    paragraphs: string[];
-  }
-> = {
-  "romans-319": {
-    reference: "Romans 3:19",
-    verse:
-      "Now we know that what things soever the law saith, it saith to them who are under the law: that every mouth may be stopped, and all the world may become guilty before God.",
-    title: "Every Mouth Stopped",
-    paragraphs: [
-      "God's law speaks to those who are under the law so that every mouth may be stopped. Before a holy God, no person has a good defense for sin. We cannot explain it away, excuse it, or compare ourselves with someone worse and be justified.",
-      "The purpose of this truth is not to leave us hopeless, but to show us our need. All the world is guilty before God, and guilty sinners need a Saviour. The Romans Road begins by bringing us face to face with that need.",
-    ],
-  },
-  "romans-323": {
-    reference: "Romans 3:23",
-    verse: "For all have sinned, and come short of the glory of God;",
-    title: "All Have Sinned",
-    paragraphs: [
-      "Sin is not merely a problem for unusually wicked people. The Bible says that all have sinned. Every person has broken God's law in thought, word, deed, and desire.",
-      "To come short of the glory of God means that we have failed to meet His perfect standard. Salvation must therefore be by God's grace, not by our goodness.",
-    ],
-  },
-  "romans-58": {
-    reference: "Romans 5:8",
-    verse: "But God commendeth his love toward us, in that, while we were yet sinners, Christ died for us.",
-    title: "Christ Died For Us",
-    paragraphs: [
-      "God did not wait for us to make ourselves worthy of His love. He commended, or showed, His love toward us while we were yet sinners.",
-      "The proof of God's love is the death of Jesus Christ for sinners. Christ took our place, bore our sin, and provided the only sufficient sacrifice by His blood.",
-    ],
-  },
-  "romans-623": {
-    reference: "Romans 6:23",
-    verse: "For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.",
-    title: "Wages And Gift",
-    paragraphs: [
-      "A wage is something earned. The wages of sin is death, which means separation from God and the righteous judgment that sin deserves.",
-      "But salvation is not offered as a wage for religious effort. It is the gift of God. Eternal life comes through Jesus Christ our Lord, received by faith in Him.",
-    ],
-  },
-  "romans-425": {
-    reference: "Romans 4:25",
-    verse: "Who was delivered for our offences, and was raised again for our justification.",
-    title: "Delivered And Raised",
-    paragraphs: [
-      "Jesus was delivered for our offences. He went to the cross because of our sins, not because of any sin in Himself.",
-      "He was raised again for our justification. His resurrection declares that the sacrifice was accepted and that sinners can be counted righteous through faith in Him.",
-    ],
-  },
-  "romans-14-9": {
-    reference: "Romans 14:9",
-    verse: "For to this end Christ both died, and rose, and revived, that he might be Lord both of the dead and living.",
-    title: "Jesus Christ Is Lord",
-    paragraphs: [
-      "Jesus Christ died, rose, and revived for this end: that He might be Lord both of the dead and living. Salvation is not merely escaping punishment; it is being brought under the gracious lordship of Christ.",
-      "Because He gave Himself for us and rose again, it is reasonable and good to belong to Him, trust Him, follow Him, and confess Him as Lord.",
-    ],
-  },
-  "romans-109": {
-    reference: "Romans 10:9",
-    verse:
-      "That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved.",
-    title: "Confess And Believe",
-    paragraphs: [
-      "The response God calls for is personal faith. We are to believe in the heart that God raised Jesus from the dead. This is not empty religious language, but real trust in the risen Saviour.",
-      "The mouth confesses what the heart believes: the Lord Jesus. The promise attached to this faith is clear and gracious: thou shalt be saved.",
-    ],
-  },
-  "romans-1013": {
-    reference: "Romans 10:13",
-    verse: "For whosoever shall call upon the name of the Lord shall be saved.",
-    title: "Whosoever Shall Call",
-    paragraphs: [
-      "The word whosoever opens the door wide. Salvation is offered to every sinner who will call upon the name of the Lord.",
-      "To call upon Him is to turn to Him in faith, asking Him to save you because of who He is and what He has done. God's promise is not maybe, but shall be saved.",
-    ],
-  },
-  "new-page-2": {
-    reference: "Romans 6:4",
-    verse:
-      "Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life.",
-    title: "Walk In Newness Of Life",
-    paragraphs: [
-      "Those who are saved by Christ are not left unchanged. Baptism pictures burial and resurrection: the old life judged with Christ, and a new life lived unto God.",
-      "The believer's walk should now be different. Because Christ was raised from the dead, His people are called to walk in newness of life.",
-    ],
-  },
-  "romans-121": {
-    reference: "Romans 12:1",
-    verse:
-      "I beseech you therefore, brethren, by the mercies of God, that ye present your bodies a living sacrifice, holy, acceptable unto God, which is your reasonable service.",
-    title: "A Living Sacrifice",
-    paragraphs: [
-      "After showing God's mercy in salvation, Romans calls believers to present themselves to God. The Christian life is not a small addition to our own plans; it is the yielding of ourselves to the Lord.",
-      "This is called reasonable service. In light of God's mercy through Christ, giving ourselves to Him is not extreme; it is right, holy, and acceptable unto God.",
-    ],
-  },
-};
 
 type Params = {
   slug?: string[];
@@ -204,6 +89,8 @@ export async function generateMetadata({
     return { title: post?.title ?? "Thy Word" };
   }
   if (key === "the-romans-road") return { title: "The Romans Road" };
+  const romansMeta = romansRoadDetails.find((d) => d.slug === key);
+  if (romansMeta) return { title: `${romansMeta.reference} — The Romans Road` };
   if (key === "who-is-jesus") return { title: "Who Is Jesus" };
   if (key === "prayer-2") return { title: "Prayer" };
   if (key === "give") return { title: "Give" };
@@ -237,7 +124,8 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   if (key === "the-bible") return <BibleSearchPage />;
   if (key === "bible-reading-tracker") return <BibleTrackerPage />;
   if (key === "daily-worship") return <DailyWorshipPage />;
-  if (romansRoadDetails[key]) return <RomansDetailPage detail={romansRoadDetails[key]} />;
+  const romansDetail = romansRoadDetails.find((d) => d.slug === key);
+  if (romansDetail) return <RomansVerseDetailPage detail={romansDetail} />;
   if (key === "pastor") return <PastorPage />;
   if (key === "give") return <GivePage />;
   if (key === "connect-with-us") return <ConnectPage />;
@@ -616,22 +504,17 @@ function RomansRoadPage() {
   return (
     <PageShell title="The Romans Road" intro="God's way of salvation, traced through the book of Romans.">
       <div className="road">
-        {romansRoad.map(([reference, summary]) => {
-          const meaningHref = romansRoadMeaningLinks[reference];
-          return (
-            <article className="road-step" key={reference}>
-              <span>{reference}</span>
-              <div>
-                <p>{summary}</p>
-                {meaningHref ? (
-                  <SmartLink className="meaning-link" href={meaningHref}>
-                    What does this mean? <ArrowRight size={14} />
-                  </SmartLink>
-                ) : null}
-              </div>
-            </article>
-          );
-        })}
+        {romansRoad.map(([reference, summary]) => (
+          <article className="road-step" key={reference}>
+            <span>{reference}</span>
+            <div>
+              <p>{summary}</p>
+              <Link className="meaning-link" href={`/${romansRoadSlug(reference)}`}>
+                What does this mean? <ArrowRight size={14} />
+              </Link>
+            </div>
+          </article>
+        ))}
       </div>
       <div className="callout">
         <h2>What should I do?</h2>
@@ -893,46 +776,30 @@ function GivePage() {
   );
 }
 
-function RomansDetailPage({ detail }: { detail: (typeof romansRoadDetails)[string] }) {
+function RomansVerseDetailPage({ detail }: { detail: (typeof romansRoadDetails)[number] }) {
   return (
-    <PageShell title={detail.reference} intro="A Romans Road Bible verse explained in three parts.">
-      <div className="romans-detail-sections">
-        <article className="romans-detail-card scripture-card">
-          <p className="eyebrow">Part 1</p>
-          <h2>The Scripture</h2>
-          <blockquote>
-            <p>&ldquo;{detail.verse}&rdquo;</p>
-            <cite>{detail.reference}</cite>
-          </blockquote>
-        </article>
-
-        <article className="romans-detail-card meaning-card">
-          <p className="eyebrow">Part 2</p>
-          <h2>What does this mean?</h2>
-          <h3>{detail.title}</h3>
-          {detail.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </article>
-
-        <article className="romans-detail-card response-card">
-          <p className="eyebrow">Part 3</p>
-          <h2>What should I do?</h2>
-          <p>
-            Take God at His Word. Do not pass by this truth as mere information. Let it
-            bring you honestly before the Lord, and call upon Jesus Christ for the mercy,
-            forgiveness, and new life that only He can give.
-          </p>
-          <div className="button-row">
-            <Link className="button primary" href="/ask-a-question">
-              Ask a Bible question
-            </Link>
-            <Link className="button secondary dark" href="/the-romans-road">
-              Back to The Romans Road <ArrowRight size={16} />
-            </Link>
-          </div>
-        </article>
+    <PageShell eyebrow="The Romans Road" title={detail.reference} intro={detail.verse}>
+      <div className="truth-grid">
+        {detail.columns.map((col) => (
+          <article key={col.heading}>
+            <h2>{col.heading}</h2>
+            <p>{col.body}</p>
+            {col.learnMore ? (
+              <a
+                className="text-link"
+                href={col.learnMore[1]}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Learn More: {col.learnMore[0]} <ExternalLink size={14} />
+              </a>
+            ) : null}
+          </article>
+        ))}
       </div>
+      <Link className="text-link" href="/the-romans-road">
+        Back to The Romans Road <ArrowRight size={16} />
+      </Link>
     </PageShell>
   );
 }

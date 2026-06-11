@@ -761,6 +761,242 @@ export const romansRoad = [
   ["Romans 12:1", "Present your body a living sacrifice, holy, acceptable unto God."],
 ] as const;
 
+// Convert "Romans 3:19" → "romans-3-19" (the URL slug for the detail page).
+export function romansRoadSlug(reference: string): string {
+  return reference.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+type RomansColumn = {
+  readonly heading: string;
+  readonly body: string;
+  readonly learnMore?: readonly [label: string, href: string];
+};
+
+type RomansDetail = {
+  readonly slug: string;
+  readonly reference: string;
+  readonly verse: string;
+  readonly columns: readonly RomansColumn[];
+};
+
+export const romansRoadDetails: readonly RomansDetail[] = [
+  {
+    slug: "romans-3-19",
+    reference: "Romans 3:19",
+    verse: "NOW WE KNOW THAT WHAT THINGS SOEVER THE LAW SAITH, IT SAITH TO THEM WHO ARE UNDER THE LAW: THAT EVERY MOUTH MAY BE STOPPED, AND ALL THE WORLD MAY BECOME GUILTY BEFORE GOD.",
+    columns: [
+      {
+        heading: "Those Under The Law",
+        body: "All of us are under the laws of God. These laws such as obeying your mother and father are known to us without the need for reading it in the Bible. Yet God has confirmed these things in the Bible for a reason.",
+        learnMore: ["The Ten Commandments", "https://www.blueletterbible.org/kjv/exo/20/1/s_70001"],
+      },
+      {
+        heading: "Every Mouth Stopped",
+        body: "God desires we, the people that he has made, should know that we have broken his law. It is wrong for us to open our mouths to make excuses for breaking his law.",
+        learnMore: ["Ephesians 2:8-9", "https://www.blueletterbible.org/kjv/eph/2/8/s_1099008"],
+      },
+      {
+        heading: "All Are Guilty",
+        body: "We are guilty of breaking God's Laws. This is called sin. Every person has broken God's Laws. We are all guilty before God, and this is true no matter how good we have tried to live our lives.",
+        learnMore: ["When Did Sin Start?", "https://www.blueletterbible.org/kjv/gen/3/1/s_3001"],
+      },
+    ],
+  },
+  {
+    slug: "romans-3-23",
+    reference: "Romans 3:23",
+    verse: "FOR ALL HAVE SINNED, AND COME SHORT OF THE GLORY OF GOD;",
+    columns: [
+      {
+        heading: "All Have Sinned",
+        body: "No person has avoided following Adam and Eve's path of sin against God. Sin occurs through rejecting God and through wrongdoing toward His creation, particularly other people.",
+        learnMore: ["Romans 3:10-18", "https://www.blueletterbible.org/kjv/rom/3/10/s_1049010"],
+      },
+      {
+        heading: "Come Short",
+        body: "Rather than glorifying God, people glorify other things, individuals, and themselves. Even sincere attempts to glorify God fall short of elevating Him above all else.",
+        learnMore: ["Our Righteousness", "https://www.blueletterbible.org/kjv/isa/64/6/s_743006"],
+      },
+      {
+        heading: "Glory Of God",
+        body: "God created humans as His greatest creation, designed for His glory. From Genesis 3 onward, all people sin and therefore fail to reflect God's intended glory.",
+        learnMore: ["God's Creation", "https://www.blueletterbible.org/kjv/gen/1/1/s_1001"],
+      },
+    ],
+  },
+  {
+    slug: "romans-5-8",
+    reference: "Romans 5:8",
+    verse: "BUT GOD COMMENDETH HIS LOVE TOWARD US, IN THAT, WHILE WE WERE YET SINNERS, CHRIST DIED FOR US.",
+    columns: [
+      {
+        heading: "God Commendeth",
+        body: "The word commendeth means to show or to prove. Many people doubt God's love but they do not know what He did to prove to us that He does love us.",
+        learnMore: ["God's Love and our eternity", "https://www.blueletterbible.org/kjv/jhn/3/16/s_1000016"],
+      },
+      {
+        heading: "While We Were Sinners",
+        body: "God did not and does not wait for people to stop sinning to deal with our sin. If He did wait, it would have to be forever, because we won't stop sinning.",
+        learnMore: ["Our sin penalty paid for by Jesus", "https://www.blueletterbible.org/kjv/isa/53/6/s_732006"],
+      },
+      {
+        heading: "Christ Died For Us",
+        body: "The penalty for our sin was paid for by Jesus. By dying, Jesus, who became a man in the flesh, paid the penalty for our sin, demonstrating both God's justice and mercy.",
+        learnMore: ["How did Jesus die?", "https://www.blueletterbible.org/kjv/mat/27/1/s_956001"],
+      },
+    ],
+  },
+  {
+    slug: "romans-6-23",
+    reference: "Romans 6:23",
+    verse: "FOR THE WAGES OF SIN IS DEATH; BUT THE GIFT OF GOD IS ETERNAL LIFE THROUGH JESUS CHRIST OUR LORD.",
+    columns: [
+      {
+        heading: "Wages Of Sin",
+        body: "God contrasts wages (earned through labor) with gift (received freely). Our sinful labor only earns death, meaning eternal separation from God in Hell.",
+        learnMore: ["This truth to Adam and Eve", "https://www.blueletterbible.org/kjv/gen/2/17/s_2017"],
+      },
+      {
+        heading: "The Gift Of God",
+        body: "Rather than separation, God offers eternal life through His perfect love. Though free to us, this gift was purchased at great cost through Christ's sacrifice.",
+        learnMore: ["This gift to Adam and Eve", "https://www.blueletterbible.org/kjv/gen/3/14/s_3014"],
+      },
+      {
+        heading: "Through Jesus Christ",
+        body: "Jesus paid the penalty for our sins through His death and resurrection. Salvation comes only through faith in Christ, not through personal effort to earn God's favor.",
+        learnMore: ["Jesus teaches this in John 3", "https://www.blueletterbible.org/kjv/jhn/3/14/s_1000014"],
+      },
+    ],
+  },
+  {
+    slug: "romans-4-25",
+    reference: "Romans 4:25",
+    verse: "WHO WAS DELIVERED FOR OUR OFFENCES, AND WAS RAISED AGAIN FOR OUR JUSTIFICATION.",
+    columns: [
+      {
+        heading: "Who Was Delivered",
+        body: "Our offenses represent violations of God's Law. Jesus Christ was delivered from heaven to earth, from life to death, to provide justification before a holy God. Though God is love, He is also just, and sin requires punishment. Jesus accepted that punishment on our behalf.",
+        learnMore: ["What did Jesus really do?", "https://www.blueletterbible.org/kjv/2co/5/21/s_1083021"],
+      },
+      {
+        heading: "Raised Again",
+        body: "As God, Jesus Christ could not remain in death. He rose after three days through God's power, demonstrating His capacity to atone for all sins. His resurrection proved His divine authority and ability to save anyone from sin.",
+        learnMore: ["An account of Jesus rising from the dead", "https://www.blueletterbible.org/kjv/jhn/20/1/s_1017001"],
+      },
+      {
+        heading: "Justification",
+        body: "Trusting in Christ's sacrificial death and resurrection results in justification before God. Believers no longer face eternal punishment for sin, as Christ satisfied God's justice through His substitutionary atonement.",
+      },
+    ],
+  },
+  {
+    slug: "romans-14-9",
+    reference: "Romans 14:9",
+    verse: "FOR TO THIS END CHRIST BOTH DIED, AND ROSE, AND REVIVED, THAT HE MIGHT BE LORD BOTH OF THE DEAD AND LIVING.",
+    columns: [
+      {
+        heading: "For To This End",
+        body: "There is an ultimate reason Jesus Christ did what He did: that His people might live with Him as their Lord.",
+      },
+      {
+        heading: "Died, Rose, And Revived",
+        body: "Jesus died, rose, and revived so that those under His lordship would also be His friends.",
+      },
+      {
+        heading: "That He Might Be Lord",
+        body: "Because He gave Himself for us, it is reasonable and good to follow Him.",
+      },
+    ],
+  },
+  {
+    slug: "romans-10-9",
+    reference: "Romans 10:9",
+    verse: "THAT IF THOU SHALT CONFESS WITH THY MOUTH THE LORD JESUS, AND SHALT BELIEVE IN THINE HEART THAT GOD HATH RAISED HIM FROM THE DEAD, THOU SHALT BE SAVED.",
+    columns: [
+      {
+        heading: "Confess",
+        body: "Faith requires public declaration to both God and believers. Remaining silent indicates incomplete belief.",
+        learnMore: ["Believe with all your heart", "https://www.blueletterbible.org/kjv/act/8/26/s_1026027"],
+      },
+      {
+        heading: "From The Dead",
+        body: "Jesus' resurrection proves His divine nature and is essential Christian doctrine. He is the Savior, not merely a moral teacher.",
+        learnMore: ["John 2:18-22", "https://www.blueletterbible.org/kjv/jhn/2/18/s_999019"],
+      },
+      {
+        heading: "Thou Shalt Be Saved",
+        body: "Salvation means rescue from hell to heaven through Christ's sacrifice. It offers deliverance from eternal punishment to eternal peace.",
+        learnMore: ["What is Hell?", "https://www.blueletterbible.org/kjv/luk/16/19/s_989019"],
+      },
+    ],
+  },
+  {
+    slug: "romans-10-13",
+    reference: "Romans 10:13",
+    verse: "FOR WHOSOEVER SHALL CALL UPON THE NAME OF THE LORD SHALL BE SAVED.",
+    columns: [
+      {
+        heading: "Whosoever",
+        body: "No sin is too great for Jesus to save you from. If you believe wholeheartedly and call upon Him, He will save you.",
+        learnMore: ["Lydia and a Jailer are saved", "https://www.blueletterbible.org/kjv/act/16/1/s_1034012"],
+      },
+      {
+        heading: "Shall Call",
+        body: "Jesus invites you to pray, confess your sins, ask forgiveness, and request Him to be your Savior. His promise is certain.",
+        learnMore: ["The thief calls upon Jesus", "https://www.blueletterbible.org/kjv/luk/23/39/s_996043"],
+      },
+      {
+        heading: "Shall Be Saved",
+        body: "Through His sacrifice, believers escape eternal punishment and receive the gift of spending eternity in heaven.",
+        learnMore: ["The New Jerusalem — Heaven", "https://www.blueletterbible.org/kjv/rev/21/1/s_1188001"],
+      },
+    ],
+  },
+  {
+    slug: "romans-6-4",
+    reference: "Romans 6:4",
+    verse: "THEREFORE WE ARE BURIED WITH HIM BY BAPTISM INTO DEATH: THAT LIKE AS CHRIST WAS RAISED UP FROM THE DEAD BY THE GLORY OF THE FATHER, EVEN SO WE ALSO SHOULD WALK IN NEWNESS OF LIFE.",
+    columns: [
+      {
+        heading: "Baptism",
+        body: "After trusting Jesus Christ as savior, believers should identify with Him through baptism. According to Scripture, baptism involves full water immersion following the decision to trust Jesus, mirroring His own baptism.",
+        learnMore: ["Jesus is baptized", "https://www.blueletterbible.org/kjv/mat/3/13/s_932011"],
+      },
+      {
+        heading: "Christ Was Raised",
+        body: "Baptism symbolizes the Gospel message: Christ's death, burial, and resurrection. The act mirrors this sequence — entering water represents death, submersion symbolizes burial, and emergence signifies resurrection.",
+        learnMore: ["Colossians 3:1-3", "https://www.blueletterbible.org/kjv/col/3/1/s_1110001"],
+      },
+      {
+        heading: "Newness Of Life",
+        body: "Believers should pursue transformed living by engaging in daily Scripture reading, prayer, church participation, and sin confession. Through commitment to Christ, old sinful patterns diminish as believers desire to share faith with others.",
+        learnMore: ["Behold all things are new!", "https://www.blueletterbible.org/kjv/2co/5/17/s_1083017"],
+      },
+    ],
+  },
+  {
+    slug: "romans-12-1",
+    reference: "Romans 12:1",
+    verse: "I BESEECH YOU THEREFORE, BRETHREN, BY THE MERCIES OF GOD, THAT YE PRESENT YOUR BODIES A LIVING SACRIFICE, HOLY, ACCEPTABLE UNTO GOD, WHICH IS YOUR REASONABLE SERVICE.",
+    columns: [
+      {
+        heading: "Brethren",
+        body: "Becoming saved means joining God's family as a spiritual brother or sister with all believers. While eternal fellowship awaits in heaven, bonding with church members now strengthens faith through biblical teaching and mutual support.",
+        learnMore: ["The Great Commission", "https://www.blueletterbible.org/kjv/mat/28/18/s_957001"],
+      },
+      {
+        heading: "Living Sacrifice",
+        body: "God's plan often differs from personal ambitions and others' expectations. Being a living sacrifice means doing what God wants for your life rather than doing anything else.",
+        learnMore: ["The Apostle Paul, Philippians 3:7-14", "https://www.blueletterbible.org/kjv/phl/3/7/s_1106001"],
+      },
+      {
+        heading: "Reasonable Service",
+        body: "Following Christ is logical: Jesus sacrificed Himself, created us knowing our purpose, possesses divine wisdom, and acts with goodness. His guidance leads to fulfillment beyond any alternative path.",
+      },
+    ],
+  },
+];
+
 export const bibleBooks = [
   "Genesis",
   "Exodus",
@@ -939,4 +1175,14 @@ export function thyWordSlug(post: { date: string; title: string }): string {
 export const aliases: Record<string, string> = {
   "daily-worship": "daily-worship",
   "new-page-1": "romans-14-9",
+  // Old Squarespace slugs for Romans Road detail pages
+  "romans-319": "romans-3-19",
+  "romans-323": "romans-3-23",
+  "romans-58": "romans-5-8",
+  "romans-623": "romans-6-23",
+  "romans-425": "romans-4-25",
+  "romans-109": "romans-10-9",
+  "romans-1013": "romans-10-13",
+  "new-page-2": "romans-6-4",
+  "romans-121": "romans-12-1",
 };
