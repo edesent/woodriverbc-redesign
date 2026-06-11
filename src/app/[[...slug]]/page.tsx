@@ -106,7 +106,8 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   if (key === "home") return <HomePage />;
   if (key === "services") redirect("/#services");
   if (key === "find-us" || key === "contact-us") redirect("/connect-with-us");
-  if (key === "events" || key.startsWith("events/")) return <EventsPage archive={key !== "events"} />;
+  if (key === "events") return <EventsPage />;
+  if (key.startsWith("events/")) notFound();
   if (key === "thy-word-is-a-lamp-unto-my-feet") return <ThyWordPage />;
   if (key.startsWith("thy-word-is-a-lamp-unto-my-feet/")) {
     const slug = key.slice("thy-word-is-a-lamp-unto-my-feet/".length);
