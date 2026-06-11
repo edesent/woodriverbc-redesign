@@ -218,50 +218,6 @@ export const events = [
     image: "/woodriver/vbs.jpg",
     url: "https://woodriverbc.myanswers.com/emerald-crossing/",
   },
-  {
-    title: "Resurrection Day Services and Easter Breakfast",
-    date: "Sunday, April 5, 2026",
-    time: "6:30 AM - 11:30 PM",
-    description:
-      "Sunrise outdoor service, Easter breakfast, Jubilee hymnsing, and Resurrection Day service celebrating the risen Saviour.",
-  },
-  {
-    title: "Christmas Eve Service",
-    date: "Wednesday, December 24, 2025",
-    time: "6:30 PM - 8:00 PM",
-    description:
-      "Worship with songs, praises, Scripture, joyful fellowship, and Christmas Eve candle-lighting.",
-  },
-  {
-    title: "Living Nativity",
-    date: "Saturday, December 20, 2025",
-    time: "6:00 PM - 8:00 PM",
-    description:
-      "An outdoor Christmas gospel presentation with singing, the Christmas story, warm fires, and refreshments.",
-    image: "/woodriver/vbs.jpg",
-  },
-  {
-    title: "Vacation Bible School - Wonder Junction",
-    date: "June 23-28, 2025",
-    time: "Evenings and Saturday afternoon",
-    description:
-      "A train-themed VBS with Bible lessons, crafts, games, music, snacks, and truth from God's Word.",
-    image: "/woodriver/vbs.jpg",
-  },
-  {
-    title: "Church Fellowship & Charity Dinner",
-    date: "Sunday, July 6, 2025",
-    time: "10:00 AM - 2:00 PM",
-    description:
-      "Bi-monthly church fellowship dinner after morning worship with shared food, testimonies, prayer, and a special offering.",
-  },
-  {
-    title: "American Independence Picnic & Prayer Meeting",
-    date: "Wednesday, July 2, 2025",
-    time: "5:00 PM - 9:00 PM",
-    description:
-      "Food, games, preaching, prayer, and reflection on civic responsibility and God's mercy.",
-  },
 ] as const;
 
 export const thyWordPosts = [
