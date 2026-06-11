@@ -5,6 +5,7 @@ import { useState, type FormEvent } from "react";
 
 const ENDPOINT = "https://slackwebsitechat.vercel.app/api/chat/contact-form";
 const API_KEY = "wbc_422afd7825c1a05f6d82ebf47816500fca0421f5874b4b6c";
+const RECIPIENT_EMAIL = "pastor@woodriverbc.org";
 
 export function ContactForm({ mode }: { mode: string }) {
   const isPrayer = mode === "prayer";
