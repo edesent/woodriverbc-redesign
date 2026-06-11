@@ -141,7 +141,7 @@ function HomePage() {
     <>
       <section className="hero">
         <div className="hero-media">
-          <Image src="/wood-river-baptist-church.jpg" alt="" fill priority sizes="100vw" />
+          <Image src="/hero-image-wrbc.png" alt="" fill priority sizes="100vw" />
         </div>
         <div className="hero-crosses" aria-hidden>
           <Image src="/woodriver/wood-riverctosses.png" alt="" width={620} height={620} />
