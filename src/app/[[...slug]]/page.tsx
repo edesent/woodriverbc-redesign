@@ -28,6 +28,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { BibleSearch } from "./bible-search";
+import { ContactForm } from "./contact-form";
 import {
   aliases,
   bibleBooks,
@@ -839,27 +840,6 @@ function TextPage({ page, pageKey }: { page: (typeof textPages)[string]; pageKey
   );
 }
 
-function ContactForm({ mode }: { mode: string }) {
-  return (
-    <form className="contact-form">
-      <label>
-        Name
-        <input name="name" />
-      </label>
-      <label>
-        Email or phone
-        <input name="contact" />
-      </label>
-      <label>
-        {mode === "prayer" ? "Prayer request" : "Question"}
-        <textarea name="message" rows={5} />
-      </label>
-      <button type="button">
-        Send to church <Send size={16} />
-      </button>
-    </form>
-  );
-}
 
 function PageShell({
   eyebrow,

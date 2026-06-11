@@ -893,6 +893,51 @@ h3 {
   font-weight: 900;
 }
 
+/* Honeypot — visually hidden, off-screen, NOT display:none (some bots skip
+   hidden fields). Real users never see it; spambots that autofill every
+   field will tick it and the server silently drops the submission. */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact-form-success {
+  max-width: 720px;
+  margin-top: 24px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: 0 10px 35px rgba(8, 44, 54, 0.06);
+}
+
+.contact-form-success h2 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  color: var(--pine-dark);
+}
+
+.contact-form-success p {
+  margin: 0;
+  color: var(--ink);
+}
+
+.contact-form-error {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: rgba(184, 95, 50, 0.08);
+  border: 1px solid var(--copper);
+  color: var(--copper);
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
 .body-copy {
   max-width: 860px;
 }
