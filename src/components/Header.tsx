@@ -18,8 +18,11 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="top-strip">
-        <Link href={featuredVbsEvent.url ?? "/events"}>
-          {featuredVbsEvent.title}: {featuredVbsEvent.date} • {featuredVbsEvent.time} — Register now
+        <Link className="top-strip-announcement" href={featuredVbsEvent.url ?? "/events"}>
+          <span>
+            {featuredVbsEvent.title}: {featuredVbsEvent.date} • {featuredVbsEvent.time}
+          </span>
+          <strong>Register now</strong>
         </Link>
       </div>
       <nav className="main-nav" aria-label="Primary navigation">
