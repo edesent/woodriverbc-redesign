@@ -61,6 +61,19 @@ const dailyWalkIcons: Record<string, React.ReactNode> = {
   "/the-bible": <BookMarked />,
 };
 
+const romansRoadMeaningLinks: Record<string, string> = {
+  "Romans 3:19": "https://www.woodriverbc.org/romans-319",
+  "Romans 3:23": "https://www.woodriverbc.org/romans-323",
+  "Romans 5:8": "https://www.woodriverbc.org/romans-58",
+  "Romans 6:23": "https://www.woodriverbc.org/romans-623",
+  "Romans 4:25": "https://www.woodriverbc.org/romans-425",
+  "Romans 14:9": "/romans-14-9",
+  "Romans 10:9": "https://www.woodriverbc.org/romans-109",
+  "Romans 10:13": "https://www.woodriverbc.org/romans-1013",
+  "Romans 6:4": "https://www.woodriverbc.org/new-page-2",
+  "Romans 12:1": "https://www.woodriverbc.org/romans-121",
+};
+
 type Params = {
   slug?: string[];
 };
