@@ -786,6 +786,19 @@ h3 {
   color: var(--muted);
 }
 
+.meaning-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  color: var(--cranberry);
+  font-weight: 900;
+}
+
+.meaning-link:hover {
+  color: var(--pine-dark);
+}
+
 .callout {
   margin-top: 22px;
   background: var(--pine);
