@@ -81,7 +81,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const key = aliases[routeKey(await params)] ?? routeKey(await params);
   if (key === "home") return {};
-  if (key.startsWith("events/")) return { title: "Events" };
+  if (key.startsWith("events/")) return { title: "Wood River Baptist Church" };
   if (key === "thy-word-is-a-lamp-unto-my-feet") return { title: "Thy Word" };
   if (key.startsWith("thy-word-is-a-lamp-unto-my-feet/")) {
     const slug = key.slice("thy-word-is-a-lamp-unto-my-feet/".length);
