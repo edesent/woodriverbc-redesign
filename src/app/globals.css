@@ -816,6 +816,75 @@ h3 {
   color: rgba(255, 255, 255, 0.82);
 }
 
+.romans-detail-sections {
+  display: grid;
+  gap: 20px;
+  max-width: 920px;
+}
+
+.romans-detail-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+  padding: 28px;
+  box-shadow: 0 10px 35px rgba(8, 44, 54, 0.06);
+}
+
+.romans-detail-card h2 {
+  margin-bottom: 14px;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.romans-detail-card h3 {
+  margin: 0 0 12px;
+  color: var(--pine-dark);
+  font-size: 1.2rem;
+}
+
+.romans-detail-card p {
+  color: var(--muted);
+}
+
+.scripture-card {
+  background: var(--pine-dark);
+  color: var(--white);
+}
+
+.scripture-card .eyebrow {
+  color: var(--gold);
+}
+
+.scripture-card blockquote {
+  margin: 0;
+  padding-left: 20px;
+  border-left: 3px solid var(--gold);
+}
+
+.scripture-card blockquote p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.scripture-card cite {
+  display: block;
+  margin-top: 12px;
+  color: var(--gold);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.response-card {
+  background: var(--mist);
+}
+
+.button.secondary.dark {
+  border-color: var(--pine-dark);
+  color: var(--pine-dark);
+}
+
 .search-panel {
   display: grid;
   gap: 14px;
