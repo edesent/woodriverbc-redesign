@@ -293,9 +293,9 @@ function EventsPreview() {
   );
 }
 
-function EventsPage({ archive }: { archive: boolean }) {
+function EventsPage() {
   return (
-    <PageShell eyebrow="Church Calendar" title={archive ? "Event Archive" : "Upcoming Events of WRBC"} intro="Special services, fellowship meals, seasonal outreach, and church family gatherings.">
+    <PageShell eyebrow="Church Calendar" title="Upcoming Events of WRBC" intro="Special services, fellowship meals, seasonal outreach, and church family gatherings.">
       <div className="event-list full">
         {events.map((event) => (
           <EventCard event={event} key={event.title} />
