@@ -893,23 +893,15 @@ function GivePage() {
   );
 }
 
-function RomansDetailPage() {
+function RomansDetailPage({ detail }: { detail: (typeof romansRoadDetails)[string] }) {
   return (
-    <PageShell title="Romans 14:9" intro="For to this end Christ both died, and rose, and revived, that he might be Lord both of the dead and living.">
-      <div className="truth-grid">
-        <article>
-          <h2>For to This End</h2>
-          <p>There is an ultimate reason Jesus Christ did what He did: that His people might live with Him as their Lord.</p>
-        </article>
-        <article>
-          <h2>Died, Rose, And Revived</h2>
-          <p>Jesus died, rose, and revived so that those under His lordship would also be His friends.</p>
-        </article>
-        <article>
-          <h2>That He Might Be Lord</h2>
-          <p>Because He gave Himself for us, it is reasonable and good to follow Him.</p>
-        </article>
-      </div>
+    <PageShell title={detail.reference} intro={detail.verse}>
+      <article className="callout romans-detail-card">
+        <h2>{detail.title}</h2>
+        {detail.paragraphs.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+      </article>
       <Link className="text-link" href="/the-romans-road">
         Back to The Romans Road <ArrowRight size={16} />
       </Link>
