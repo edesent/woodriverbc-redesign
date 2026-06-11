@@ -18,8 +18,9 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="top-strip">
-        <span>{site.address}</span>
-        <a href={`tel:${site.phone.replace(/[^0-9]/g, "")}`}>{site.phone}</a>
+        <Link href={featuredVbsEvent.url ?? "/events"}>
+          {featuredVbsEvent.title}: {featuredVbsEvent.date} • {featuredVbsEvent.time} — Register now
+        </Link>
       </div>
       <nav className="main-nav" aria-label="Primary navigation">
         <Link className="brand" href="/" onClick={close}>
