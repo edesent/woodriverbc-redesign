@@ -434,21 +434,37 @@ function SimpleListPage({
   intro,
   items,
   icon,
+  links = {},
 }: {
   title: string;
   intro: string;
   items: readonly string[];
   icon: React.ReactNode;
+  links?: Record<string, string>;
 }) {
   return (
     <PageShell title={title} intro={intro}>
       <div className="memory-grid">
-        {items.map((item) => (
-          <div className="memory-item" key={item}>
-            {icon}
-            <span>{item}</span>
-          </div>
-        ))}
+        {items.map((item) => {
+          const href = links[item];
+          const content = (
+            <>
+              {icon}
+              <span>{item}</span>
+              {href ? <ArrowRight size={16} /> : null}
+            </>
+          );
+
+          return href ? (
+            <Link className="memory-item memory-link" href={href} key={item}>
+              {content}
+            </Link>
+          ) : (
+            <div className="memory-item" key={item}>
+              {content}
+            </div>
+          );
+        })}
       </div>
     </PageShell>
   );
