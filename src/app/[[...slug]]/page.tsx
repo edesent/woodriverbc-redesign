@@ -49,6 +49,7 @@ import {
   thyWordPosts,
   thyWordSlug,
 } from "@/lib/site";
+import { scriptureMemoryLinks, scriptureMemoryTextPages } from "@/lib/scripture-memory-pages";
 
 const dailyWalkIcons: Record<string, React.ReactNode> = {
   "/devotionals": <NotebookPen />,
