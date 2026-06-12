@@ -10,6 +10,7 @@ export const scriptureMemoryLinks: Record<string, string> = {
   "John 1:1-14": "/john-1-1-14",
   "The Romans Road": "/the-romans-road",
   ["Thoughts on " + "Prayer"]: "/thoughts-on-prayer",
+  "Jesus Is Coming Again!": "/jesus-is-coming-again",
   "I John 3:1-7": "/1-john-3-1-7",
 };
 
