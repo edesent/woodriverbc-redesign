@@ -209,6 +209,15 @@ export const bibleStudies = [
 
 export const events = [
   {
+    title: "Teen Camp at Camp Northfield",
+    date: "Monday, July 13 – Saturday, July 18, 2026",
+    time: "All week",
+    description:
+      "Teens ages 14–18 are invited to join a week of Christ-centered preaching, fellowship, and camp activities at Camp Northfield in Northfield, Massachusetts. Speaker: Pastor Anthony Frazer. Cost: $340 per camper.",
+    image: "/woodriver/wednesday-night.jpg",
+    url: "https://www.campnorthfield.com/youth-camp-registration",
+  },
+  {
     title: "Vacation Bible School — Emerald Crossing",
     date: "Monday, June 29 – Friday, July 3, 2027",
     time: "6:00 PM – 8:00 PM",
