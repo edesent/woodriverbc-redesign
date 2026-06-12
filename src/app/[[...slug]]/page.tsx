@@ -96,6 +96,8 @@ export async function generateMetadata({
   if (key === "prayer-2") return { title: "Prayer" };
   if (key === "give") return { title: "Give" };
   if (key === "daily-worship") return { title: "Daily Worship" };
+  const scriptureMemoryPage = scriptureMemoryTextPages[key];
+  if (scriptureMemoryPage) return { title: scriptureMemoryPage.title };
   const page = textPages[key];
   return { title: page?.title ?? "Wood River Baptist Church" };
 }
