@@ -104,7 +104,7 @@ export const devotionals = [
   ["My Utmost For His Highest", "https://utmost.org/"],
   ["Streams In the Desert", "https://www.crosswalk.com/devotionals/desert/"],
   ["Days of Praise", "https://www.icr.org/days-of-praise"],
-  ["Love Worth Finding", "https://www.crosswalk.com/devotionals/loveworthfinding/"],
+  ["Love Worth Finding", "https://www.lwf.org/daily-devotionals"],
   ["The Valley of Vision", "https://banneroftruth.org/us/devotional/the-valley-of-vision/"],
 ] as const;
 
