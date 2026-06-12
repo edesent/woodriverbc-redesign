@@ -118,7 +118,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
     if (post) return <ThyWordPostPage post={post} />;
     notFound();
   }
-  if (key === "devotionals") return <LinkCollection title="Devotionals" intro="A curated set of daily devotional readings to help you and your family to walk with the Lord each day." links={devotionals} icon={<NotebookPen />} />;
+  if (key === "devotionals") return <LinkCollection title="Devotionals" intro="A curated set of daily devotional readings to help you and your family to walk with the Lord each day." links={devotionals} icon={<NotebookPen />} compactHero />;
   if (key === "scripture-memory-1") return <SimpleListPage title="Scripture Memory Selections" intro="Selected passages for hiding God's Word in your heart." items={scriptureMemory} icon={<BookOpenText />} links={scriptureMemoryLinks} />;
   if (key === "bible-studies") return <BibleStudiesPage />;
   if (key === "prayer-2") return <PrayerPage />;
