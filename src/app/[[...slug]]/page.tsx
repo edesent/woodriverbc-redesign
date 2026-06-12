@@ -825,11 +825,15 @@ function TextPage({ page, pageKey }: { page: (typeof textPages)[string]; pageKey
   return (
     <PageShell eyebrow={page.eyebrow} title={page.title} intro={page.intro} image={page.image}>
       {pageKey === "services" ? <ServicesBand /> : null}
-      {page.paragraphs?.map((paragraph) => (
-        <p className="body-copy" key={paragraph}>
-          {paragraph}
-        </p>
-      ))}
+      {page.paragraphs?.length ? (
+        <div className={page.bodyClass}>
+          {page.paragraphs.map((paragraph) => (
+            <p className="body-copy" key={paragraph}>
+              {paragraph}
+            </p>
+          ))}
+        </div>
+      ) : null}
       {page.bullets ? (
         <ul className="check-list">
           {page.bullets.map((bullet) => (
