@@ -119,7 +119,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
     notFound();
   }
   if (key === "devotionals") return <LinkCollection title="Devotionals" intro="A curated set of daily devotional readings and trusted Bible helps." links={devotionals} icon={<NotebookPen />} />;
-  if (key === "scripture-memory-1") return <SimpleListPage title="Scripture Memory Selections" intro="Selected passages for hiding God's Word in your heart." items={scriptureMemory} icon={<BookOpenText />} links={{ "Psalm 27 - A Psalm For Courage And Strength": "/psalm-27" }} />;
+  if (key === "scripture-memory-1") return <SimpleListPage title="Scripture Memory Selections" intro="Selected passages for hiding God's Word in your heart." items={scriptureMemory} icon={<BookOpenText />} links={scriptureMemoryLinks} />;
   if (key === "bible-studies") return <BibleStudiesPage />;
   if (key === "prayer-2") return <PrayerPage />;
   if (key === "christian-radio") return <LinkCollection title="Christian Radio" intro="Music and Bible broadcasting resources for daily listening." links={radioLinks} icon={<Radio />} />;
