@@ -1,9 +1,7 @@
 import type { TextPage } from "./site";
 
 export const scriptureMemoryLinks: Record<string, string> = {
-  "Selections from Psalm 119 Part 1": "/psalm-119-part-1",
   "The Greatest of These: I Corinthians 13": "/1-corinthians-13",
-  "Select Verses On Love": "/verses-on-love",
   "Psalm 145:15-21 A Table Prayer of Thanksgiving": "/psalm-145-15-21",
   "Psalm 27 - A Psalm For Courage And Strength": "/psalm-27",
   "Philippians 2:1-11 The Humility & Exaltation of Christ": "/philippians-2-1-11",
@@ -11,39 +9,14 @@ export const scriptureMemoryLinks: Record<string, string> = {
   "Isaiah 55:6-13": "/isaiah-55-6-13",
   "John 1:1-14": "/john-1-1-14",
   "The Romans Road": "/the-romans-road",
-  "Thoughts on Prayer": "/thoughts-on-prayer",
-  "Jesus Is Coming Again!": "/jesus-is-coming-again",
-  "A Psalm of Patient Confidence": "/psalm-of-patient-confidence",
-  "The Soul-winners Concern": "/the-soul-winners-concern",
-  "Thoughts on True Worship": "/thoughts-on-true-worship",
-  "The Importance Of God's Word": "/the-importance-of-gods-word",
   "I John 3:1-7": "/1-john-3-1-7",
-  "Prompting Praise": "/prompting-praise",
-  "Heaven": "/heaven",
 };
 
 export const scriptureMemoryTextPages: Record<string, TextPage> = {
-  "psalm-119-part-1": {
-    title: "Selections from Psalm 119 Part 1",
-    eyebrow: "Scripture Memory",
-    intro: "Selected verses from Psalm 119 on loving and keeping the Word of God.",
-    bodyClass: "scripture-passage",
-    paragraphs: [
-      "Psalm 119:9 Wherewithal shall a young man cleanse his way? by taking heed thereto according to thy word.",
-      "Psalm 119:10 With my whole heart have I sought thee: O let me not wander from thy commandments.",
-      "Psalm 119:11 Thy word have I hid in mine heart, that I might not sin against thee.",
-      "Psalm 119:12 Blessed art thou, O LORD: teach me thy statutes.",
-      "Psalm 119:13 With my lips have I declared all the judgments of thy mouth.",
-      "Psalm 119:14 I have rejoiced in the way of thy testimonies, as much as in all riches.",
-      "Psalm 119:15 I will meditate in thy precepts, and have respect unto thy ways.",
-      "Psalm 119:16 I will delight myself in thy statutes: I will not forget thy word."
-    ],
-    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
-  },
   "1-corinthians-13": {
     title: "The Greatest of These: I Corinthians 13",
     eyebrow: "Scripture Memory",
-    intro: "Charity never faileth.",
+    intro: "And now abideth faith, hope, charity, these three; but the greatest of these is charity.",
     bodyClass: "scripture-passage",
     paragraphs: [
       "1 Though I speak with the tongues of men and of angels, and have not charity, I am become as sounding brass, or a tinkling cymbal.",
@@ -59,23 +32,6 @@ export const scriptureMemoryTextPages: Record<string, TextPage> = {
       "11 When I was a child, I spake as a child, I understood as a child, I thought as a child: but when I became a man, I put away childish things.",
       "12 For now we see through a glass, darkly; but then face to face: now I know in part; but then shall I know even as also I am known.",
       "13 And now abideth faith, hope, charity, these three; but the greatest of these is charity."
-    ],
-    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
-  },
-  "verses-on-love": {
-    title: "Select Verses On Love",
-    eyebrow: "Scripture Memory",
-    intro: "Selected passages on the love of God and Christian love.",
-    bodyClass: "scripture-passage",
-    paragraphs: [
-      "John 13:34 A new commandment I give unto you, That ye love one another; as I have loved you, that ye also love one another.",
-      "John 13:35 By this shall all men know that ye are my disciples, if ye have love one to another.",
-      "Romans 5:8 But God commendeth his love toward us, in that, while we were yet sinners, Christ died for us.",
-      "I John 4:7 Beloved, let us love one another: for love is of God; and every one that loveth is born of God, and knoweth God.",
-      "I John 4:8 He that loveth not knoweth not God; for God is love.",
-      "I John 4:9 In this was manifested the love of God toward us, because that God sent his only begotten Son into the world, that we might live through him.",
-      "I John 4:10 Herein is love, not that we loved God, but that he loved us, and sent his Son to be the propitiation for our sins.",
-      "I John 4:11 Beloved, if God so loved us, we ought also to love one another."
     ],
     cta: ["Back to Scripture Memory", "/scripture-memory-1"],
   },
@@ -143,7 +99,7 @@ export const scriptureMemoryTextPages: Record<string, TextPage> = {
       "7 Let the wicked forsake his way, and the unrighteous man his thoughts: and let him return unto the LORD, and he will have mercy upon him; and to our God, for he will abundantly pardon.",
       "8 For my thoughts are not your thoughts, neither are your ways my ways, saith the LORD.",
       "9 For as the heavens are higher than the earth, so are my ways higher than your ways, and my thoughts than your thoughts.",
-      "10 For as the rain cometh down, and the snow from heaven, and returneth not thither...",
+      "10 For as the rain cometh down, and the snow from heaven, and returneth not thither, but watereth the earth...",
       "11 So shall my word be that goeth forth out of my mouth: it shall not return unto me void...",
       "12 For ye shall go out with joy, and be led forth with peace...",
       "13 Instead of the thorn shall come up the fir tree, and instead of the brier shall come up the myrtle tree..."
@@ -173,100 +129,6 @@ export const scriptureMemoryTextPages: Record<string, TextPage> = {
     ],
     cta: ["Back to Scripture Memory", "/scripture-memory-1"],
   },
-  "thoughts-on-prayer": {
-    title: "Thoughts on Prayer",
-    eyebrow: "Scripture Memory",
-    intro: "Selected verses to encourage prayer.",
-    bodyClass: "scripture-passage",
-    paragraphs: [
-      "Matthew 7:7 Ask, and it shall be given you; seek, and ye shall find; knock, and it shall be opened unto you:",
-      "Matthew 7:8 For every one that asketh receiveth; and he that seeketh findeth; and to him that knocketh it shall be opened.",
-      "Philippians 4:6 Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.",
-      "Philippians 4:7 And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
-      "I Thessalonians 5:17 Pray without ceasing.",
-      "I John 5:14 And this is the confidence that we have in him, that, if we ask any thing according to his will, he heareth us:",
-      "I John 5:15 And if we know that he hear us, whatsoever we ask, we know that we have the petitions that we desired of him."
-    ],
-    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
-  },
-  "jesus-is-coming-again": {
-    title: "Jesus Is Coming Again!",
-    eyebrow: "Scripture Memory",
-    intro: "Promises concerning the return of Christ.",
-    bodyClass: "scripture-passage",
-    paragraphs: [
-      "John 14:2 In my Father's house are many mansions... I go to prepare a place for you.",
-      "John 14:3 And if I go and prepare a place for you, I will come again, and receive you unto myself...",
-      "Acts 1:11 This same Jesus, which is taken up from you into heaven, shall so come in like manner...",
-      "I Thessalonians 4:16 For the Lord himself shall descend from heaven with a shout...",
-      "I Thessalonians 4:17 Then we which are alive and remain shall be caught up together with them in the clouds...",
-      "I Thessalonians 4:18 Wherefore comfort one another with these words."
-    ],
-    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
-  },
-  "psalm-of-patient-confidence": {
-    title: "A Psalm of Patient Confidence",
-    eyebrow: "Scripture Memory",
-    intro: "Psalm 37:1-9",
-    bodyClass: "scripture-passage",
-    paragraphs: [
-      "1 Fret not thyself because of evildoers, neither be thou envious against the workers of iniquity.",
-      "2 For they shall soon be cut down like the grass, and wither as the green herb.",
-      "3 Trust in the LORD, and do good; so shalt thou dwell in the land, and verily thou shalt be fed.",
-      "4 Delight thyself also in the LORD; and he shall give thee the desires of thine heart.",
-      "5 Commit thy way unto the LORD; trust also in him; and he shall bring it to pass.",
-      "6 And he shall bring forth thy righteousness as the light, and thy judgment as the noonday.",
-      "7 Rest in the LORD, and wait patiently for him...",
-      "8 Cease from anger, and forsake wrath: fret not thyself in any wise to do evil.",
-      "9 For evildoers shall be cut off: but those that wait upon the LORD, they shall inherit the earth."
-    ],
-    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
-  },
-  "the-soul-winners-concern": {
-    title: "The Soul-winners Concern",
-    eyebrow: "Scripture Memory",
-    intro: "Selected verses on witnessing and winning souls.",
-    bodyClass: "scripture-passage",
-    paragraphs: [
-      "Proverbs 11:30 The fruit of the righteous is a tree of life; and he that winneth souls is wise.",
-      "Psalm 126:5 They that sow in tears shall reap in joy.",
-      "Psalm 126:6 He that goeth forth and weepeth, bearing precious seed, shall doubtless come again with rejoicing...",
-      "Matthew 9:37 Then saith he unto his disciples, The harvest truly is plenteous, but the labourers are few;",
-      "Matthew 9:38 Pray ye therefore the Lord of the harvest, that he will send forth labourers into his harvest.",
-      "Mark 16:15 And he said unto them, Go ye into all the world, and preach the gospel to every creature."
-    ],
-    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
-  },
-  "thoughts-on-true-worship": {
-    title: "Thoughts on True Worship",
-    eyebrow: "Scripture Memory",
-    intro: "Selected verses on worshipping God in truth.",
-    bodyClass: "scripture-passage",
-    paragraphs: [
-      "John 4:23 But the hour cometh, and now is, when the true worshippers shall worship the Father in spirit and in truth...",
-      "John 4:24 God is a Spirit: and they that worship him must worship him in spirit and in truth.",
-      "Psalm 95:1 O come, let us sing unto the LORD: let us make a joyful noise to the rock of our salvation.",
-      "Psalm 95:2 Let us come before his presence with thanksgiving, and make a joyful noise unto him with psalms.",
-      "Psalm 95:6 O come, let us worship and bow down: let us kneel before the LORD our maker.",
-      "Psalm 95:7 For he is our God; and we are the people of his pasture, and the sheep of his hand."
-    ],
-    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
-  },
-  "the-importance-of-gods-word": {
-    title: "The Importance Of God's Word",
-    eyebrow: "Scripture Memory",
-    intro: "Selected verses on the value and power of Scripture.",
-    bodyClass: "scripture-passage",
-    paragraphs: [
-      "Psalm 119:89 For ever, O LORD, thy word is settled in heaven.",
-      "Psalm 119:105 Thy word is a lamp unto my feet, and a light unto my path.",
-      "Psalm 119:130 The entrance of thy words giveth light; it giveth understanding unto the simple.",
-      "II Timothy 3:16 All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness:",
-      "II Timothy 3:17 That the man of God may be perfect, throughly furnished unto all good works.",
-      "Hebrews 4:12 For the word of God is quick, and powerful, and sharper than any twoedged sword..."
-    ],
-    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
-  },
   "1-john-3-1-7": {
     title: "I John 3:1-7",
     eyebrow: "Scripture Memory",
@@ -280,35 +142,6 @@ export const scriptureMemoryTextPages: Record<string, TextPage> = {
       "5 And ye know that he was manifested to take away our sins; and in him is no sin.",
       "6 Whosoever abideth in him sinneth not: whosoever sinneth hath not seen him, neither known him.",
       "7 Little children, let no man deceive you: he that doeth righteousness is righteous, even as he is righteous."
-    ],
-    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
-  },
-  "prompting-praise": {
-    title: "Prompting Praise",
-    eyebrow: "Scripture Memory",
-    intro: "Psalm 103:1-5",
-    bodyClass: "scripture-passage",
-    paragraphs: [
-      "1 Bless the LORD, O my soul: and all that is within me, bless his holy name.",
-      "2 Bless the LORD, O my soul, and forget not all his benefits:",
-      "3 Who forgiveth all thine iniquities; who healeth all thy diseases;",
-      "4 Who redeemeth thy life from destruction; who crowneth thee with lovingkindness and tender mercies;",
-      "5 Who satisfieth thy mouth with good things; so that thy youth is renewed like the eagle's."
-    ],
-    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
-  },
-  "heaven": {
-    title: "Heaven",
-    eyebrow: "Scripture Memory",
-    intro: "Selected verses on the believer's heavenly hope.",
-    bodyClass: "scripture-passage",
-    paragraphs: [
-      "John 14:1 Let not your heart be troubled: ye believe in God, believe also in me.",
-      "John 14:2 In my Father's house are many mansions... I go to prepare a place for you.",
-      "John 14:3 And if I go and prepare a place for you, I will come again, and receive you unto myself...",
-      "Revelation 21:3 Behold, the tabernacle of God is with men, and he will dwell with them...",
-      "Revelation 21:4 And God shall wipe away all tears from their eyes; and there shall be no more death...",
-      "Revelation 21:5 And he that sat upon the throne said, Behold, I make all things new."
     ],
     cta: ["Back to Scripture Memory", "/scripture-memory-1"],
   },
