@@ -631,6 +631,15 @@ h3 {
   padding: 74px 22px;
 }
 
+.page-hero.compact {
+  min-height: 220px;
+}
+
+.page-hero.compact > div {
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+
 .page-hero h1 {
   max-width: 900px;
   font-size: clamp(2.6rem, 6vw, 5rem);
