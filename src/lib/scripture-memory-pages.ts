@@ -125,7 +125,7 @@ export const scriptureMemoryTextPages: Record<string, TextPage> = {
       "11 He came unto his own, and his own received him not.",
       "12 But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:",
       "13 Which were born, not of blood, nor of the will of the flesh, nor of the will of man, but of God.",
-      "14 And the Word was made flesh, and dwelt among us..."
+      "14 And the Word was made flesh, and dwelt among us, and we beheld his glory, the glory as of the only begotten of the Father, full of grace and truth."
     ],
     cta: ["Back to Scripture Memory", "/scripture-memory-1"],
   },
