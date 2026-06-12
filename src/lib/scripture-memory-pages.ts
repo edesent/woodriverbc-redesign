@@ -99,10 +99,10 @@ export const scriptureMemoryTextPages: Record<string, TextPage> = {
       "7 Let the wicked forsake his way, and the unrighteous man his thoughts: and let him return unto the LORD, and he will have mercy upon him; and to our God, for he will abundantly pardon.",
       "8 For my thoughts are not your thoughts, neither are your ways my ways, saith the LORD.",
       "9 For as the heavens are higher than the earth, so are my ways higher than your ways, and my thoughts than your thoughts.",
-      "10 For as the rain cometh down, and the snow from heaven, and returneth not thither, but watereth the earth...",
-      "11 So shall my word be that goeth forth out of my mouth: it shall not return unto me void...",
-      "12 For ye shall go out with joy, and be led forth with peace...",
-      "13 Instead of the thorn shall come up the fir tree, and instead of the brier shall come up the myrtle tree..."
+      "10 For as the rain cometh down, and the snow from heaven, and returneth not thither, but watereth the earth, and maketh it bring forth and bud, that it may give seed to the sower, and bread to the eater:",
+      "11 So shall my word be that goeth forth out of my mouth: it shall not return unto me void, but it shall accomplish that which I please, and it shall prosper in the thing whereto I sent it.",
+      "12 For ye shall go out with joy, and be led forth with peace: the mountains and the hills shall break forth before you into singing, and all the trees of the field shall clap their hands.",
+      "13 Instead of the thorn shall come up the fir tree, and instead of the brier shall come up the myrtle tree: and it shall be to the LORD for a name, for an everlasting sign that shall not be cut off."
     ],
     cta: ["Back to Scripture Memory", "/scripture-memory-1"],
   },
