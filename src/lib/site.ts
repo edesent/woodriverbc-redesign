@@ -98,8 +98,7 @@ export const homeLinks = [
 export const devotionals = [
   ["Bible Apologetics", "https://bibleapologetics.org/"],
   ["Thy Word Is A Lamp Unto My Feet", "/thy-word-is-a-lamp-unto-my-feet"],
-  ["Spurgeon Morning Meditation", "/devotionals/spurgeon-morning"],
-  ["Spurgeon Evening Meditation", "https://www.sermonaudio.com/daily-devotional/evening"],
+  ["Spurgeon's Morning and Evening", "https://spurgeonsmorningandevening.org"],
   ["Faith's Checkbook", "https://www.romans45.org/faiths-checkbook"],
   ["My Utmost For His Highest", "https://utmost.org/"],
   ["Streams In the Desert", "https://www.crosswalk.com/devotionals/desert/"],
