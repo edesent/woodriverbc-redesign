@@ -1,3 +1,5 @@
+import type { TextPage } from "./site";
+
 export const scriptureMemoryLinks: Record<string, string> = {
   "Selections from Psalm 119 Part 1": "/psalm-119-part-1",
   "The Greatest of These: I Corinthians 13": "/1-corinthians-13",
@@ -20,7 +22,7 @@ export const scriptureMemoryLinks: Record<string, string> = {
   "Heaven": "/heaven",
 };
 
-export const scriptureMemoryTextPages = {
+export const scriptureMemoryTextPages: Record<string, TextPage> = {
   "psalm-119-part-1": {
     title: "Selections from Psalm 119 Part 1",
     eyebrow: "Scripture Memory",
@@ -141,7 +143,7 @@ export const scriptureMemoryTextPages = {
       "7 Let the wicked forsake his way, and the unrighteous man his thoughts: and let him return unto the LORD, and he will have mercy upon him; and to our God, for he will abundantly pardon.",
       "8 For my thoughts are not your thoughts, neither are your ways my ways, saith the LORD.",
       "9 For as the heavens are higher than the earth, so are my ways higher than your ways, and my thoughts than your thoughts.",
-      "10 For as the rain cometh down, and the snow from heaven, and returneth not thither, but watereth the earth...",
+      "10 For as the rain cometh down, and the snow from heaven, and returneth not thither...",
       "11 So shall my word be that goeth forth out of my mouth: it shall not return unto me void...",
       "12 For ye shall go out with joy, and be led forth with peace...",
       "13 Instead of the thorn shall come up the fir tree, and instead of the brier shall come up the myrtle tree..."
@@ -310,4 +312,4 @@ export const scriptureMemoryTextPages = {
     ],
     cta: ["Back to Scripture Memory", "/scripture-memory-1"],
   },
-} as const;
+};
