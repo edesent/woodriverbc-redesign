@@ -866,17 +866,19 @@ function PageShell({
   title,
   intro,
   image,
+  compactHero = false,
   children,
 }: {
   eyebrow?: string;
   title: string;
   intro?: string;
   image?: string;
+  compactHero?: boolean;
   children: React.ReactNode;
 }) {
   return (
     <>
-      <section className={`page-hero ${image ? "with-image" : ""}`}>
+      <section className={`page-hero ${image ? "with-image" : ""} ${compactHero ? "compact" : ""}`}>
         {image ? <Image src={image} alt="" fill sizes="100vw" /> : null}
         <div>
           {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
