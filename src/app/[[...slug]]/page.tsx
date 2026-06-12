@@ -279,7 +279,18 @@ function PastorPreview() {
   );
 }
 
+function getEventStartYear(event: (typeof events)[number]) {
+  const match = event.date.match(/\b(20\d{2})\b/);
+  return match ? Number(match[1]) : Number.MAX_SAFE_INTEGER;
+}
+
+function getUpcomingEvents() {
+  return [...events].sort((a, b) => getEventStartYear(a) - getEventStartYear(b));
+}
+
 function EventsPreview() {
+  const upcomingEvents = getUpcomingEvents();
+
   return (
     <section className="section events-preview">
       <div className="section-heading">
@@ -290,7 +301,7 @@ function EventsPreview() {
         </Link>
       </div>
       <div className="event-list">
-        {events.slice(0, 3).map((event) => (
+        {upcomingEvents.slice(0, 3).map((event) => (
           <EventCard event={event} key={event.title} />
         ))}
       </div>
@@ -299,10 +310,12 @@ function EventsPreview() {
 }
 
 function EventsPage() {
+  const upcomingEvents = getUpcomingEvents();
+
   return (
     <PageShell eyebrow="Church Calendar" title="Upcoming Events of WRBC" intro="Special services, fellowship meals, seasonal outreach, and church family gatherings.">
       <div className="event-list full">
-        {events.map((event) => (
+        {upcomingEvents.map((event) => (
           <EventCard event={event} key={event.title} />
         ))}
       </div>
