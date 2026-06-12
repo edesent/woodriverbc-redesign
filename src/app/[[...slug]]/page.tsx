@@ -128,6 +128,8 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   if (key === "the-bible") return <BibleSearchPage />;
   if (key === "bible-reading-tracker") return <BibleTrackerPage />;
   if (key === "daily-worship") return <DailyWorshipPage />;
+  const scriptureMemoryPage = scriptureMemoryTextPages[key];
+  if (scriptureMemoryPage) return <TextPage page={scriptureMemoryPage} pageKey={key} />;
   const romansDetail = romansRoadDetails.find((d) => d.slug === key);
   if (romansDetail) return <RomansVerseDetailPage detail={romansDetail} />;
   if (key === "pastor") return <PastorPage />;
