@@ -849,7 +849,7 @@ function TextPage({ page, pageKey }: { page: (typeof textPages)[string]; pageKey
         <div className={page.bodyClass}>
           {page.paragraphs.map((paragraph) => (
             <p className="body-copy" key={paragraph}>
-              {paragraph}
+              {renderScriptureParagraph(paragraph, page.bodyClass === "scripture-passage")}
             </p>
           ))}
         </div>
