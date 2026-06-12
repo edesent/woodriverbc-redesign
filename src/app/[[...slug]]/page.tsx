@@ -828,6 +828,19 @@ function RomansVerseDetailPage({ detail }: { detail: (typeof romansRoadDetails)[
   );
 }
 
+function renderScriptureParagraph(paragraph: string, isScripturePassage?: boolean) {
+  if (!isScripturePassage) return paragraph;
+
+  const match = paragraph.match(/^((?:(?:[1-3]|I{1,3})\s+)?[A-Z][A-Za-z]+(?:\s+(?:of|the|[A-Z][A-Za-z]+))*\s+\d+:\d+(?:[-–]\d+)?(?:,\s*\d+)?|\d+)\s+(.*)$/);
+  if (!match) return paragraph;
+
+  return (
+    <>
+      <strong>{match[1]}</strong> {match[2]}
+    </>
+  );
+}
+
 function TextPage({ page, pageKey }: { page: (typeof textPages)[string]; pageKey: string }) {
   return (
     <PageShell eyebrow={page.eyebrow} title={page.title} intro={page.intro} image={page.image}>
