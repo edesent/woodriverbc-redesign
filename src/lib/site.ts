@@ -1028,6 +1028,7 @@ export type TextPage = {
   image?: string;
   intro?: string;
   paragraphs?: string[];
+  bodyClass?: string;
   bullets?: string[];
   cta?: readonly [string, string];
 };
