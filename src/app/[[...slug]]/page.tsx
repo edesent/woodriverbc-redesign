@@ -413,14 +413,16 @@ function LinkCollection({
   intro,
   links,
   icon,
+  compactHero = false,
 }: {
   title: string;
   intro: string;
   links: readonly (readonly [string, string])[];
   icon: React.ReactNode;
+  compactHero?: boolean;
 }) {
   return (
-    <PageShell title={title} intro={intro}>
+    <PageShell title={title} intro={intro} compactHero={compactHero}>
       <div className="link-grid">
         {links.map(([label, href]) => (
           <SmartLink className="resource-link" href={href} key={href}>
