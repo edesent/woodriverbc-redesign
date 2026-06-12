@@ -9,6 +9,7 @@ export const scriptureMemoryLinks: Record<string, string> = {
   "Isaiah 55:6-13": "/isaiah-55-6-13",
   "John 1:1-14": "/john-1-1-14",
   "The Romans Road": "/the-romans-road",
+  ["Thoughts on " + "Prayer"]: "/thoughts-on-prayer",
   "I John 3:1-7": "/1-john-3-1-7",
 };
 
