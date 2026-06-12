@@ -153,6 +153,25 @@ export const scriptureMemoryTextPages: Record<string, TextPage> = {
     ],
     cta: ["Back to Scripture Memory", "/scripture-memory-1"],
   },
+  "jesus-is-coming-again": {
+    title: "Jesus Is Coming Again!",
+    eyebrow: "Scripture Memory",
+    intro: "Selected verses on the return of the Lord Jesus Christ.",
+    bodyClass: "scripture-passage",
+    paragraphs: [
+      "John 14:3 And if I go and prepare a place for you, I will come again, and receive you unto myself; that where I am, there ye may be also.",
+      "Acts 1:11 Which also said, Ye men of Galilee, why stand ye gazing up into heaven? this same Jesus, which is taken up from you into heaven, shall so come in like manner as ye have seen him go into heaven.",
+      "1 Corinthians 15:52 In a moment, in the twinkling of an eye, at the last trump: for the trumpet shall sound, and the dead shall be raised incorruptible, and we shall be changed.",
+      "Philippians 1:6 Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:",
+      "Philippians 3:20 For our conversation is in heaven; from whence also we look for the Saviour, the Lord Jesus Christ:",
+      "I Thessalonians 4:17 Then we which are alive and remain shall be caught up together with them in the clouds, to meet the Lord in the air: and so shall we ever be with the Lord.",
+      "2 Timothy 4:8 Henceforth there is laid up for me a crown of righteousness, which the Lord, the righteous judge, shall give me at that day: and not to me only, but unto all them also that love his appearing.",
+      "1 John 3:2 Beloved, now are we the sons of God, and it doth not yet appear what we shall be: but we know that, when he shall appear, we shall be like him; for we shall see him as he is.",
+      "1 John 3:3 And every man that hath this hope in him purifieth himself, even as he is pure.",
+      "Revelation 22:20 He which testifieth these things saith, Surely I come quickly. Amen. Even so, come, Lord Jesus."
+    ],
+    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
+  },
   "1-john-3-1-7": {
     title: "I John 3:1-7",
     eyebrow: "Scripture Memory",
