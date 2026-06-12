@@ -135,8 +135,8 @@ export const scriptureMemoryTextPages: Record<string, TextPage> = {
     intro: "Behold, what manner of love the Father hath bestowed upon us.",
     bodyClass: "scripture-passage",
     paragraphs: [
-      "1 Behold, what manner of love the Father hath bestowed upon us, that we should be called the sons of God...",
-      "2 Beloved, now are we the sons of God, and it doth not yet appear what we shall be...",
+      "1 Behold, what manner of love the Father hath bestowed upon us, that we should be called the sons of God: therefore the world knoweth us not, because it knew him not.",
+      "2 Beloved, now are we the sons of God, and it doth not yet appear what we shall be: but we know that, when he shall appear, we shall be like him; for we shall see him as he is.",
       "3 And every man that hath this hope in him purifieth himself, even as he is pure.",
       "4 Whosoever committeth sin transgresseth also the law: for sin is the transgression of the law.",
       "5 And ye know that he was manifested to take away our sins; and in him is no sin.",
