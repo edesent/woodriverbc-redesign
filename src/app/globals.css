@@ -764,6 +764,42 @@ h3 {
   color: var(--pine);
 }
 
+.memory-link {
+  justify-content: space-between;
+  transition: 180ms ease;
+}
+
+.memory-link span {
+  flex: 1;
+}
+
+.memory-link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.scripture-passage {
+  max-width: 820px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+  padding: clamp(24px, 4vw, 44px);
+  box-shadow: 0 10px 35px rgba(8, 44, 54, 0.06);
+}
+
+.scripture-passage .body-copy {
+  max-width: none;
+  margin: 0 0 1.15em;
+  color: var(--ink);
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(1.18rem, 2.2vw, 1.45rem);
+  line-height: 1.85;
+}
+
+.scripture-passage .body-copy:last-child {
+  margin-bottom: 0;
+}
+
 .road {
   display: grid;
   gap: 14px;
