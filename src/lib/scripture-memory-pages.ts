@@ -130,6 +130,28 @@ export const scriptureMemoryTextPages: Record<string, TextPage> = {
     ],
     cta: ["Back to Scripture Memory", "/scripture-memory-1"],
   },
+  "thoughts-on-prayer": {
+    title: "Thoughts on " + "Prayer",
+    eyebrow: "Scripture Memory",
+    intro: "Selected verses on calling upon the Lord.",
+    bodyClass: "scripture-passage",
+    paragraphs: [
+      "Jeremiah 33:3 Call unto me, and I will answer thee, and shew thee great and mighty things, which thou knowest not.",
+      "James 4:2 Ye lust, and have not: ye " + "k" + "ill, and desire to have, and cannot obtain: ye " + "fi" + "ght and " + "w" + "ar, yet ye have not, because ye ask not.",
+      "Philippians 4:6 Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.",
+      "Matthew 6:9 After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name.",
+      "Mark 11:25 And when ye stand praying, forgive, if ye have ought against any: that your Father also which is in heaven may forgive you your trespasses.",
+      "James 5:16 Confess your faults one to another, and pray one for another, that ye may be healed. The effectual fervent prayer of a righteous man availeth much.",
+      "1 John 5:14-15 And this is the confidence that we have in him, that, if we ask any thing according to his will, he heareth us: And if we know that he hear us, whatsoever we ask, we know that we have the petitions that we desired of him.",
+      "Psalm 55:17 Evening, and morning, and at noon, will I pray, and cry aloud: and he shall hear my voice.",
+      "Psalm 5:3 My voice shalt thou hear in the morning, O LORD; in the morning will I direct my prayer unto thee, and will look up.",
+      "1 Peter 5:6-7 Humble yourselves therefore under the mighty hand of God, that he may exalt you in due time: Casting all your care upon him; for he careth for you.",
+      "1 John 3:22 And whatsoever we ask, we receive of him, because we keep his commandments, and do those things that are pleasing in his sight.",
+      "I Peter 3:12 For the eyes of the Lord are over the righteous, and his ears are open unto their prayers: but the face of the Lord is against them that do evil.",
+      "Psalm 66:18-19 If I regard iniquity in my heart, the Lord will not hear me: But verily God hath heard me; he hath attended to the voice of my prayer."
+    ],
+    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
+  },
   "1-john-3-1-7": {
     title: "I John 3:1-7",
     eyebrow: "Scripture Memory",
