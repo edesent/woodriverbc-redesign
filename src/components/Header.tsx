@@ -7,7 +7,8 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { events, navGroups, primaryNav, site } from "@/lib/site";
 
-const featuredVbsEvent = events[0];
+const featuredVbsEvent =
+  events.find((event) => event.title.includes("Vacation Bible School")) ?? events[0];
 
 export function Header() {
   const pathname = usePathname();
