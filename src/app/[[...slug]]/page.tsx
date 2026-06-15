@@ -26,6 +26,7 @@ import {
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import { notFound, redirect } from "next/navigation";
 import { BibleSearch } from "./bible-search";
 import { ContactForm } from "./contact-form";
