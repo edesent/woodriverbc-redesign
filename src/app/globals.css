@@ -1333,15 +1333,20 @@ h3 {
 }
 
 .give-embed {
-  display: flex;
-  justify-content: center;
   max-width: 720px;
   margin: 0 auto;
-  padding: 32px;
   border: 1px solid var(--line);
   border-radius: 12px;
+  overflow: hidden;
   background: var(--white);
   box-shadow: var(--shadow);
+}
+
+.give-embed iframe {
+  display: block;
+  width: 100%;
+  min-height: 1000px;
+  border: 0;
 }
 
 
