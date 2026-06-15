@@ -792,28 +792,13 @@ function GivePage() {
       </blockquote>
 
       <div className="give-embed">
-        <button
-          className="tithely-give-button"
-          data-form="072ae9f0-c681-413f-9c3d-306612ba9a35"
-          style={{
-            backgroundColor: "#00DB72",
-            fontFamily: "inherit",
-            fontWeight: "bold",
-            fontSize: "19px",
-            padding: "15px 70px",
-            borderRadius: "4px",
-            cursor: "pointer",
-            backgroundImage: "none",
-            color: "white",
-            textShadow: "none",
-            display: "inline-block",
-            float: "none",
-            border: "none",
-          }}
-        >
-          Give
-        </button>
-        <Script src="https://static.tithely.com/give/give.js" strategy="afterInteractive" />
+        <iframe
+          src="https://give.tithe.ly/?formId=072ae9f0-c681-413f-9c3d-306612ba9a35"
+          title="Wood River Baptist Church online giving"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allow="payment"
+        />
       </div>
     </PageShell>
   );
