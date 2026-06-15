@@ -219,7 +219,7 @@ export const events = [
   },
   {
     title: "Vacation Bible School — Emerald Crossing",
-    date: "Monday, June 29 – Friday, July 3, 2027",
+    date: "Monday, June 29 – Friday, July 3, 2026",
     time: "6:00 PM – 8:00 PM",
     description:
       "A week of Bible lessons, songs, crafts, games, and snacks for kids in Wyoming, Rhode Island. Bring your family and friends — registration is open.",
