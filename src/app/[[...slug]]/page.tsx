@@ -777,8 +777,6 @@ function ConnectPage() {
 }
 
 function GivePage() {
-  const tithelyFormId = "072ae9f0-c681-413f-9c3d-306612ba9a35";
-  const tithelyEmbedUrl = `https://give.tithe.ly/?formId=${tithelyFormId}`;
   return (
     <PageShell
       eyebrow="Giving"
@@ -794,22 +792,29 @@ function GivePage() {
       </blockquote>
 
       <div className="give-embed">
-        <iframe
-          src={tithelyEmbedUrl}
-          title="Wood River Baptist Church online giving"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          allow="payment"
-        />
+        <button
+          className="tithely-give-button"
+          data-form="072ae9f0-c681-413f-9c3d-306612ba9a35"
+          style={{
+            backgroundColor: "#00DB72",
+            fontFamily: "inherit",
+            fontWeight: "bold",
+            fontSize: "19px",
+            padding: "15px 70px",
+            borderRadius: "4px",
+            cursor: "pointer",
+            backgroundImage: "none",
+            color: "white",
+            textShadow: "none",
+            display: "inline-block",
+            float: "none",
+            border: "none",
+          }}
+        >
+          Give
+        </button>
+        <Script src="https://static.tithely.com/give/give.js" strategy="afterInteractive" />
       </div>
-
-      <p className="note give-fallback">
-        Having trouble with the form?{" "}
-        <a href={tithelyEmbedUrl} target="_blank" rel="noopener noreferrer">
-          Open the giving form in a new tab
-        </a>
-        .
-      </p>
     </PageShell>
   );
 }
