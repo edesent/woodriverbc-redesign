@@ -1344,19 +1344,6 @@ h3 {
   box-shadow: var(--shadow);
 }
 
-.give-fallback {
-  max-width: 720px;
-  margin: 16px auto 0;
-  text-align: center;
-  font-size: 0.92rem;
-  color: var(--muted);
-}
-
-.give-fallback a {
-  color: var(--ink);
-  font-weight: 700;
-  border-bottom: 1px solid var(--copper);
-}
 
 .thyword-list {
   display: grid;
