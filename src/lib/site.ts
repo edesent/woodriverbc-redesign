@@ -209,6 +209,23 @@ export const bibleStudies = [
 
 export const events = [
   {
+    title: "250th Anniversary of America / VBS Cookout",
+    date: "Friday, July 3, 2026",
+  },
+  {
+    title: "4th of July Church Cookout",
+    date: "Saturday, July 4, 2026",
+    time: "11:00 AM – 3:00 PM",
+    description: "Bring a dish!",
+    location: "The Burns Family House, 130 Phillips Road, Lisbon, CT.",
+  },
+  {
+    title: "Movie Viewing — \"Young Washington\"",
+    date: "Tuesday, July 7, 2026",
+    time: "7:15 PM",
+    location: "Showcase Cinema, Warwick, RI.",
+  },
+  {
     title: "Teen Camp at Camp Northfield",
     date: "Monday, July 13 – Saturday, July 18, 2026",
     time: "All week",
