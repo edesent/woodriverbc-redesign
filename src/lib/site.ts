@@ -211,6 +211,7 @@ export const events = [
   {
     title: "250th Anniversary of America / VBS Cookout",
     date: "Friday, July 3, 2026",
+    time: undefined,
     description: "Join us for a cookout celebrating the 250th Anniversary of America. Location: Wood River Baptist Church.",
   },
   {
