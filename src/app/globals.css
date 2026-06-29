@@ -1729,6 +1729,21 @@ h3 {
   }
 }
 
+.steak-fry-artwork {
+  max-width: 1120px;
+  margin: 0 auto 32px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.steak-fry-artwork img {
+  width: 100%;
+  height: auto;
+}
+
 .steak-fry-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
