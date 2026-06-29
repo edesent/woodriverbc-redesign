@@ -199,6 +199,25 @@ export const scriptureMemoryTextPages: Record<string, TextPage> = {
     ],
     cta: ["Back to Scripture Memory", "/scripture-memory-1"],
   },
+  "thoughts-on-true-worship": {
+    title: "Thoughts on True Worship",
+    eyebrow: "Scripture Memory",
+    intro: "Selected verses on worship, the Word of God, confession, prayer, and faithful Christian living.",
+    bodyClass: "scripture-passage",
+    paragraphs: [
+      "Psalm 100:3 Know ye that the LORD he is God: it is he that hath made us, and not we ourselves; we are his people, and the sheep of his pasture.",
+      "Psalm 96:9 O worship the LORD in the beauty of holiness: fear before him, all the earth.",
+      "John 4:23 But the hour cometh, and now is, when the true worshippers shall worship the Father in spirit and in truth: for the Father seeketh such to worship him.",
+      "I Peter 2:2 As newborn babes, desire the sincere milk of the word, that ye may grow thereby:",
+      "James 1:21 Wherefore lay apart all filthiness and superfluity of naughtiness, and receive with meekness the engrafted word, which is able to save your souls.",
+      "I John 1:9 If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.",
+      "Joshua 1:8 This book of the law shall not depart out of thy mouth; but thou shalt meditate therein day and night, that thou mayest observe to do according to all that is written therein: for then thou shalt make thy way prosperous, and then thou shalt have good success.",
+      "Hebrews 4:16 Let us therefore come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need.",
+      "Matthew 6:33 But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
+      "Galatians 6:9 And let us not be weary in well-doing: for in due season we shall reap, if we faint not."
+    ],
+    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
+  },
   "the-soul-winners-concern": {
     title: "The Soul-winner's Concern",
     eyebrow: "Scripture Memory",
