@@ -60,6 +60,26 @@ export const scriptureMemoryTextPages: Record<string, TextPage> = {
     ],
     cta: ["Back to Scripture Memory", "/scripture-memory-1"],
   },
+  "select-verses-on-love": {
+    title: "Select Verses On Love",
+    eyebrow: "Scripture Memory",
+    intro: "Selected verses on the love of God and Christian charity.",
+    bodyClass: "scripture-passage",
+    paragraphs: [
+      "1 Corinthians 16:14 Let all your things be done with charity.",
+      "1 John 4:8 He that loveth not knoweth not God; for God is love.",
+      "Mark 12:29–31 And Jesus answered him, The first of all the commandments is, Hear, O Israel; The Lord our God is one Lord: And thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind, and with all thy strength: this is the first commandment. And the second is like, namely this, Thou shalt love thy neighbour as thyself. There is none other commandment greater than these.",
+      "John 13:34–35 A new commandment I give unto you, That ye love one another; as I have loved you, that ye also love one another. By this shall all men know that ye are my disciples, if ye have love one to another.",
+      "Colossians 3:14 And above all these things put on charity, which is the bond of perfectness.",
+      "John 15:13 Greater love hath no man than this, that a man lay down his life for his friends.",
+      "John 3:16 For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
+      "1 John 4:19 We love him, because he first loved us.",
+      "1 John 4:7 Beloved, let us love one another: for love is of God; and every one that loveth is born of God, and knoweth God.",
+      "1 Peter 4:8 And above all things have fervent charity among yourselves: for charity shall cover the multitude of sins.",
+      "John 14:15 If ye love me, keep my commandments."
+    ],
+    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
+  },
   "psalm-145-15-21": {
     title: "Psalm 145:15-21",
     eyebrow: "Scripture Memory",
