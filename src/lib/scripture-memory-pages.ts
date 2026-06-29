@@ -18,6 +18,7 @@ export const scriptureMemoryLinks: Record<string, string> = {
   "Thoughts on True Worship": "/thoughts-on-true-worship",
   "The Importance Of God's Word": "/the-importance-of-gods-word",
   "Prompting Praise": "/prompting-praise",
+  "Heaven": "/heaven",
   "I John 3:1-7": "/1-john-3-1-7",
 };
 
