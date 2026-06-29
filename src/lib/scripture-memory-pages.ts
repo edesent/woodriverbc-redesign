@@ -38,7 +38,7 @@ export const scriptureMemoryTextPages: Record<string, TextPage> = {
     cta: ["Back to Scripture Memory", "/scripture-memory-1"],
   },
   "1-corinthians-13": {
-    title: "The Greatest of These: I Corinthians 13",
+    title: "The Greatest Of These - 1 Corinthians 13",
     eyebrow: "Scripture Memory",
     intro: "And now abideth faith, hope, charity, these three; but the greatest of these is charity.",
     bodyClass: "scripture-passage",
