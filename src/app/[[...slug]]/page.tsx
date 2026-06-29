@@ -346,14 +346,13 @@ function MensSteakFryPage() {
       <div className="steak-fry-layout">
         <section className="steak-fry-details">
           <div className="button-row" style={{ marginTop: 0, marginBottom: "18px" }}>
-            <span className="steak-fry-badge" style={{ marginBottom: 0 }}>No Cost</span>
             <a
               className="button primary"
               href="https://campaigns.tithely.com/29931-wood-river-baptist-church/living-nativity-animal-pens"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Give toward animal pens <ExternalLink size={16} />
+              Free Event but Help With Our New Living Nativity Animal Pens! <ExternalLink size={16} />
             </a>
           </div>
           <h2>Friday, July 24, 2026</h2>
