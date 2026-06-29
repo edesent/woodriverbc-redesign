@@ -396,6 +396,24 @@ function MensSteakFryPage() {
           <MensSteakFryForm />
         </section>
       </div>
+
+      <section className="steak-fry-giving">
+        <p className="eyebrow">Living Nativity</p>
+        <h2>Help provide the animal pens</h2>
+        <p>
+          Men who would like to help may give toward the animal pens for this year&apos;s
+          Living Nativity using the secure form below.
+        </p>
+        <div className="steak-fry-giving-embed">
+          <iframe
+            src="https://campaigns.tithely.com/29931-wood-river-baptist-church/living-nativity-animal-pens?context=embed"
+            title="Give toward the Living Nativity animal pens"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allow="payment"
+          />
+        </div>
+      </section>
     </PageShell>
   );
 }
