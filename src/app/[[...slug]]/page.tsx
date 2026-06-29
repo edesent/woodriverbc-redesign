@@ -30,6 +30,7 @@ import Script from "next/script";
 import { notFound, redirect } from "next/navigation";
 import { BibleSearch } from "./bible-search";
 import { ContactForm } from "./contact-form";
+import { MensSteakFryForm } from "./mens-steak-fry-form";
 import {
   aliases,
   bibleBooks,
