@@ -1729,6 +1729,95 @@ h3 {
   }
 }
 
+.steak-fry-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.steak-fry-details,
+.steak-fry-registration {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+  padding: clamp(24px, 4vw, 36px);
+  box-shadow: 0 10px 35px rgba(8, 44, 54, 0.06);
+}
+
+.steak-fry-details h2,
+.steak-fry-registration h2 {
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+}
+
+.steak-fry-details > p,
+.steak-fry-registration > p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.steak-fry-badge {
+  display: inline-flex;
+  margin-bottom: 18px;
+  border-radius: 999px;
+  background: var(--cranberry);
+  color: var(--white);
+  padding: 7px 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.steak-fry-facts {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.steak-fry-facts li {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.steak-fry-facts svg {
+  flex: 0 0 auto;
+  margin-top: 3px;
+  color: var(--copper);
+}
+
+.steak-fry-facts a {
+  border-bottom: 1px solid var(--copper);
+}
+
+.steak-fry-workshop {
+  margin-top: 24px;
+  border-left: 4px solid var(--gold);
+  border-radius: 0 10px 10px 0;
+  background: var(--mist);
+  padding: 18px 20px;
+}
+
+.steak-fry-workshop strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--pine-dark);
+}
+
+.steak-fry-workshop p {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (max-width: 880px) {
+  .steak-fry-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Web-chat widget — shown only on the homepage. The third-party script injects
    these fixed elements into <body>; ChatWidget.tsx flags non-home routes. */
 body[data-chat-hidden="true"] #wbc-chat-bubble,
