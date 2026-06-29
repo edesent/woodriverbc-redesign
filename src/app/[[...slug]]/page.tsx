@@ -343,6 +343,17 @@ function MensSteakFryPage() {
       title="Men's Steak Fry"
       intro="Enjoy a free steak dinner and learn practical ways to maintain your small engines. Men and their guests are welcome."
     >
+      <figure className="steak-fry-artwork">
+        <Image
+          src="/events/mens-steak-fry-2026.webp"
+          alt="Wood River Baptist Church Men's Steak Fry on July 24, 2026 at 6 PM, with a free steak dinner and small-engine maintenance instruction"
+          width={1536}
+          height={1080}
+          sizes="(max-width: 1320px) 100vw, 1280px"
+          priority
+        />
+      </figure>
+
       <div className="steak-fry-layout">
         <section className="steak-fry-details">
           <span className="steak-fry-badge">No Cost</span>
