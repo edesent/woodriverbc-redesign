@@ -109,7 +109,7 @@ export const devotionals = [
 
 export const scriptureMemory = [
   "Selections from Psalm 119 Part 1",
-  "The Greatest of These:\nI Corinthians 13",
+  "The Greatest Of These - 1 Corinthians 13",
   "Select Verses On Love",
   "Psalm 145:15-21 A Table Prayer of Thanksgiving",
   "Psalm 27 - A Psalm For Courage And Strength",
