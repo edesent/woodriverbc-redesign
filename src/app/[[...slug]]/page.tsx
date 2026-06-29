@@ -348,7 +348,7 @@ function MensSteakFryPage() {
           <div className="button-row" style={{ marginTop: 0, marginBottom: "18px" }}>
             <a
               className="button primary"
-              href="https://campaigns.tithely.com/29931-wood-river-baptist-church/living-nativity-animal-pens"
+              href="https://campaigns.tithely.com/60798-wood-river-baptist-church/living-nativity-animal-pens"
               target="_blank"
               rel="noopener noreferrer"
             >
