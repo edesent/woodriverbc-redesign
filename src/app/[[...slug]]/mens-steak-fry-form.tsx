@@ -3,7 +3,7 @@
 import { Send } from "lucide-react";
 import { useState, type FormEvent } from "react";
 
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/pastor@woodriverbc.org";
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/15239157c4695439e5e191ecdbb68b8e";
 
 type FormStatus = "idle" | "sending" | "sent" | "error";
 
