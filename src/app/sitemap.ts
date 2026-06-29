@@ -5,6 +5,7 @@ const routes = [
   "",
   "give",
   "events",
+  "events/mens-steak-fry",
   "thy-word-is-a-lamp-unto-my-feet",
   "who-is-jesus",
   "the-romans-road",
