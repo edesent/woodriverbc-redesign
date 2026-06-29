@@ -304,6 +304,25 @@ export const scriptureMemoryTextPages: Record<string, TextPage> = {
     ],
     cta: ["Back to Scripture Memory", "/scripture-memory-1"],
   },
+  "prompting-praise": {
+    title: "Prompting Praise",
+    eyebrow: "Scripture Memory",
+    intro: "Selected verses that call the believer to thanksgiving, praise, and rejoicing in the Lord.",
+    bodyClass: "scripture-passage",
+    paragraphs: [
+      "Psalm 26:7 That I may publish with the voice of thanksgiving, and tell of all thy wondrous works.",
+      "Psalm 69:30 I will praise the name of God with a song, and will magnify him with thanksgiving.",
+      "II Corinthians 9:11 Being enriched in every thing to all bountifulness, which causeth through us thanksgiving to God.",
+      "I Chronicles 23:30 And to stand every morning to thank and praise the LORD, and likewise at even;",
+      "Psalm 22:26 The meek shall eat and be satisfied: they shall praise the LORD that seek him: your heart shall live for ever.",
+      "Psalm 28:7 The LORD is my strength and my shield; my heart trusted in him, and I am helped: therefore my heart greatly rejoiceth; and with my song will I praise him.",
+      "Psalm 42:11 Why art thou cast down, O my soul? and why art thou disquieted within me? hope thou in God: for I shall yet praise him, who is the health of my countenance, and my God.",
+      "Ephesians 1:6 To the praise of the glory of his grace, wherein he hath made us accepted in the beloved.",
+      "Philippians 4:8 Finally, brethren, whatsoever things are true, whatsoever things are honest, whatsoever things are just, whatsoever things are pure, whatsoever things are lovely, whatsoever things are of good report; if there be any virtue, and if there be any praise, think on these things.",
+      "1 Peter 1:7 That the trial of your faith, being much more precious than of gold that perisheth, though it be tried with fire, might be found unto praise and honour and glory at the appearing of Jesus Christ:"
+    ],
+    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
+  },
   "1-john-3-1-7": {
     title: "I John 3:1-7",
     eyebrow: "Scripture Memory",
