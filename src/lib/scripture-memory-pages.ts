@@ -3,6 +3,7 @@ import type { TextPage } from "./site";
 export const scriptureMemoryLinks: Record<string, string> = {
   "Selections from Psalm 119 Part 1": "/psalm-119-part-1",
   "The Greatest Of These - 1 Corinthians 13": "/1-corinthians-13",
+  "Select Verses On Love": "/select-verses-on-love",
   "Psalm 145:15-21 A Table Prayer of Thanksgiving": "/psalm-145-15-21",
   "Psalm 27 - A Psalm For Courage And Strength": "/psalm-27",
   "Philippians 2:1-11 The Humility & Exaltation of Christ": "/philippians-2-1-11",
