@@ -17,6 +17,7 @@ export const scriptureMemoryLinks: Record<string, string> = {
   "The Soul-winner's Concern": "/the-soul-winners-concern",
   "Thoughts on True Worship": "/thoughts-on-true-worship",
   "The Importance Of God's Word": "/the-importance-of-gods-word",
+  "Prompting Praise": "/prompting-praise",
   "I John 3:1-7": "/1-john-3-1-7",
 };
 
