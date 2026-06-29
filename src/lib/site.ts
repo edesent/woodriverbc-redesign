@@ -121,7 +121,7 @@ export const scriptureMemory = [
   "Thoughts on Prayer",
   "Jesus Is Coming Again!",
   "A Psalm of Patient Confidence",
-  "The Soul-winners Concern",
+  "The Soul-winner's Concern",
   "Thoughts on True Worship",
   "The Importance Of God's Word",
   "I John 3:1-7",
