@@ -242,6 +242,15 @@ export const events = [
     url: "https://www.campnorthfield.com/youth-camp-registration",
   },
   {
+    title: "Men's Steak Fry",
+    date: "Friday, July 24, 2026",
+    time: "6:00 PM",
+    description:
+      "A free steak dinner for men, with practical instruction on maintaining small engines. Please RSVP by July 21.",
+    image: undefined,
+    url: "/events/mens-steak-fry",
+  },
+  {
     title: "Vacation Bible School — Emerald Crossing",
     date: "Monday, June 29 – Friday, July 3, 2026",
     time: "6:00 PM – 8:00 PM",
