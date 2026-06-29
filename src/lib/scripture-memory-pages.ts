@@ -305,6 +305,26 @@ export const scriptureMemoryTextPages: Record<string, TextPage> = {
     ],
     cta: ["Back to Scripture Memory", "/scripture-memory-1"],
   },
+  "heaven": {
+    title: "Heaven",
+    eyebrow: "Scripture Memory",
+    intro: "Revelation 21:1-4; 22:1-5",
+    bodyClass: "scripture-passage",
+    paragraphs: [
+      "SECTION:Revelation 21:1-4",
+      "Revelation 21:1 And I saw a new heaven and a new earth: for the first heaven and the first earth were passed away; and there was no more sea.",
+      "2 And I John saw the holy city, new Jerusalem, coming down from God out of heaven, prepared as a bride adorned for her husband.",
+      "3 And I heard a great voice out of heaven saying, Behold, the tabernacle of God is with men, and he will dwell with them, and they shall be his people, and God himself shall be with them, and be their God.",
+      "4 And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away.",
+      "SECTION:Revelation 22:1-5",
+      "Revelation 22:1 And he shewed me a pure river of water of life, clear as crystal, proceeding out of the throne of God and of the Lamb.",
+      "2 In the midst of the street of it, and on either side of the river, was there the tree of life, which bare twelve manner of fruits, and yielded her fruit every month: and the leaves of the tree were for the healing of the nations.",
+      "3 And there shall be no more curse: but the throne of God and of the Lamb shall be in it; and his servants shall serve him:",
+      "4 And they shall see his face; and his name shall be in their foreheads.",
+      "5 And there shall be no night there; and they need no candle, neither light of the sun; for the Lord God giveth them light: and they shall reign for ever and ever."
+    ],
+    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
+  },
   "prompting-praise": {
     title: "Prompting Praise",
     eyebrow: "Scripture Memory",
