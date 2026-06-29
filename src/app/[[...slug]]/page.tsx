@@ -119,6 +119,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   if (key === "services") redirect("/#services");
   if (key === "find-us" || key === "contact-us") redirect("/connect-with-us");
   if (key === "events") return <EventsPage />;
+  if (key === "events/mens-steak-fry") return <MensSteakFryPage />;
   if (key.startsWith("events/")) notFound();
   if (key === "thy-word-is-a-lamp-unto-my-feet") return <ThyWordPage />;
   if (key.startsWith("thy-word-is-a-lamp-unto-my-feet/")) {
