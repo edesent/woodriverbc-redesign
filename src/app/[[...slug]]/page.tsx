@@ -84,6 +84,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const key = aliases[routeKey(await params)] ?? routeKey(await params);
   if (key === "home") return {};
+  if (key === "events/mens-steak-fry") {
+    return {
+      title: "Men's Steak Fry — Wood River Baptist Church",
+      description:
+        "Register for the free Men's Steak Fry at Wood River Baptist Church on Friday, July 24, 2026 at 6:00 PM.",
+    };
+  }
   if (key.startsWith("events/")) return { title: "Wood River Baptist Church" };
   if (key === "thy-word-is-a-lamp-unto-my-feet") return { title: "Thy Word" };
   if (key.startsWith("thy-word-is-a-lamp-unto-my-feet/")) {
