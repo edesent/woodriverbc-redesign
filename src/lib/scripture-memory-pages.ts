@@ -197,6 +197,25 @@ export const scriptureMemoryTextPages: Record<string, TextPage> = {
     ],
     cta: ["Back to Scripture Memory", "/scripture-memory-1"],
   },
+  "psalm-37-1-10": {
+    title: "Psalm 37:1-10",
+    eyebrow: "Scripture Memory",
+    intro: "A Psalm of Patient Confidence",
+    bodyClass: "scripture-passage",
+    paragraphs: [
+      "1 Fret not thyself because of evildoers, neither be thou envious against the workers of iniquity.",
+      "2 For they shall soon be cut down like the grass, and wither as the green herb.",
+      "3 Trust in the LORD, and do good; so shalt thou dwell in the land, and verily thou shalt be fed.",
+      "4 Delight thyself also in the LORD; and he shall give thee the desires of thine heart.",
+      "5 Commit thy way unto the LORD; trust also in him; and he shall bring it to pass.",
+      "6 And he shall bring forth thy righteousness as the light, and thy judgment as the noonday.",
+      "7 Rest in the LORD, and wait patiently for him: fret not thyself because of him who prospereth in his way, because of the man who bringeth wicked devices to pass.",
+      "8 Cease from anger, and forsake wrath: fret not thyself in any wise to do evil.",
+      "9 For evildoers shall be cut off: but those that wait upon the LORD, they shall inherit the earth.",
+      "10 For yet a little while, and the wicked shall not be: yea, thou shalt diligently consider his place, and it shall not be."
+    ],
+    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
+  },
   "jesus-is-coming-again": {
     title: "Jesus Is Coming Again!",
     eyebrow: "Scripture Memory",
