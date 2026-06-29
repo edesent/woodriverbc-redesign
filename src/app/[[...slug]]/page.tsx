@@ -325,6 +325,73 @@ function EventsPage() {
   );
 }
 
+function MensSteakFryPage() {
+  const directionsHref = `https://maps.google.com/?q=${encodeURIComponent(site.address)}`;
+  const phoneHref = `tel:${site.secondaryPhone.replace(/[^0-9]/g, "")}`;
+
+  return (
+    <PageShell
+      eyebrow="Men's Fellowship"
+      title="Men's Steak Fry"
+      intro="Enjoy a free steak dinner and learn practical ways to maintain your small engines. Men and their guests are welcome."
+    >
+      <div className="steak-fry-layout">
+        <section className="steak-fry-details">
+          <span className="steak-fry-badge">No Cost</span>
+          <h2>Friday, July 24, 2026</h2>
+          <p>
+            Join the men of Wood River Baptist Church for a steak dinner, fellowship,
+            and a practical small-engine maintenance presentation.
+          </p>
+
+          <ul className="steak-fry-facts">
+            <li>
+              <Clock size={20} aria-hidden />
+              <span>6:00 PM</span>
+            </li>
+            <li>
+              <MapPin size={20} aria-hidden />
+              <span>
+                <a href={directionsHref} target="_blank" rel="noopener noreferrer">
+                  {site.address}
+                </a>
+              </span>
+            </li>
+            <li>
+              <CalendarDays size={20} aria-hidden />
+              <span>Please RSVP by Tuesday, July 21.</span>
+            </li>
+            <li>
+              <Phone size={20} aria-hidden />
+              <span>
+                Questions? Text or call <a href={phoneHref}>{site.secondaryPhone}</a>.
+              </span>
+            </li>
+          </ul>
+
+          <div className="steak-fry-workshop">
+            <strong>Learn how to maintain your small engines</strong>
+            <p>
+              The evening will include useful instruction for caring for lawn mowers,
+              trimmers, and other small-engine equipment.
+            </p>
+          </div>
+        </section>
+
+        <section className="steak-fry-registration">
+          <p className="eyebrow">RSVP by July 21</p>
+          <h2>Sign up for the Steak Fry</h2>
+          <p>
+            Register yourself and list the names of any guests you plan to bring. Please
+            also tell us about any dietary needs so we can prepare for you.
+          </p>
+          <MensSteakFryForm />
+        </section>
+      </div>
+    </PageShell>
+  );
+}
+
 function EventCard({ event }: { event: (typeof events)[number] }) {
   const url = "url" in event ? event.url : undefined;
   return (
