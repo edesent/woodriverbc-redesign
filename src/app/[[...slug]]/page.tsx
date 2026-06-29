@@ -414,9 +414,15 @@ function EventCard({ event }: { event: (typeof events)[number] }) {
       </p>
       <p>{event.description}</p>
       {url ? (
-        <a className="button primary inline" href={url} target="_blank" rel="noopener noreferrer">
-          Learn more &amp; register <ExternalLink size={14} />
-        </a>
+        url.startsWith("/") ? (
+          <Link className="button primary inline" href={url}>
+            Learn more &amp; register <ArrowRight size={14} />
+          </Link>
+        ) : (
+          <a className="button primary inline" href={url} target="_blank" rel="noopener noreferrer">
+            Learn more &amp; register <ExternalLink size={14} />
+          </a>
+        )
       ) : null}
     </article>
   );
