@@ -933,11 +933,17 @@ function TextPage({ page, pageKey }: { page: (typeof textPages)[string]; pageKey
       {pageKey === "services" ? <ServicesBand /> : null}
       {page.paragraphs?.length ? (
         <div className={page.bodyClass}>
-          {page.paragraphs.map((paragraph) => (
-            <p className="body-copy" key={paragraph}>
-              {renderScriptureParagraph(paragraph, page.bodyClass === "scripture-passage")}
-            </p>
-          ))}
+          {page.paragraphs.map((paragraph) =>
+            paragraph.startsWith("SECTION:") ? (
+              <h2 className="scripture-section-heading" key={paragraph}>
+                {paragraph.slice("SECTION:".length)}
+              </h2>
+            ) : (
+              <p className="body-copy" key={paragraph}>
+                {renderScriptureParagraph(paragraph, page.bodyClass === "scripture-passage")}
+              </p>
+            )
+          )}
         </div>
       ) : null}
       {page.bullets ? (
