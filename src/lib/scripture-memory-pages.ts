@@ -13,6 +13,7 @@ export const scriptureMemoryLinks: Record<string, string> = {
   "The Romans Road": "/the-romans-road",
   ["Thoughts on " + "Prayer"]: "/thoughts-on-prayer",
   "Jesus Is Coming Again!": "/jesus-is-coming-again",
+  "A Psalm of Patient Confidence": "/psalm-37-1-10",
   "I John 3:1-7": "/1-john-3-1-7",
 };
 
