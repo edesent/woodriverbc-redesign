@@ -16,6 +16,27 @@ export const scriptureMemoryLinks: Record<string, string> = {
 };
 
 export const scriptureMemoryTextPages: Record<string, TextPage> = {
+  "psalm-119-part-1": {
+    title: "Selections From Psalm 119",
+    eyebrow: "Scripture Memory",
+    intro: "Selected verses from Psalm 119 on seeking, trusting, and keeping God's Word.",
+    bodyClass: "scripture-passage",
+    paragraphs: [
+      "Psalm 119:2 Blessed are they that keep his testimonies, and that seek him with the whole heart.",
+      "Psalm 119:11 Thy word have I hid in mine heart, that I might not sin against thee.",
+      "Psalm 119:18 Open thou mine eyes, that I may behold wondrous things out of thy law.",
+      "Psalm 119:25 My soul cleaveth unto the dust: quicken thou me according to thy word.",
+      "Psalm 119:33 Teach me, O LORD, the way of thy statutes; and I shall keep it unto the end.",
+      "Psalm 119:42 So shall I have wherewith to answer him that reproacheth me: for I trust in thy word.",
+      "Psalm 119:49 Remember the word unto thy servant, upon which thou hast caused me to hope.",
+      "Psalm 119:57 Thou art my portion, O LORD: I have said that I would keep thy words.",
+      "Psalm 119:71 It is good for me that I have been afflicted; that I might learn thy statutes.",
+      "Psalm 119:73 Thy hands have made me and fashioned me: give me understanding, that I may learn thy commandments.",
+      "Psalm 119:81 My soul fainteth for thy salvation: but I hope in thy word.",
+      "Psalm 119:89 For ever, O LORD, thy word is settled in heaven."
+    ],
+    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
+  },
   "1-corinthians-13": {
     title: "The Greatest of These: I Corinthians 13",
     eyebrow: "Scripture Memory",
