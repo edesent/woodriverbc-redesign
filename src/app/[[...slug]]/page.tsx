@@ -119,6 +119,9 @@ export default async function Page({
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const rawKey = routeKey(await params);
+  if (rawKey === "thy-word-is-a-lamp-unto-my-feet/2022-06-28-one-thing") {
+    permanentRedirect("/thy-word-is-a-lamp-unto-my-feet/2026-06-28-one-thing");
+  }
   const key = aliases[rawKey] ?? rawKey;
   const query = await searchParams;
 
