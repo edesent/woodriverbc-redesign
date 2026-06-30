@@ -93,7 +93,7 @@ async function buildEpisodeXml() {
       <title>${escapeXml(post.title)}</title>
       <itunes:title>${escapeXml(post.title)}</itunes:title>
       <link>${escapeXml(pageUrl)}</link>
-      <guid isPermaLink="false">wrbc:thy-word:${escapeXml(post.slug)}</guid>
+      <guid isPermaLink="false">${escapeXml(post.guid)}</guid>
       <pubDate>${publicationDate(post.date)}</pubDate>
       <description>${escapeXml(description)}</description>
       <content:encoded><![CDATA[<p>${cdata(description)}</p>]]></content:encoded>
