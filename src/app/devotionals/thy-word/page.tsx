@@ -61,8 +61,11 @@ const devotionals = [
       "Hudson Taylor learned that God did not merely want him working for Him; He wanted him walking with Him. Under tremendous strain, Taylor was known for resting his soul in Christ and quietly repeating, “Jesus, I am resting, resting.” Our strength is not found in visiting Christ for a hurried supply and then leaving. It is found in abiding in Him.",
     ],
     question: "Are you dwelling with the Lord throughout the week, or mainly visiting Him during religious occasions?",
-    prayer:
-      "Lord Jesus, teach me to abide in You. Keep me near You through every ordinary responsibility and every difficult hour. Amen.",
+    prayerPrompts: [
+      "Ask the Lord to make fellowship with Him part of your ordinary days, not only special occasions.",
+      "Pray for a greater awareness of Christ's presence in your home, work, and responsibilities.",
+      "Bring one present burden to Christ and ask Him to teach you to rest and abide in Him.",
+    ],
   },
   {
     day: "Day 4",
