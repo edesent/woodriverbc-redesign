@@ -1581,6 +1581,18 @@ h3 {
   color: var(--ink);
 }
 
+.devotional-response ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--ink);
+}
+
+.devotional-response li::marker {
+  color: var(--copper);
+}
+
 .devotional-closing {
   grid-column: 2;
   margin-top: 0;
