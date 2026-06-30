@@ -111,9 +111,23 @@ export async function generateMetadata({
   return { title: page?.title ?? "Wood River Baptist Church" };
 }
 
-export default async function Page({ params }: { params: Promise<Params> }) {
+export default async function Page({
+  params,
+  searchParams,
+}: {
+  params: Promise<Params>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
   const rawKey = routeKey(await params);
   const key = aliases[rawKey] ?? rawKey;
+  const query = await searchParams;
+
+  if (
+    key === "thy-word-is-a-lamp-unto-my-feet" &&
+    query.format === "rss"
+  ) {
+    permanentRedirect("/podcast.xml");
+  }
 
   if (key === "home") return <HomePage />;
   if (key === "services") redirect("/#services");
