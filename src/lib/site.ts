@@ -96,6 +96,7 @@ export const homeLinks = [
 ] as const;
 
 export const devotionals = [
+  ["Thy Word", "/devotionals/thy-word"],
   ["Bible Apologetics", "https://bibleapologetics.org/"],
   ["Thy Word Is A Lamp Unto My Feet", "/thy-word-is-a-lamp-unto-my-feet"],
   ["Spurgeon's Morning and Evening", "https://spurgeonsmorningandevening.org"],
