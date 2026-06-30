@@ -99,8 +99,11 @@ const devotionals = [
       "Mary “hath chosen that good part.” Time with Christ must be chosen. It will rarely happen by accident. Choose to stop, open His Word, listen, worship, and receive from Him before the demands of the day scatter your heart.",
     ],
     question: "Which good and necessary activity most often pushes the one needful thing out of first place?",
-    prayer:
-      "Lord Jesus, quiet my careful and troubled heart. Help me choose the good part and place the one thing before the many things. Amen.",
+    prayerPrompts: [
+      "Tell the Lord which many things are making your heart careful and troubled.",
+      "Ask for wisdom to put the one needful thing before every lesser demand.",
+      "Pray for grace to sit at Christ's feet before beginning your work for Him.",
+    ],
   },
   {
     day: "Day 6",
