@@ -1429,6 +1429,187 @@ h3 {
   }
 }
 
+.devotional-series {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.34fr) minmax(0, 1fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.devotional-index {
+  position: sticky;
+  top: 118px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+  padding: 24px;
+  box-shadow: 0 10px 35px rgba(8, 44, 54, 0.06);
+}
+
+.devotional-index h2 {
+  margin-bottom: 18px;
+  font-size: 1.55rem;
+}
+
+.devotional-index-links {
+  display: grid;
+  gap: 8px;
+}
+
+.devotional-index-links a {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  align-items: center;
+  border-radius: 8px;
+  padding: 10px;
+  color: var(--ink);
+  font-weight: 800;
+  transition: background 140ms ease, color 140ms ease;
+}
+
+.devotional-index-links a:hover {
+  background: var(--mist);
+  color: var(--pine-dark);
+}
+
+.devotional-index-links svg {
+  color: var(--copper);
+}
+
+.devotional-index-links span {
+  display: grid;
+}
+
+.devotional-index-links small {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.devotional-entries {
+  display: grid;
+  gap: 28px;
+}
+
+.devotional-entry {
+  scroll-margin-top: 118px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--white);
+  padding: clamp(24px, 4vw, 42px);
+  box-shadow: 0 10px 35px rgba(8, 44, 54, 0.06);
+}
+
+.devotional-entry header {
+  margin-bottom: 22px;
+}
+
+.devotional-entry h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.devotional-reference {
+  margin: 8px 0 0;
+  color: var(--copper);
+  font-weight: 900;
+}
+
+.devotional-entry blockquote {
+  margin: 0 0 26px;
+  padding: 22px 24px;
+  border-left: 4px solid var(--gold);
+  border-radius: 0 10px 10px 0;
+  background: var(--pine-dark);
+  color: var(--white);
+}
+
+.devotional-entry blockquote p {
+  margin: 0;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(1.08rem, 2vw, 1.25rem);
+  font-style: italic;
+  line-height: 1.65;
+}
+
+.devotional-entry blockquote cite {
+  display: block;
+  margin-top: 10px;
+  color: var(--gold);
+  font-style: normal;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.devotional-body {
+  display: grid;
+  gap: 15px;
+}
+
+.devotional-body p {
+  max-width: 820px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
+.devotional-response {
+  display: grid;
+  gap: 8px;
+  margin-top: 28px;
+  border-radius: 10px;
+  background: var(--mist);
+  padding: 22px;
+}
+
+.devotional-response h3 {
+  margin-top: 8px;
+  color: var(--pine-dark);
+  font-size: 1.05rem;
+}
+
+.devotional-response h3:first-child {
+  margin-top: 0;
+}
+
+.devotional-response p {
+  margin: 0;
+  color: var(--ink);
+}
+
+.devotional-closing {
+  grid-column: 2;
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .devotional-series {
+    grid-template-columns: 1fr;
+  }
+
+  .devotional-index {
+    position: static;
+  }
+
+  .devotional-closing {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .devotional-entry {
+    padding: 22px 18px;
+  }
+
+  .devotional-entry blockquote {
+    padding: 18px;
+  }
+}
+
 .pastor-band {
   max-width: none;
   background: var(--pine-dark);
