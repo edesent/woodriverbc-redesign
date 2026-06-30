@@ -118,8 +118,11 @@ const devotionals = [
       "Jim Elliot's well-known words fit this concentrated pursuit: “He is no fool who gives what he cannot keep to gain what he cannot lose.” A life spent upon Christ is never wasted. The world may call such devotion extreme, but eternity will reveal that knowing and following Christ was the only pursuit of lasting value.",
     ],
     question: "What from your past is keeping you from pressing forward in your pursuit of Christ?",
-    prayer:
-      "Lord, free me from both pride and shame over the past. Help me reach forth, press toward the mark, and spend my life upon what cannot be lost. Amen.",
+    prayerPrompts: [
+      "Confess any pride over past victories or shame over past failures that is hindering you.",
+      "Ask God for strength to take the next obedient step in your pursuit of Christ.",
+      "Pray that your time, abilities, and opportunities would be spent upon what has eternal value.",
+    ],
   },
   {
     day: "Day 7",
