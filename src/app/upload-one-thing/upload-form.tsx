@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 
 const AUDIO_PATHNAME = "thy-word/2022-06-28-one-thing.m4a";
-const SERMON_HREF = "/thy-word-is-a-lamp-unto-my-feet/2022-06-28-one-thing";
+const SERMON_HREF = "/thy-word-is-a-lamp-unto-my-feet/2026-06-28-one-thing";
 
 export function OneThingUploadForm({ accessKey }: { accessKey: string }) {
   const inputRef = useRef<HTMLInputElement>(null);
