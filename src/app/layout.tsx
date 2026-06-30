@@ -22,13 +22,18 @@ const sans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://woodriverbc-redesign.local"),
+  metadataBase: new URL("https://www.woodriverbc.org"),
   title: {
     default: `${site.name} | Wyoming, RI`,
     template: `%s | ${site.name}`,
   },
   description:
-    "A redesigned website for Wood River Baptist Church in Wyoming, Rhode Island, with services, events, Bible resources, prayer, gospel pages, and church information.",
+    "Wood River Baptist Church in Wyoming, Rhode Island — preaching the gospel of Jesus Christ and providing sermons, Bible resources, prayer, events, and church information.",
+  alternates: {
+    types: {
+      "application/rss+xml": "/podcast.xml",
+    },
+  },
 };
 
 export const viewport: Viewport = {
