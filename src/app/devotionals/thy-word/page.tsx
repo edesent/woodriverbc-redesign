@@ -6,89 +6,89 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Thy Word — Seven Devotionals from Psalm 27:4",
   description:
-    "A seven-day devotional series from Pastor Jon Juneau's sermon One Thing, centered on Psalm 27:4 and a life devoted to knowing, beholding, and seeking the Lord.",
+    "A seven-day devotional series drawn from Pastor Jon Juneau's sermon One Thing, centered on Psalm 27:4 and the believer's one great desire for the Lord.",
 };
 
 const devotionals = [
   {
     day: "Day 1",
-    title: "One Controlling Desire",
+    title: "One Concentrated Desire",
     reference: "Psalm 27:4",
     scripture:
       "One thing have I desired of the LORD, that will I seek after; that I may dwell in the house of the LORD all the days of my life, to behold the beauty of the LORD, and to enquire in his temple.",
     paragraphs: [
-      "David had many responsibilities and many legitimate concerns. He was a king, a soldier, a husband, a father, and a leader of God's people. Yet when he opened his heart before the Lord, he gathered all his desires into one: he wanted God.",
-      "Our lives are often divided among many desires. We want security, success, relief, recognition, comfort, and answers. Some of these desires are not sinful, but even good desires can pull the heart in different directions. David teaches us that one desire must govern all the others. To desire the Lord does not mean that nothing else matters. It means that everything else finds its proper place beneath Him.",
-      "A controlling desire for God gives direction to the whole life. It determines what we pursue, how we respond to disappointment, and where we turn when we are afraid. David did not merely say, 'One thing have I desired.' He added, 'that will I seek after.' Holy desire must become deliberate pursuit.",
-      "The great question is not simply, 'What do I want today?' but, 'What desire rules all my other desires?' Ask the Lord to gather your scattered heart and make fellowship with Him your highest pursuit.",
+      "David did not say, “Many things have I desired.” He said, “One thing.” His life was filled with enemies, responsibilities, troubles, and needs, but beneath them all was one concentrated desire. He wanted God Himself. He did not chiefly ask for escape, comfort, victory, or an easier life. He desired the Lord.",
+      "We often have many desires pulling upon the heart at the same time. We want success, relief, security, recognition, comfort, and answers. Some of those desires may be good, but the heart becomes weak when it is divided among many ruling aims. As the sermon emphasized, “The man of one aim is the man of strength.” Spurgeon expressed the danger plainly: “Divided aims tend to distraction, weakness, disappointment.”",
+      "David's one desire did not remove every other duty from his life. It brought every duty under one great purpose. His battles, leadership, family, worship, and future all had to be governed by his desire for the Lord. The one thing did not make the many things disappear; it put them in their proper place.",
+      "Ask yourself what truly rules your heart. What do you think about most? What loss frightens you most? What gain seems most necessary to your happiness? Those questions often reveal our ruling desire. The prayer of this passage is not merely, “Lord, give me better desires,” but, “Lord, bring my many competing desires under one great desire.”",
     ],
-    question: "What competing desire most often distracts your heart from seeking the Lord?",
+    question: "What desire is presently competing most strongly with your desire for the Lord Himself?",
     prayer:
-      "Lord, gather the many desires of my heart into one holy pursuit. Help me to desire You above every gift and to seek You faithfully today. Amen.",
+      "Lord, bring my many competing desires under one great desire. Make knowing You, loving You, and walking with You the controlling pursuit of my life. Amen.",
   },
   {
     day: "Day 2",
-    title: "Dwelling With the Lord",
+    title: "A Committed Pursuit",
+    reference: "Psalm 27:4; Hebrews 11:6",
+    scripture:
+      "One thing have I desired of the LORD, that will I seek after. — Psalm 27:4",
+    paragraphs: [
+      "David's desire became a decision: “that will I seek after.” It is possible to admire a spiritual life without pursuing one. It is possible to say that God matters while giving Him only whatever time remains after everything else has been done. David refused to leave his desire as a pleasant thought. He committed himself to seek after it.",
+      "The sermon made the application simple: “We usually make time for what we truly treasure.” We make time for meals, work, appointments, entertainment, and the people we love. When time with God is continually crowded out, the problem is not only a busy schedule. It reveals that other things have been allowed to become more urgent and more treasured.",
+      "Seeking the Lord requires definite choices. Open the Bible when you do not feel particularly spiritual. Pray when your thoughts wander. Assemble with the church when other activities compete for the same time. Turn away from the distraction that continually steals your attention. Desire says, “I want the Lord.” Commitment says, “That will I seek after.”",
+      "Hebrews 11:6 says that God “is a rewarder of them that diligently seek him.” The reward of seeking God is not merely that He gives us things. The reward is that we find Him. Do not wait for a more convenient season. Begin where you are, with the time God has given you today.",
+    ],
+    question: "What specific change would turn your desire for God into a committed pursuit this week?",
+    prayer:
+      "Lord, keep my desire from remaining only a good intention. Help me to seek You diligently, deliberately, and faithfully today. Amen.",
+  },
+  {
+    day: "Day 3",
+    title: "A Continual Fellowship",
     reference: "Psalm 27:4; John 15:4",
     scripture:
       "That I may dwell in the house of the LORD all the days of my life. — Psalm 27:4",
     paragraphs: [
-      "David's desire was not for an occasional visit with God. He wanted to dwell with Him. A visitor comes for a short time and then returns to ordinary life. A dweller remains. David longed for the presence of God to become the settled home of his soul.",
-      "For the believer, dwelling with the Lord is not limited to being inside a church building. Through Jesus Christ, we have continual access to God. Christ has brought us near by His blood, and the Holy Spirit dwells within every person who has trusted Him. We may walk with God at home, at work, in the car, during sorrow, and in the middle of ordinary responsibilities.",
-      "Jesus gave the same invitation when He said, 'Abide in me.' Abiding is a daily dependence upon Christ. It is living with an awareness of His presence, drawing strength from His Word, confessing sin quickly, and speaking with Him throughout the day. We do not merely come to Christ for salvation and then attempt to live by our own strength. We remain in Him.",
-      "Many Christians visit the Lord hurriedly but do not dwell with Him. A few rushed moments cannot replace a heart that continually turns toward God. Begin today by recognizing that wherever you go, the Lord is present and ready to fellowship with you.",
+      "David did not want an occasional visit with the Lord. He wanted to dwell with Him “all the days” of his life. A visitor comes for a short time and then leaves. A dweller remains. The sermon stated it memorably: “God is not seeking weekend visitors.” He desires continual fellowship with His people.",
+      "It is possible to attend church faithfully and still treat the Lord as someone we visit. We may speak with Him on Sunday, call upon Him during an emergency, and then live the ordinary days with little conscious dependence upon Him. But the Christian life was never meant to be lived in brief religious moments. Christ said, “Abide in me.”",
+      "Adults can lose their appetite for God beneath work, family responsibilities, fatigue, and care. Young people may feel close to God at camp, during a special meeting, or in an emotional service, yet struggle to walk with Him on an ordinary Tuesday. But ordinary-day faith is where continual fellowship is proved. The God of the meeting is also the God of the kitchen, the workplace, the classroom, and the quiet hour at home.",
+      "Hudson Taylor learned that God did not merely want him working for Him; He wanted him walking with Him. Under tremendous strain, Taylor was known for resting his soul in Christ and quietly repeating, “Jesus, I am resting, resting.” Our strength is not found in visiting Christ for a hurried supply and then leaving. It is found in abiding in Him.",
     ],
-    question: "Do you treat time with God as a brief visit or as the settled home of your soul?",
+    question: "Are you dwelling with the Lord throughout the week, or mainly visiting Him during religious occasions?",
     prayer:
-      "Lord Jesus, teach me to abide in You. Help me to live every part of this day in conscious fellowship with You. Amen.",
-  },
-  {
-    day: "Day 3",
-    title: "Beholding His Beauty",
-    reference: "Psalm 27:4; John 1:14",
-    scripture:
-      "To behold the beauty of the LORD. — Psalm 27:4",
-    paragraphs: [
-      "David did not only want help from God; he wanted to behold God. The Lord is beautiful in His holiness, wisdom, mercy, faithfulness, power, and love. Every perfection is found in Him without mixture or defect. The more clearly we see Him, the more worthy He becomes of our worship and trust.",
-      "The fullest revelation of God's beauty is found in Jesus Christ. John wrote that the Word was made flesh and that the disciples beheld His glory. In Christ we see holiness that welcomed sinners, power that served the weak, truth that exposed sin, and love that went willingly to the cross. At Calvary, God's justice and mercy meet. In the resurrection, His victory and faithfulness shine.",
-      "The world constantly asks us to behold lesser things. Screens, possessions, personalities, anxieties, and ambitions compete for our attention. What we behold begins to shape what we love, and what we love begins to shape how we live. A hurried glance at Christ will not overcome a day spent staring at the world.",
-      "Open the Scriptures slowly. Look for the character of God. Notice what Christ says, what He does, what He loves, and what He condemns. Do not read merely to finish a chapter. Read to behold the Lord. Worship grows where spiritual sight becomes clear.",
-    ],
-    question: "What have you been beholding so often that it has begun to shape your heart?",
-    prayer:
-      "Lord, open my eyes to see Your beauty in the Scriptures and in the Lord Jesus Christ. Turn my attention away from lesser glories and fill my heart with worship. Amen.",
+      "Lord Jesus, teach me to abide in You. Keep me near You through every ordinary responsibility and every difficult hour. Amen.",
   },
   {
     day: "Day 4",
-    title: "Enquiring of God",
-    reference: "Psalm 27:4; Acts 9:6",
+    title: "A Contemplative Devotion",
+    reference: "Psalm 27:4; 2 Corinthians 3:18",
     scripture:
-      "And to enquire in his temple. — Psalm 27:4",
+      "To behold the beauty of the LORD. — Psalm 27:4",
     paragraphs: [
-      "David desired not only to dwell and behold, but also to enquire. He wanted God's wisdom and direction. The person who truly values the Lord's presence will also value the Lord's will.",
-      "We often ask God to approve decisions we have already made. Biblical enquiry begins with surrender. When Saul met the risen Christ, he asked, 'Lord, what wilt thou have me to do?' That question placed his plans, preferences, and future beneath the authority of Jesus Christ.",
-      "God guides His children principally through His Word. He will never lead us contrary to Scripture. As we read, pray, listen to faithful preaching, and seek godly counsel, the Lord shapes our judgment. Sometimes He gives a clear command. At other times He gives principles that require wisdom and patience. In either case, the seeking heart must be willing to obey before the answer is known.",
-      "Enquiring of God is more than asking, 'What will make my life easier?' It asks, 'What will please the Lord? What will honor Christ? What will help me obey His Word and serve others?' The safest path is not always the easiest path, but it is always the path of obedience.",
+      "David wanted to dwell in the Lord's house for a purpose: “to behold the beauty of the LORD.” He did not merely want to be in a sacred place. He wanted his attention fixed upon the Lord. He desired a contemplative devotion—a life that looks carefully, lovingly, and continually at who God is.",
+      "The beauty of the Lord is the perfection of His whole character. He is beautiful in holiness, mercy, wisdom, truth, power, faithfulness, and love. There is nothing ugly, cruel, deceptive, or impure in Him. Every earthly beauty is only a faint reflection of the One who made it. The more clearly we behold Him, the less impressive the attractions of sin become.",
+      "We become shaped by what we continually behold. The world places its images, fears, pleasures, personalities, and ambitions before our eyes all day long. A hurried glance at Christ will not overcome a heart that spends its hours beholding everything else. We must look into the Word of God until we see the God of the Word.",
+      "The greatest revelation of God's beauty is Jesus Christ. In Him we see grace and truth, compassion and holiness, humility and glory. At the cross, justice and mercy meet. In the resurrection, power and faithfulness shine. Do not read the Bible merely to finish a chapter. Read until your heart can say, “I have beheld something of the beauty of my Lord.”",
     ],
-    question: "Is there a decision about which you are seeking God's approval without first surrendering to God's will?",
+    question: "What has occupied your attention so continually that it is shaping your affections more than Christ is?",
     prayer:
-      "Lord, what wilt Thou have me to do? Give me a willing heart, a teachable spirit, and wisdom from Your Word. Help me to obey whatever You show me. Amen.",
+      "Lord, turn my eyes from lesser glories. Open Your Word to me and help me behold the beauty of the Lord Jesus Christ. Amen.",
   },
   {
     day: "Day 5",
-    title: "The One Needful Thing",
+    title: "The One Thing Must Come First",
     reference: "Luke 10:41-42",
     scripture:
       "Martha, Martha, thou art careful and troubled about many things: But one thing is needful: and Mary hath chosen that good part, which shall not be taken away from her.",
     paragraphs: [
-      "Martha was serving the Lord, but her service had become crowded with care and troubled with resentment. Mary sat at Jesus' feet and heard His word. Jesus did not say that Martha's work was unimportant. He showed that fellowship with Him was more necessary than all the work being done for Him.",
-      "It is possible to be busy with church, family, ministry, and responsibility while the heart grows distant from Christ. We may serve Him publicly and neglect Him privately. We may prepare lessons, help others, attend services, and accomplish useful things without sitting quietly at His feet.",
-      "The one needful thing cannot be replaced by religious activity. We need Christ Himself. We need His words to correct our thinking, calm our fears, expose our pride, and renew our love. Service that does not flow from fellowship eventually becomes burdensome. Fellowship with Christ gives service its strength and sweetness.",
-      "Mary chose the good part. Time with Jesus rarely happens accidentally; it must be chosen. Other demands will always speak loudly. Set aside a definite time, open the Bible, silence unnecessary distractions, and listen to the Lord. What is received at His feet cannot be taken away.",
+      "Martha was not occupied with wicked things. She was serving. Yet Jesus said that she was “careful and troubled about many things.” Mary sat at His feet and heard His word. The lesson of the sermon was plain: “The one thing must come before the many things.”",
+      "The many things of life are always noisy. Meals must be prepared, bills must be paid, children must be cared for, work must be completed, messages must be answered, and ministry must be done. The one thing often speaks more quietly. No alarm sounds when we neglect prayer. No bill arrives when we fail to meditate upon Scripture. Yet the soul grows weak when the one needful thing is continually postponed.",
+      "Even work for Christ can take the place of fellowship with Christ. We may prepare lessons, attend services, help people, organize ministries, and still fail to sit at His feet. Service without fellowship eventually becomes irritated, anxious, and resentful. Martha was working in the same house where Jesus was speaking, but her heart had become troubled because the many things had displaced the one thing.",
+      "Mary “hath chosen that good part.” Time with Christ must be chosen. It will rarely happen by accident. Choose to stop, open His Word, listen, worship, and receive from Him before the demands of the day scatter your heart.",
     ],
-    question: "Has your work for the Lord become a substitute for sitting at the feet of the Lord?",
+    question: "Which good and necessary activity most often pushes the one needful thing out of first place?",
     prayer:
-      "Lord Jesus, quiet my careful and troubled heart. Help me choose the one needful thing and receive Your Word before I begin my work. Amen.",
+      "Lord Jesus, quiet my careful and troubled heart. Help me choose the good part and place the one thing before the many things. Amen.",
   },
   {
     day: "Day 6",
@@ -97,30 +97,30 @@ const devotionals = [
     scripture:
       "This one thing I do, forgetting those things which are behind, and reaching forth unto those things which are before, I press toward the mark for the prize of the high calling of God in Christ Jesus.",
     paragraphs: [
-      "Paul's life had been transformed by meeting Jesus Christ. He had accomplishments he could boast about and sins he deeply regretted, but neither pride in the past nor shame over the past would control his pursuit. He said, 'This one thing I do.' His life was aimed toward knowing Christ and finishing the course God had given him.",
-      "A divided runner does not finish well. Looking continually backward slows our progress. Some believers live upon yesterday's victories and stop growing. Others remain chained to yesterday's failures and believe they can never be useful again. Paul refused both distractions. The grace of Christ allowed him to learn from the past without living in it.",
-      "Pressing toward the mark requires effort, but not self-sufficient effort. Paul pursued the calling of God 'in Christ Jesus.' The Christian presses forward because Christ has saved him, Christ is with him, and Christ is the prize at the end of the race.",
-      "You cannot change yesterday, but by God's grace you can seek Him today. Confess what must be confessed, thank God for what He has done, and take the next obedient step. A life centered upon one holy pursuit can move forward with strength and purpose.",
+      "David said, “One thing have I desired.” Paul said, “This one thing I do.” The desire of the heart must become the direction of the life. Paul was not content merely to admire Christ. He pressed toward the mark. His life had a holy concentration.",
+      "Paul had both achievements and failures behind him. He could have lived upon past accomplishments, or he could have remained chained to past sins. Instead, he forgot those things which were behind and reached forth. The one-thing life refuses to be governed by yesterday's pride or yesterday's shame.",
+      "A runner cannot press forward while constantly turning around. There may be sins to confess, wrongs to make right, and lessons to remember, but Christ calls us onward. His grace is sufficient for what is behind, and His calling is before us. We seek Him today and take the next obedient step.",
+      "Jim Elliot's well-known words fit this concentrated pursuit: “He is no fool who gives what he cannot keep to gain what he cannot lose.” A life spent upon Christ is never wasted. The world may call such devotion extreme, but eternity will reveal that knowing and following Christ was the only pursuit of lasting value.",
     ],
-    question: "Are you being held back more by pride in past victories or by shame over past failures?",
+    question: "What from your past is keeping you from pressing forward in your pursuit of Christ?",
     prayer:
-      "Lord, free me from living in the past. Help me reach forward, press toward Your calling, and take the next faithful step in Christ today. Amen.",
+      "Lord, free me from both pride and shame over the past. Help me reach forth, press toward the mark, and spend my life upon what cannot be lost. Amen.",
   },
   {
     day: "Day 7",
-    title: "A Fixed Heart in Troubled Times",
+    title: "One Desire in Troubled Times",
     reference: "Psalm 27:1, 3-4, 14",
     scripture:
       "Though an host should encamp against me, my heart shall not fear: though war should rise against me, in this will I be confident.",
     paragraphs: [
-      "Psalm 27 was not written from a life without trouble. Enemies surrounded David, false witnesses rose against him, and fear pressed near. Yet in the middle of conflict he spoke of one desire. His heart was steadied because it was fixed upon the Lord.",
-      "Fear scatters the mind. It causes us to imagine every possible danger and attempt to control every uncertain outcome. David answered fear by remembering who God is: 'The LORD is my light and my salvation; whom shall I fear?' Confidence did not come from favorable circumstances. It came from the character and presence of God.",
-      "The one-thing life is not an escape from difficulty. It is the way we remain steady within difficulty. When the Lord is our light, darkness cannot finally overcome us. When He is our salvation, no enemy can separate us from His care. When He is the strength of our life, weakness becomes an invitation to depend upon Him.",
-      "David ended the psalm by telling his own heart to wait on the Lord. Waiting is not inactivity; it is continued trust and obedience while God works. Seek His face, behold His beauty, enquire of Him, and wait courageously. A heart fixed upon God will be strengthened by God.",
+      "Psalm 27 was not written in peaceful circumstances. Enemies surrounded David, war threatened him, and false witnesses rose against him. Yet in the midst of all those pressures, his heart returned to one thing. His confidence did not come from the disappearance of trouble. It came from a heart wholly set upon God.",
+      "Fear scatters the heart among a hundred possibilities. It asks what might happen, what might be lost, who might fail us, and how we will manage. David answered fear by fixing his attention upon who the Lord is: “The LORD is my light and my salvation; whom shall I fear?” The Lord Himself was greater than every surrounding danger.",
+      "The one-thing life does not promise an easy life. It gives us a steady heart in a difficult life. When God is our light, darkness does not have the final word. When He is our salvation, no enemy can destroy what He has secured. When He is the strength of our life, weakness drives us nearer to Him instead of farther away.",
+      "The sermon closes where this week should close—in personal surrender: “Lord, bring my many competing desires under one great desire. Help me to dwell with You, behold Your beauty, and enquire of You.” Then wait on the Lord. Be of good courage. The heart that is fixed upon Him will be strengthened by Him.",
     ],
-    question: "What present fear needs to be answered by a fresh view of who the Lord is?",
+    question: "What present fear needs to be brought beneath your one great desire for the Lord?",
     prayer:
-      "Lord, be my light, my salvation, and the strength of my life. Fix my heart upon You, give me courage to wait, and keep me faithful in troubled times. Amen.",
+      "Lord, bring my many competing desires under one great desire. Be my light, my salvation, and the strength of my life. Help me wait upon You with courage. Amen.",
   },
 ] as const;
 
@@ -139,8 +139,9 @@ export default function ThyWordDevotionalsPage() {
           <p className="eyebrow">Seven Written Devotionals</p>
           <h1>Thy Word</h1>
           <p>
-            A seven-day devotional series from Pastor Jon Juneau&apos;s sermon
-            &ldquo;One Thing,&rdquo; preached from Psalm 27:4 on June 28, 2026.
+            A seven-day devotional series using the language and main movements of
+            Pastor Jon Juneau&apos;s sermon &ldquo;One Thing,&rdquo; preached from Psalm 27:4
+            on June 28, 2026.
           </p>
           <div className="button-row">
             <Link
@@ -208,9 +209,10 @@ export default function ThyWordDevotionalsPage() {
         <div className="callout devotional-closing">
           <h2>Make the Lord your one pursuit</h2>
           <p>
-            Return to Psalm 27:4 throughout the week. Ask God to gather your heart,
-            deepen your fellowship with Him, reveal the beauty of Christ, and direct
-            every part of your life according to His Word.
+            Return to Psalm 27:4 throughout the week: one concentrated desire, a
+            committed pursuit, a continual fellowship, and a contemplative devotion.
+            Ask God to bring every competing desire beneath the one great desire to
+            know Him.
           </p>
           <Link
             className="button primary inline"
