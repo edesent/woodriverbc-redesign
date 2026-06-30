@@ -220,8 +220,12 @@ export default function ThyWordDevotionalsPage() {
               <div className="devotional-response">
                 <h3>Consider</h3>
                 <p>{devotional.question}</p>
-                <h3>Prayer</h3>
-                <p>{devotional.prayer}</p>
+                <h3>Prayer Prompts</h3>
+                <ul>
+                  {devotional.prayerPrompts.map((prompt) => (
+                    <li key={prompt}>{prompt}</li>
+                  ))}
+                </ul>
               </div>
             </article>
           ))}
