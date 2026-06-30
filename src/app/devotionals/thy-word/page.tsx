@@ -80,8 +80,11 @@ const devotionals = [
       "The greatest revelation of God's beauty is Jesus Christ. In Him we see grace and truth, compassion and holiness, humility and glory. At the cross, justice and mercy meet. In the resurrection, power and faithfulness shine. Do not read the Bible merely to finish a chapter. Read until your heart can say, “I have beheld something of the beauty of my Lord.”",
     ],
     question: "What has occupied your attention so continually that it is shaping your affections more than Christ is?",
-    prayer:
-      "Lord, turn my eyes from lesser glories. Open Your Word to me and help me behold the beauty of the Lord Jesus Christ. Amen.",
+    prayerPrompts: [
+      "Ask God to identify the lesser things that have occupied too much of your attention.",
+      "Pray for clearer spiritual sight as you read the Scriptures and look for the beauty of Christ.",
+      "Praise the Lord for specific aspects of His character revealed in today's passage.",
+    ],
   },
   {
     day: "Day 5",
