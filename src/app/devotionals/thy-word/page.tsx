@@ -23,8 +23,11 @@ const devotionals = [
       "Ask yourself what truly rules your heart. What do you think about most? What loss frightens you most? What gain seems most necessary to your happiness? Those questions often reveal our ruling desire. The prayer of this passage is not merely, “Lord, give me better desires,” but, “Lord, bring my many competing desires under one great desire.”",
     ],
     question: "What desire is presently competing most strongly with your desire for the Lord Himself?",
-    prayer:
-      "Lord, bring my many competing desires under one great desire. Make knowing You, loving You, and walking with You the controlling pursuit of my life. Amen.",
+    prayerPrompts: [
+      "Ask God to reveal the desires that most often compete with your desire for Him.",
+      "Pray that knowing, loving, and walking with the Lord would become the controlling pursuit of your life.",
+      "Thank God that He is worthy to be desired above every earthly gift.",
+    ],
   },
   {
     day: "Day 2",
