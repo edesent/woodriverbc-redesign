@@ -67,6 +67,10 @@ async function buildEpisodeXml() {
           body: "body" in post && post.body ? post.body : undefined,
           audio: post.audio,
           slug: thyWordSlug(post),
+          guid:
+            "podcastGuid" in post && post.podcastGuid
+              ? post.podcastGuid
+              : "wrbc:thy-word:" + thyWordSlug(post),
         },
       ];
     })
