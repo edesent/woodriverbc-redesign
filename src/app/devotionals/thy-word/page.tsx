@@ -42,8 +42,11 @@ const devotionals = [
       "Hebrews 11:6 says that God “is a rewarder of them that diligently seek him.” The reward of seeking God is not merely that He gives us things. The reward is that we find Him. Do not wait for a more convenient season. Begin where you are, with the time God has given you today.",
     ],
     question: "What specific change would turn your desire for God into a committed pursuit this week?",
-    prayer:
-      "Lord, keep my desire from remaining only a good intention. Help me to seek You diligently, deliberately, and faithfully today. Amen.",
+    prayerPrompts: [
+      "Ask God to show you where good intentions have not yet become obedient action.",
+      "Pray for diligence and consistency in seeking the Lord through His Word and prayer.",
+      "Ask for grace to make one specific change that will protect time with God this week.",
+    ],
   },
   {
     day: "Day 3",
