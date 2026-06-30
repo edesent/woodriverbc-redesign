@@ -19,7 +19,7 @@ function escapeXml(value: string): string {
 }
 
 function cdata(value: string): string {
-  return value.replace(/]]>/g, "]]\]\]><![CDATA[>");
+  return value.replace(/]]>/g, "]]]]><![CDATA[>");
 }
 
 function mediaType(url: string): string {
