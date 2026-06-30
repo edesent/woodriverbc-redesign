@@ -137,8 +137,11 @@ const devotionals = [
       "The sermon closes where this week should close—in personal surrender: “Lord, bring my many competing desires under one great desire. Help me to dwell with You, behold Your beauty, and enquire of You.” Then wait on the Lord. Be of good courage. The heart that is fixed upon Him will be strengthened by Him.",
     ],
     question: "What present fear needs to be brought beneath your one great desire for the Lord?",
-    prayer:
-      "Lord, bring my many competing desires under one great desire. Be my light, my salvation, and the strength of my life. Help me wait upon You with courage. Amen.",
+    prayerPrompts: [
+      "Name the fear that is presently scattering your heart and bring it honestly before the Lord.",
+      "Thank God that He is your light, salvation, and strength in troubled times.",
+      "Ask for courage to wait upon the Lord and keep seeking Him while circumstances remain uncertain.",
+    ],
   },
 ] as const;
 
