@@ -453,6 +453,11 @@ function ThyWordPage() {
           <p className="eyebrow">Pastor Jon Juneau</p>
           <h1>Thy Word</h1>
           <p>Thoughts on selected passages from the Word of God — sermons, devotionals, and Bible studies preached at Wood River Baptist Church.</p>
+          <div className="button-row">
+            <a className="button secondary" href="/podcast.xml">
+              Podcast RSS Feed
+            </a>
+          </div>
         </div>
       </section>
       <section className="section">
