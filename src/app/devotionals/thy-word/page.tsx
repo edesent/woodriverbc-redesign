@@ -160,9 +160,8 @@ export default function ThyWordDevotionalsPage() {
           <p className="eyebrow">Seven Written Devotionals</p>
           <h1>Thy Word</h1>
           <p>
-            A seven-day devotional series using the language and main movements of
-            Pastor Jon Juneau&apos;s sermon &ldquo;One Thing,&rdquo; preached from Psalm 27:4
-            on June 28, 2026.
+            A seven-day devotional series using Pastor Jon Juneau&apos;s recent sermon
+            &ldquo;One Thing,&rdquo; preached from Psalm 27:4 on June 28, 2026.
           </p>
           <div className="button-row">
             <Link
