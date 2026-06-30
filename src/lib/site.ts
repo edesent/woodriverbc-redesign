@@ -263,6 +263,14 @@ export const events = [
 
 export const thyWordPosts = [
   {
+    title: "One Thing",
+    date: "2022-06-28",
+    author: "Pastor Jon Juneau",
+    reference: "Psalm 27:4",
+    audio: "https://q6axj5fl7frjn0ax.public.blob.vercel-storage.com/thy-word/2022-06-28-one-thing.m4a",
+    body: "In Psalm 27:4, David gathers the desires of his heart into one controlling pursuit: to dwell in the house of the LORD, behold His beauty, and enquire in His temple. This message challenges believers to consider whether life has become scattered among many competing ambitions or centered upon fellowship with God. A concentrated desire for the Lord gives strength, direction, and stability even in seasons of fear and opposition. Dwelling speaks of continual communion with God, beholding calls us to worship and delight in His character, and enquiring reminds us to seek His wisdom and surrender to His will. The Christian life is not chiefly about receiving things from God, but knowing God Himself. Like Mary choosing the one needful thing, believers are called to make the presence of Christ their highest treasure. When the heart is fixed on Him, worship becomes more than a weekly activity; it becomes the governing pursuit of the whole life.",
+  },
+  {
     title: "The Legacy Worth Leaving",
     date: "2025-06-17",
     author: "Pastor Jon Juneau",
