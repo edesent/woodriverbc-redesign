@@ -756,16 +756,43 @@ export const radioLinks = [
 ] as const;
 
 export const romansRoad = [
-  ["Romans 3:19", "Every mouth is stopped, and all the world becomes guilty before God."],
-  ["Romans 3:23", "All have sinned, and come short of the glory of God."],
-  ["Romans 5:8", "Christ died for us while we were yet sinners."],
-  ["Romans 6:23", "The wages of sin is death, but the gift of God is eternal life through Jesus Christ our Lord."],
-  ["Romans 4:25", "Jesus was delivered for our offences and raised again for our justification."],
-  ["Romans 14:9", "Christ died, rose, and revived, that He might be Lord both of the dead and living."],
-  ["Romans 10:9", "Confess the Lord Jesus and believe that God raised Him from the dead."],
-  ["Romans 10:13", "Whosoever shall call upon the name of the Lord shall be saved."],
-  ["Romans 6:4", "Those saved by Christ should walk in newness of life."],
-  ["Romans 12:1", "Present your body a living sacrifice, holy, acceptable unto God."],
+  [
+    "Romans 3:19",
+    "Now we know that what things soever the law saith, it saith to them who are under the law: that every mouth may be stopped, and all the world may become guilty before God.",
+  ],
+  ["Romans 3:23", "For all have sinned, and come short of the glory of God;"],
+  [
+    "Romans 5:8",
+    "But God commendeth his love toward us, in that, while we were yet sinners, Christ died for us.",
+  ],
+  [
+    "Romans 6:23",
+    "For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.",
+  ],
+  [
+    "Romans 4:25",
+    "Who was delivered for our offences, and was raised again for our justification.",
+  ],
+  [
+    "Romans 14:9",
+    "For to this end Christ both died, and rose, and revived, that he might be Lord both of the dead and living.",
+  ],
+  [
+    "Romans 10:9",
+    "That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved.",
+  ],
+  [
+    "Romans 10:13",
+    "For whosoever shall call upon the name of the Lord shall be saved.",
+  ],
+  [
+    "Romans 6:4",
+    "Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life.",
+  ],
+  [
+    "Romans 12:1",
+    "I beseech you therefore, brethren, by the mercies of God, that ye present your bodies a living sacrifice, holy, acceptable unto God, which is your reasonable service.",
+  ],
 ] as const;
 
 // Convert "Romans 3:19" → "romans-3-19" (the URL slug for the detail page).
