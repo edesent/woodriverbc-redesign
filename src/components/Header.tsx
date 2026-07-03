@@ -5,10 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { events, navGroups, primaryNav, site } from "@/lib/site";
-
-const featuredVbsEvent =
-  events.find((event) => event.title.includes("Vacation Bible School")) ?? events[0];
+import { navGroups, primaryNav, site } from "@/lib/site";
 
 export function Header() {
   const pathname = usePathname();
@@ -18,14 +15,6 @@ export function Header() {
 
   return (
     <header className="site-header">
-      <div className="top-strip">
-        <Link className="top-strip-announcement" href={featuredVbsEvent.url ?? "/events"}>
-          <span>
-            {featuredVbsEvent.title}: {featuredVbsEvent.date} • {featuredVbsEvent.time}
-          </span>
-          <strong>Register now</strong>
-        </Link>
-      </div>
       <nav className="main-nav" aria-label="Primary navigation">
         <Link className="brand" href="/" onClick={close}>
           <Image src="/woodriver/wood-riverctosses-tight.png" alt="" width={140} height={140} priority />
