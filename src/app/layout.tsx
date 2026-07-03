@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   creator: site.name,
   publisher: site.name,
   category: "Church",
+  verification: {
+    google: "J5T8RELgAYkT3Npjb5xD3aLcW6-ExUjS1K2YDULx4L8",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
