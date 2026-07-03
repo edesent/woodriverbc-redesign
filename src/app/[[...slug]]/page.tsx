@@ -96,7 +96,23 @@ export async function generateMetadata({
   if (key.startsWith("thy-word-is-a-lamp-unto-my-feet/")) {
     const slug = key.slice("thy-word-is-a-lamp-unto-my-feet/".length);
     const post = thyWordPosts.find((p) => thyWordSlug(p) === slug);
-    return { title: post?.title ?? "Thy Word" };
+    return {
+      title: post?.title ?? "Thy Word",
+      description:
+        post && "body" in post && post.body
+          ? post.body.slice(0, 155)
+          : "Listen to Bible preaching and read Christian devotionals from Wood River Baptist Church in Wyoming, Rhode Island.",
+      alternates: { canonical: `/${key}` },
+      openGraph: {
+        type: "article",
+        title: post?.title ?? "Thy Word",
+        description:
+          post && "body" in post && post.body
+            ? post.body.slice(0, 155)
+            : "Bible preaching and Christian devotionals from Wood River Baptist Church.",
+        url: `/${key}`,
+      },
+    };
   }
   if (key === "the-romans-road") return { title: "The Romans Road" };
   const romansMeta = romansRoadDetails.find((d) => d.slug === key);
