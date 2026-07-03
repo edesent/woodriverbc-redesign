@@ -69,6 +69,28 @@ export const viewport: Viewport = {
   themeColor: "#5bdae1",
 };
 
+const churchStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Church",
+  name: site.name,
+  url: site.originalUrl,
+  logo: `${site.originalUrl}/icon.png`,
+  image: `${site.originalUrl}/hero-image-wrbc.png`,
+  description:
+    "An independent Baptist church serving Wyoming and southern Rhode Island with Bible preaching, worship, gospel outreach, and Christian resources.",
+  telephone: site.phone,
+  email: site.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "246 Kingstown Rd",
+    addressLocality: "Wyoming",
+    addressRegion: "RI",
+    postalCode: "02898",
+    addressCountry: "US",
+  },
+  sameAs: [site.facebook, site.instagram, site.podcast, site.twitter],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
