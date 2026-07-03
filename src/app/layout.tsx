@@ -99,6 +99,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${serif.variable} ${sans.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(churchStructuredData) }}
+        />
         <Header />
         <main>{children}</main>
         <Footer />
