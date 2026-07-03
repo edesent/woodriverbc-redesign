@@ -32,7 +32,7 @@ const routes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://woodriverbc-redesign.local";
+  const base = "https://www.woodriverbc.org";
   const staticEntries = routes.map((route) => ({
     url: `${base}/${route}`.replace(/\/$/, ""),
     lastModified: new Date(),
