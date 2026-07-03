@@ -24,11 +24,40 @@ const sans = Source_Sans_3({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.woodriverbc.org"),
   title: {
-    default: `${site.name} | Wyoming, RI`,
+    default: `${site.name} | Independent Baptist Church in Wyoming, RI`,
     template: `%s | ${site.name}`,
   },
   description:
-    "Wood River Baptist Church in Wyoming, Rhode Island — preaching the gospel of Jesus Christ and providing sermons, Bible resources, prayer, events, and church information.",
+    "Wood River Baptist Church is an independent Baptist church in Wyoming, Rhode Island, serving families throughout southern Rhode Island with Bible preaching, worship services, gospel outreach, sermons, and Christian resources.",
+  applicationName: site.name,
+  authors: [{ name: site.name, url: site.originalUrl }],
+  creator: site.name,
+  publisher: site.name,
+  category: "Church",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: site.originalUrl,
+    siteName: site.name,
+    title: `${site.name} | Independent Baptist Church in Wyoming, RI`,
+    description:
+      "Bible preaching, worship services, gospel outreach, sermons, and Christian resources for families in Wyoming and southern Rhode Island.",
+    images: [
+      {
+        url: "/hero-image-wrbc.png",
+        width: 1200,
+        height: 630,
+        alt: site.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} | Wyoming, Rhode Island`,
+    description:
+      "Bible preaching, worship services, gospel outreach, sermons, and Christian resources in southern Rhode Island.",
+    images: ["/hero-image-wrbc.png"],
+  },
   alternates: {
     types: {
       "application/rss+xml": "/podcast.xml",
