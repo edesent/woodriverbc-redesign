@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { MorningEveningEntry, ReadingPeriod } from "@/lib/morning-evening";
 import { adjacentMorningEveningDate, formatMorningEveningDate } from "@/lib/morning-evening";
 import PeriodRefresh from "./PeriodRefresh";
+import styles from "./MorningEveningView.module.css";
 
 type Props = { entry: MorningEveningEntry; isToday?: boolean };
 
@@ -14,7 +15,7 @@ export default function MorningEveningView({ entry, isToday = false }: Props) {
   return (
     <>
       <PeriodRefresh />
-      <section className="page-hero morning-evening-hero">
+      <section className={`page-hero ${styles.hero}`}>
         <div>
           <p className="eyebrow">Daily Readings by C. H. Spurgeon</p>
           <h1>Morning and Evening</h1>
@@ -22,16 +23,16 @@ export default function MorningEveningView({ entry, isToday = false }: Props) {
         </div>
       </section>
 
-      <section className="section page-content morning-evening-page">
-        <article className="morning-evening-entry">
+      <section className={`section page-content ${styles.page}`}>
+        <article className={styles.entry}>
           <header>
             <p className="eyebrow">{isToday ? "Today’s Reading" : "Daily Reading"}</p>
-            <div className="morning-evening-heading-row">
-              <span className={`period-badge ${entry.period}`}>
+            <div className={styles.headingRow}>
+              <span className={`${styles.badge} ${entry.period === "morning" ? styles.morning : styles.evening}`}>
                 {entry.period === "morning" ? <Sun size={18} /> : <Moon size={18} />}
                 {entry.period === "morning" ? "Morning" : "Evening"}
               </span>
-              <span className="morning-evening-date">{formatMorningEveningDate(entry.dateKey)}</span>
+              <span className={styles.date}>{formatMorningEveningDate(entry.dateKey)}</span>
             </div>
             <h2>{entry.period === "morning" ? "Morning Meditation" : "Evening Meditation"}</h2>
           </header>
@@ -42,20 +43,20 @@ export default function MorningEveningView({ entry, isToday = false }: Props) {
             <cite>{entry.reference}</cite>
           </blockquote>
 
-          <div className="morning-evening-body">
+          <div className={styles.body}>
             {entry.paragraphs.map((paragraph, index) => (
               <p key={`${entry.dateKey}-${entry.period}-${index}`}>{paragraph}</p>
             ))}
           </div>
 
-          <div className="morning-evening-switcher">
+          <div className={styles.switcher}>
             <Link href={`/devotionals/spurgeon-morning-evening/${entry.dateKey}/${otherPeriod}`}>
               {otherPeriod === "morning" ? <Sun size={18} /> : <Moon size={18} />}
               Read the {otherPeriod} devotional
             </Link>
           </div>
 
-          <nav className="morning-evening-navigation" aria-label="Morning and Evening devotionals">
+          <nav className={styles.navigation} aria-label="Morning and Evening devotionals">
             <Link href={`/devotionals/spurgeon-morning-evening/${previousDate}/${entry.period}`}>
               <ArrowLeft size={18} /> Previous day
             </Link>
@@ -66,10 +67,10 @@ export default function MorningEveningView({ entry, isToday = false }: Props) {
           </nav>
         </article>
 
-        <aside className="callout morning-evening-about">
+        <aside className={`callout ${styles.about}`}>
           <h2>Morning and Evening</h2>
           <p>The main page shows the Morning reading before noon Eastern Time and the Evening reading from noon until midnight.</p>
-          <p className="morning-evening-source">This public-domain text is supplied from the Christian Classics Ethereal Library.</p>
+          <p className={styles.source}>This public-domain text is supplied from the Christian Classics Ethereal Library.</p>
         </aside>
       </section>
     </>
