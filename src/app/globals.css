@@ -2070,3 +2070,130 @@ body[data-chat-hidden="true"] #wbc-greeting-popup,
 body[data-chat-hidden="true"] #wbc-modal-overlay {
   display: none !important;
 }
+
+.faiths-checkbook-hero {
+  background: linear-gradient(135deg, var(--pine-dark), var(--cranberry));
+}
+
+.faiths-checkbook-page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.35fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.faiths-checkbook-entry {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--white);
+  padding: clamp(24px, 5vw, 48px);
+  box-shadow: var(--shadow);
+}
+
+.faiths-checkbook-entry header {
+  margin-bottom: 24px;
+}
+
+.faiths-checkbook-entry h2 {
+  margin-top: 8px;
+  font-size: clamp(2rem, 5vw, 3.35rem);
+}
+
+.faiths-checkbook-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: var(--copper);
+  font-weight: 900;
+}
+
+.faiths-checkbook-entry blockquote {
+  margin: 0 0 30px;
+  padding: 24px;
+  border-left: 4px solid var(--gold);
+  border-radius: 0 10px 10px 0;
+  background: var(--pine-dark);
+  color: var(--white);
+}
+
+.faiths-checkbook-entry blockquote svg {
+  color: var(--gold);
+}
+
+.faiths-checkbook-entry blockquote p {
+  margin: 10px 0 0;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(1.12rem, 2.3vw, 1.4rem);
+  font-style: italic;
+  line-height: 1.65;
+}
+
+.faiths-checkbook-body {
+  display: grid;
+  gap: 18px;
+}
+
+.faiths-checkbook-body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+.faiths-checkbook-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 34px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.faiths-checkbook-navigation a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 8px;
+  background: var(--mist);
+  padding: 10px 14px;
+  color: var(--pine-dark);
+  font-weight: 900;
+}
+
+.faiths-checkbook-navigation a:hover {
+  background: var(--gold);
+}
+
+.faiths-checkbook-about {
+  position: sticky;
+  top: 118px;
+  margin-top: 0;
+}
+
+.faiths-checkbook-source {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .faiths-checkbook-page {
+    grid-template-columns: 1fr;
+  }
+
+  .faiths-checkbook-about {
+    position: static;
+  }
+}
+
+@media (max-width: 520px) {
+  .faiths-checkbook-navigation {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .faiths-checkbook-navigation a {
+    justify-content: center;
+  }
+}
