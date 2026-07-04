@@ -491,6 +491,9 @@ function ThyWordPage() {
               Podcast RSS Feed
             </a>
           </div>
+          <p className="note">
+            To subscribe, copy the RSS feed link and paste it into an RSS reader or a podcast app that accepts RSS feeds.
+          </p>
         </div>
       </section>
       <section className="section">
