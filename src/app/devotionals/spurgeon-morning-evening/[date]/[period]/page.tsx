@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import MorningEveningView from "../../../MorningEveningView";
+import MorningEveningView from "../../MorningEveningView";
 import { formatMorningEveningDate, getMorningEveningEntry, type ReadingPeriod } from "@/lib/morning-evening";
 
 type Props = { params: Promise<{ date: string; period: string }> };
