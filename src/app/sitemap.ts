@@ -11,6 +11,7 @@ const routes = [
   "the-romans-road",
   "devotionals",
   "devotionals/faiths-checkbook",
+  "devotionals/spurgeon-morning-evening",
   "scripture-memory-1",
   "bible-reading-tracker",
   "bible-studies",
