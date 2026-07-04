@@ -10,6 +10,7 @@ const routes = [
   "who-is-jesus",
   "the-romans-road",
   "devotionals",
+  "devotionals/faiths-checkbook",
   "scripture-memory-1",
   "bible-reading-tracker",
   "bible-studies",
