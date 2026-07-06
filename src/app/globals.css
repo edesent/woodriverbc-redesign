@@ -2064,6 +2064,53 @@ h3 {
 
 /* Web-chat widget — shown only on the homepage. The third-party script injects
    these fixed elements into <body>; ChatWidget.tsx flags non-home routes. */
+.wbc-email-chat-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px 10px 10px;
+  border-radius: 999px;
+  background: #123c46;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.wbc-email-chat-button:hover,
+.wbc-email-chat-button:focus-visible {
+  transform: translateY(-2px);
+  background: #0f4f5d;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+}
+
+.wbc-email-chat-button img {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.88);
+}
+
+@media (max-width: 640px) {
+  .wbc-email-chat-button {
+    right: 14px;
+    bottom: 14px;
+    padding: 8px 12px 8px 8px;
+    font-size: 0.9rem;
+  }
+
+  .wbc-email-chat-button img {
+    width: 38px;
+    height: 38px;
+  }
+}
+
 body[data-chat-hidden="true"] #wbc-chat-bubble,
 body[data-chat-hidden="true"] #wbc-chat-window,
 body[data-chat-hidden="true"] #wbc-greeting-popup,
