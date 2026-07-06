@@ -1,9 +1,8 @@
-import { ArrowLeft, ArrowRight, BookOpenText, Moon, Sun } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpenText, CalendarDays, Moon, Sun } from "lucide-react";
 import Link from "next/link";
 import type { MorningEveningEntry, ReadingPeriod } from "@/lib/morning-evening";
 import { adjacentMorningEveningDate, formatMorningEveningDate } from "@/lib/morning-evening";
 import PeriodRefresh from "./PeriodRefresh";
-import styles from "./MorningEveningView.module.css";
 
 type Props = { entry: MorningEveningEntry; isToday?: boolean };
 
@@ -11,30 +10,35 @@ export default function MorningEveningView({ entry, isToday = false }: Props) {
   const otherPeriod: ReadingPeriod = entry.period === "morning" ? "evening" : "morning";
   const previousDate = adjacentMorningEveningDate(entry.dateKey, -1);
   const nextDate = adjacentMorningEveningDate(entry.dateKey, 1);
+  const label = entry.period === "morning" ? "Morning" : "Evening";
 
   return (
     <>
       <PeriodRefresh />
-      <section className={`page-hero ${styles.hero}`}>
+      <section className="page-hero morning-evening-hero">
         <div>
           <p className="eyebrow">Daily Readings by C. H. Spurgeon</p>
           <h1>Morning and Evening</h1>
-          <p>Begin and end each day with Scripture-centered meditations from Charles Haddon Spurgeon.</p>
+          <p>
+            Begin and end each day with Scripture-centered meditations from
+            Charles Haddon Spurgeon.
+          </p>
         </div>
       </section>
 
-      <section className={`section page-content ${styles.page}`}>
-        <article className={styles.entry}>
+      <section className="section page-content morning-evening-page">
+        <article className="morning-evening-entry">
           <header>
             <p className="eyebrow">{isToday ? "Today’s Reading" : "Daily Reading"}</p>
-            <div className={styles.headingRow}>
-              <span className={`${styles.badge} ${entry.period === "morning" ? styles.morning : styles.evening}`}>
-                {entry.period === "morning" ? <Sun size={18} /> : <Moon size={18} />}
-                {entry.period === "morning" ? "Morning" : "Evening"}
-              </span>
-              <span className={styles.date}>{formatMorningEveningDate(entry.dateKey)}</span>
-            </div>
-            <h2>{entry.period === "morning" ? "Morning Meditation" : "Evening Meditation"}</h2>
+            <p className="morning-evening-date">
+              <CalendarDays size={18} aria-hidden="true" />
+              {formatMorningEveningDate(entry.dateKey)}
+            </p>
+            <p className={`morning-evening-period ${entry.period}`}>
+              {entry.period === "morning" ? <Sun size={18} /> : <Moon size={18} />}
+              {label}
+            </p>
+            <h2>{label} Meditation</h2>
           </header>
 
           <blockquote>
@@ -43,20 +47,20 @@ export default function MorningEveningView({ entry, isToday = false }: Props) {
             <cite>{entry.reference}</cite>
           </blockquote>
 
-          <div className={styles.body}>
+          <div className="morning-evening-body">
             {entry.paragraphs.map((paragraph, index) => (
               <p key={`${entry.dateKey}-${entry.period}-${index}`}>{paragraph}</p>
             ))}
           </div>
 
-          <div className={styles.switcher}>
+          <div className="morning-evening-switcher">
             <Link href={`/devotionals/spurgeon-morning-evening/${entry.dateKey}/${otherPeriod}`}>
               {otherPeriod === "morning" ? <Sun size={18} /> : <Moon size={18} />}
               Read the {otherPeriod} devotional
             </Link>
           </div>
 
-          <nav className={styles.navigation} aria-label="Morning and Evening devotionals">
+          <nav className="morning-evening-navigation" aria-label="Morning and Evening devotionals">
             <Link href={`/devotionals/spurgeon-morning-evening/${previousDate}/${entry.period}`}>
               <ArrowLeft size={18} /> Previous day
             </Link>
@@ -67,10 +71,16 @@ export default function MorningEveningView({ entry, isToday = false }: Props) {
           </nav>
         </article>
 
-        <aside className={`callout ${styles.about}`}>
+        <aside className="callout morning-evening-about">
           <h2>Morning and Evening</h2>
-          <p>The main page shows the Morning reading before noon Eastern Time and the Evening reading from noon until midnight.</p>
-          <p className={styles.source}>This public-domain text is supplied from the Christian Classics Ethereal Library.</p>
+          <p>
+            The main page shows the Morning reading before noon Eastern Time and
+            the Evening reading from noon until midnight.
+          </p>
+          <p className="morning-evening-source">
+            This public-domain devotional text is supplied from the Christian
+            Classics Ethereal Library.
+          </p>
         </aside>
       </section>
     </>
