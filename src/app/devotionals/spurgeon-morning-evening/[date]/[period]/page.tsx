@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import MorningEveningView from "../../MorningEveningView";
 import { formatMorningEveningDate, getMorningEveningEntry, type ReadingPeriod } from "@/lib/morning-evening";
 
+export const dynamic = "force-dynamic";
+
 type Props = { params: Promise<{ date: string; period: string }> };
 
 function validPeriod(value: string): value is ReadingPeriod {
