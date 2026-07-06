@@ -5,5 +5,5 @@ export const metadata = {
 };
 
 export default function SpurgeonMorningPage() {
-  redirect("/devotionals/morning-and-evening");
+  redirect("/devotionals/spurgeon-morning-evening");
 }
