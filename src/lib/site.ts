@@ -210,22 +210,6 @@ export const bibleStudies = [
 
 export const events = [
   {
-    title: "250th Anniversary of America / VBS Cookout",
-    date: "Friday, July 3, 2026",
-    time: undefined,
-    description: "Join us for a cookout celebrating the 250th Anniversary of America. Location: Wood River Baptist Church.",
-    image: undefined,
-    url: undefined,
-  },
-  {
-    title: "4th of July Church Cookout",
-    date: "Saturday, July 4, 2026",
-    time: "11:00 AM – 3:00 PM",
-    description: "Bring a dish! Location: Wood River Baptist Church. Call the church for more details: 401-539-2642.",
-    image: undefined,
-    url: undefined,
-  },
-  {
     title: "Movie Viewing — \"Young Washington\"",
     date: "Tuesday, July 7, 2026",
     time: "7:15 PM",
@@ -250,15 +234,6 @@ export const events = [
       "A free steak dinner for men, with practical instruction on maintaining small engines. Please RSVP by July 21.",
     image: undefined,
     url: "/events/mens-steak-fry",
-  },
-  {
-    title: "Vacation Bible School — Emerald Crossing",
-    date: "Monday, June 29 – Friday, July 3, 2026",
-    time: "6:00 PM – 8:00 PM",
-    description:
-      "A week of Bible lessons, songs, crafts, games, and snacks for kids in Wyoming, Rhode Island. Bring your family and friends — registration is open.",
-    image: "/woodriver/vbs.jpg",
-    url: "https://woodriverbc.myanswers.com/emerald-crossing/",
   },
 ] as const;
 
