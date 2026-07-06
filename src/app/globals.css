@@ -2073,11 +2073,14 @@ h3 {
   align-items: center;
   gap: 10px;
   padding: 10px 14px 10px 10px;
+  border: 0;
   border-radius: 999px;
   background: #123c46;
   color: #ffffff;
+  font: inherit;
   font-weight: 700;
   text-decoration: none;
+  cursor: pointer;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
@@ -2097,6 +2100,110 @@ h3 {
   border: 2px solid rgba(255, 255, 255, 0.88);
 }
 
+.wbc-chat-form-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 20px;
+  background: rgba(8, 19, 23, 0.42);
+}
+
+.wbc-chat-form-card {
+  position: relative;
+  width: min(100%, 430px);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  border-radius: 24px;
+  background: #ffffff;
+  padding: 28px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+}
+
+.wbc-chat-form-card h2 {
+  margin: 0 0 8px;
+  color: #123c46;
+  font-size: 1.55rem;
+}
+
+.wbc-chat-form-card p {
+  margin: 0 0 18px;
+  color: #4b5b61;
+}
+
+.wbc-chat-form-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  border: 0;
+  background: transparent;
+  color: #123c46;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.wbc-chat-form {
+  display: grid;
+  gap: 14px;
+}
+
+.wbc-chat-form label {
+  display: grid;
+  gap: 6px;
+  color: #123c46;
+  font-weight: 700;
+}
+
+.wbc-chat-form label span {
+  color: #6b7b80;
+  font-weight: 500;
+}
+
+.wbc-chat-form input,
+.wbc-chat-form textarea {
+  width: 100%;
+  border: 1px solid #c8d3d6;
+  border-radius: 12px;
+  padding: 11px 12px;
+  color: #1b2b30;
+  font: inherit;
+}
+
+.wbc-chat-form textarea {
+  resize: vertical;
+}
+
+.wbc-chat-checkbox {
+  display: flex !important;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 9px !important;
+  font-weight: 600 !important;
+}
+
+.wbc-chat-checkbox input {
+  width: auto;
+}
+
+.wbc-chat-form button[type="submit"] {
+  border: 0;
+  border-radius: 999px;
+  background: #123c46;
+  color: #ffffff;
+  padding: 12px 18px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.wbc-chat-form button[type="submit"]:hover,
+.wbc-chat-form button[type="submit"]:focus-visible {
+  background: #0f4f5d;
+}
+
 @media (max-width: 640px) {
   .wbc-email-chat-button {
     right: 14px;
@@ -2108,6 +2215,18 @@ h3 {
   .wbc-email-chat-button img {
     width: 38px;
     height: 38px;
+  }
+
+  .wbc-chat-form-overlay {
+    align-items: stretch;
+    padding: 12px;
+  }
+
+  .wbc-chat-form-card {
+    width: 100%;
+    margin-top: auto;
+    padding: 24px 20px;
+    border-radius: 22px;
   }
 }
 
