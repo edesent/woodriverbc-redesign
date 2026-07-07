@@ -72,6 +72,9 @@ export default function MorningEveningView({ entry, isToday = false }: Props) {
             </header>
 
             <nav className="faiths-checkbook-navigation" aria-label="Daily devotionals">
+              <Link href="/devotionals">
+                <ArrowLeft size={18} /> Back to Devotionals
+              </Link>
               <Link href={`/devotionals/spurgeon-morning-evening/${previous}`}>
                 <ArrowLeft size={18} /> Previous day
               </Link>
