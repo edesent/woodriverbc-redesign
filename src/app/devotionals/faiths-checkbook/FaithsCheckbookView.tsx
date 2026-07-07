@@ -55,6 +55,9 @@ export default function FaithsCheckbookView({ entry, isToday = false }: Props) {
           </div>
 
           <nav className="faiths-checkbook-navigation" aria-label="Daily devotionals">
+            <Link href="/devotionals">
+              <ArrowLeft size={18} /> Back to Devotionals
+            </Link>
             <Link href={`/devotionals/faiths-checkbook/${previous}`}>
               <ArrowLeft size={18} /> Previous day
             </Link>
