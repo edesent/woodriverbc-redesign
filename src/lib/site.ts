@@ -99,7 +99,7 @@ export const devotionals = [
   ["Thy Word", "/devotionals/thy-word"],
   ["Bible Apologetics", "https://bibleapologetics.org/"],
   ["Thy Word Is A Lamp Unto My Feet", "/thy-word-is-a-lamp-unto-my-feet"],
-  ["Spurgeon's Morning and Evening", "https://spurgeonsmorningandevening.org"],
+  ["Spurgeon's Morning and Evening", "/devotionals/spurgeon-morning-evening"],
   ["Faith's Checkbook", "/devotionals/faiths-checkbook"],
   ["My Utmost For His Highest", "https://utmost.org/"],
   ["Streams In the Desert", "https://www.crosswalk.com/devotionals/desert/"],
