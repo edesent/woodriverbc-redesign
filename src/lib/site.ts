@@ -102,7 +102,7 @@ export const devotionals = [
   ["Spurgeon's Morning and Evening", "/devotionals/spurgeon-morning-evening"],
   ["Faith's Checkbook", "/devotionals/faiths-checkbook"],
   ["My Utmost For His Highest", "https://utmost.org/"],
-  ["Streams In the Desert", "https://www.crosswalk.com/devotionals/desert/"],
+  ["Streams In the Desert", "/devotionals/streams-in-the-desert"],
   ["Days of Praise", "https://www.icr.org/days-of-praise"],
   ["Love Worth Finding", "https://www.lwf.org/daily-devotionals"],
   ["The Valley of Vision", "https://banneroftruth.org/us/devotional/the-valley-of-vision/"],
