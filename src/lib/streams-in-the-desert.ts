@@ -34,12 +34,95 @@ export type StreamsInTheDesertEntry = {
   paragraphs: string[];
 };
 
+const OCR_WORD_FIXES: Array<[RegExp, string]> = [
+  [/\bwil\b/gi, "will"],
+  [/\bshal\b/gi, "shall"],
+  [/\bal\b/gi, "all"],
+  [/\bcal\b/gi, "call"],
+  [/\bcal ed\b/gi, "called"],
+  [/\bcaled\b/gi, "called"],
+  [/\bcal ing\b/gi, "calling"],
+  [/\bcal s\b/gi, "calls"],
+  [/\btel\b/gi, "tell"],
+  [/\btel s\b/gi, "tells"],
+  [/\btel ing\b/gi, "telling"],
+  [/\bwel\b/gi, "well"],
+  [/\bdul\b/gi, "dull"],
+  [/\bful\b/gi, "full"],
+  [/\bfil\b/gi, "fill"],
+  [/\bfil ed\b/gi, "filled"],
+  [/\bfil ing\b/gi, "filling"],
+  [/\bfol ow\b/gi, "follow"],
+  [/\bfol owed\b/gi, "followed"],
+  [/\bfol owing\b/gi, "following"],
+  [/\bfol ows\b/gi, " follows"],
+  [/\ball ow\b/gi, "allow"],
+  [/\ball owed\b/gi, "allowed"],
+  [/\ball owing\b/gi, "allowing"],
+  [/\bcontinual y\b/gi, "continually"],
+  [/\bspiritual y\b/gi, "spiritually"],
+  [/\bnatural y\b/gi, "naturally"],
+  [/\bactual y\b/gi, "actually"],
+  [/\bliteral y\b/gi, "literally"],
+  [/\bfinal y\b/gi, "finally"],
+  [/\bperpetual y\b/gi, "perpetually"],
+  [/\bprovidential y\b/gi, "providentially"],
+  [/\bwil ing\b/gi, "willing"],
+  [/\bwil ful\b/gi, "willful"],
+  [/\bwil fully\b/gi, "willfully"],
+  [/\breal y\b/gi, "really"],
+  [/\bmarvel ous\b/gi, "marvelous"],
+  [/\bcol ege\b/gi, "college"],
+  [/\bintel ect\b/gi, "intellect"],
+  [/\bintel ectual\b/gi, "intellectual"],
+  [/\bintel igence\b/gi, "intelligence"],
+  [/\bfel ow\b/gi, "fellow"],
+  [/\bfel owship\b/gi, "fellowship"],
+  [/\bsel f\b/gi, "self"],
+  [/\bself -\b/gi, "self-"],
+  [/\bto-day\b/gi, "today"],
+  [/\bto-morrow\b/gi, "tomorrow"],
+  [/\bco-operat/gi, "cooperat"],
+];
+
+function matchCase(original: string, replacement: string): string {
+  if (original === original.toUpperCase()) {
+    return replacement.toUpperCase();
+  }
+
+  if (original[0] === original[0]?.toUpperCase()) {
+    return `${replacement[0].toUpperCase()}${replacement.slice(1)}`;
+  }
+
+  return replacement;
+}
+
+function proofreadOcrText(text: string): string {
+  let corrected = text
+    .replace(/([A-Za-z])-\n([a-z])/g, "$1$2")
+    .replace(/\s+([,.;:!?])/g, "$1")
+    .replace(/([“\"'])\s+/g, "$1")
+    .replace(/\s+([”\"'])/g, "$1")
+    .replace(/\b([A-Z])\s\.\s([A-Z])\./g, "$1.$2.")
+    .replace(/\s{2,}/g, " ");
+
+  for (const [pattern, replacement] of OCR_WORD_FIXES) {
+    corrected = corrected.replace(pattern, (match) => matchCase(match, replacement));
+  }
+
+  return corrected
+    .replace(/\bfollows\b/gi, (match) => matchCase(match, "follows"))
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
 function normalizeText(text: string): string {
   return text
     .replace(/\r/g, "")
     .replace(/[“”]/g, '"')
     .replace(/[‘’]/g, "'")
     .replace(/\u00a0/g, " ")
+    .replace(/([A-Za-z])-\n([a-z])/g, "$1$2")
     .replace(/[ \t]+\n/g, "\n")
     .replace(/\n{3,}/g, "\n\n");
 }
@@ -87,7 +170,7 @@ function splitParagraphs(text: string): string[] {
   }
 
   return paragraphs
-    .map((paragraph) => paragraph.replace(/\s+/g, " ").trim())
+    .map((paragraph) => proofreadOcrText(paragraph.replace(/\s+/g, " ")))
     .filter((paragraph) => paragraph.length > 1);
 }
 
@@ -105,16 +188,16 @@ function getTitleAndScripture(paragraphs: string[]) {
   const second = body[1];
 
   if (first && first.length < 90 && first === first.toUpperCase() && /[A-Z]/.test(first)) {
-    title = first.replace(/\s+/g, " ");
+    title = proofreadOcrText(first.replace(/\s+/g, " "));
     body = body.slice(1);
   }
 
   const possibleScripture = body[0];
   if (possibleScripture && (looksLikeScripture(possibleScripture) || possibleScripture.length < 180)) {
-    scripture = possibleScripture;
+    scripture = proofreadOcrText(possibleScripture);
     body = body.slice(1);
   } else if (second && looksLikeScripture(second)) {
-    scripture = second;
+    scripture = proofreadOcrText(second);
   }
 
   return { title, scripture, body };
