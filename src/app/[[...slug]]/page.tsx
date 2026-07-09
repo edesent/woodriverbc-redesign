@@ -787,10 +787,10 @@ function WhoIsJesusPage() {
       <div className="truth-grid">
         {whoIsJesusTruths.map((item) => (
           <Link className="resource-link" href={`/who-is-jesus/${item.slug}`} key={item.truth}>
-            <span>
+            <div>
               <h2>{item.truth}</h2>
               <p>{item.reference}</p>
-            </span>
+            </div>
             <ArrowRight size={16} />
           </Link>
         ))}
