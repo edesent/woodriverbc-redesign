@@ -118,6 +118,11 @@ export async function generateMetadata({
   const romansMeta = romansRoadDetails.find((d) => d.slug === key);
   if (romansMeta) return { title: `${romansMeta.reference} — The Romans Road` };
   if (key === "who-is-jesus") return { title: "Who Is Jesus" };
+  if (key.startsWith("who-is-jesus/")) {
+    const slug = key.slice("who-is-jesus/".length);
+    const truth = whoIsJesusTruths.find((item) => item.slug === slug);
+    return { title: truth ? `${truth.reference} — Who Is Jesus` : "Who Is Jesus" };
+  }
   if (key === "prayer-2") return { title: "Prayer" };
   if (key === "give") return { title: "Give" };
   if (key === "daily-worship") return { title: "Daily Worship" };
