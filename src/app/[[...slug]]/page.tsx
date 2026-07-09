@@ -173,6 +173,11 @@ export default async function Page({
   if (key === "christian-radio") return <LinkCollection title="Christian Radio" intro="Music and Bible broadcasting resources for daily listening." links={radioLinks} icon={<Radio />} />;
   if (key === "the-romans-road") return <RomansRoadPage />;
   if (key === "who-is-jesus") return <WhoIsJesusPage />;
+  if (key.startsWith("who-is-jesus/")) {
+    const slug = key.slice("who-is-jesus/".length);
+    const truth = whoIsJesusTruths.find((item) => item.slug === slug);
+    if (truth) return <WhoIsJesusScripturePage truth={truth} />;
+  }
   if (key === "the-bible") return <BibleSearchPage />;
   if (key === "bible-reading-tracker") return <BibleTrackerPage />;
   if (key === "daily-worship") return <DailyWorshipPage />;
