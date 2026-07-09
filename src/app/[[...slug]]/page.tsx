@@ -712,26 +712,87 @@ function RomansRoadPage() {
   );
 }
 
-function WhoIsJesusPage() {
-  const truths = [
-    ["He is eternal God, Creator of all things", "John 1:1, 3"],
-    ["He became a man to reveal the Father to us", "John 1:14"],
-    ["He became the final sacrifice for sin", "John 1:29"],
-    ["He predicted that He would rise from the dead", "John 2:19, 21"],
-    ["He died that those who trust Him will have eternal life", "John 3:16"],
-    ["Those who trust Him find spiritual satisfaction", "John 4:14"],
-    ["Those who trust Him are passed from death unto life", "John 5:24"],
-    ["Those who come to Him will not be cast out", "John 6:37"],
-  ] as const;
+const whoIsJesusTruths = [
+  {
+    truth: "He is eternal God, Creator of all things",
+    reference: "John 1:1, 3",
+    slug: "eternal-god-creator",
+    verses: [
+      ["John 1:1", "In the beginning was the Word, and the Word was with God, and the Word was God."],
+      ["John 1:3", "All things were made by him; and without him was not any thing made that was made."],
+    ],
+  },
+  {
+    truth: "He became a man to reveal the Father to us",
+    reference: "John 1:14",
+    slug: "word-made-flesh",
+    verses: [
+      ["John 1:14", "And the Word was made flesh, and dwelt among us, and we beheld his glory, the glory as of the only begotten of the Father, full of grace and truth."],
+    ],
+  },
+  {
+    truth: "He became the final sacrifice for sin",
+    reference: "John 1:29",
+    slug: "lamb-of-god",
+    verses: [
+      ["John 1:29", "The next day John seeth Jesus coming unto him, and saith, Behold the Lamb of God, which taketh away the sin of the world."],
+    ],
+  },
+  {
+    truth: "He predicted that He would rise from the dead",
+    reference: "John 2:19, 21",
+    slug: "resurrection-predicted",
+    verses: [
+      ["John 2:19", "Jesus answered and said unto them, Destroy this temple, and in three days I will raise it up."],
+      ["John 2:21", "But he spake of the temple of his body."],
+    ],
+  },
+  {
+    truth: "He died that those who trust Him will have eternal life",
+    reference: "John 3:16",
+    slug: "eternal-life",
+    verses: [
+      ["John 3:16", "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."],
+    ],
+  },
+  {
+    truth: "Those who trust Him find spiritual satisfaction",
+    reference: "John 4:14",
+    slug: "living-water",
+    verses: [
+      ["John 4:14", "But whosoever drinketh of the water that I shall give him shall never thirst; but the water that I shall give him will be in him a well of water springing up into everlasting life."],
+    ],
+  },
+  {
+    truth: "Those who trust Him are passed from death unto life",
+    reference: "John 5:24",
+    slug: "death-unto-life",
+    verses: [
+      ["John 5:24", "Verily, verily, I say unto you, He that heareth my word, and believeth on him that sent me, hath everlasting life, and shall not come into condemnation; but is passed from death unto life."],
+    ],
+  },
+  {
+    truth: "Those who come to Him will not be cast out",
+    reference: "John 6:37",
+    slug: "not-cast-out",
+    verses: [
+      ["John 6:37", "All that the Father giveth me shall come to me; and him that cometh to me I will in no wise cast out."],
+    ],
+  },
+] as const;
 
+function WhoIsJesusPage() {
   return (
     <PageShell title="Who Is Jesus?" intro="It is the most important question you have to answer for yourself.">
       <div className="truth-grid">
-        {truths.map(([truth, reference]) => (
-          <article key={truth}>
-            <h2>{truth}</h2>
-            <p>{reference}</p>
-          </article>
+        {whoIsJesusTruths.map((item) => (
+          <Link className="resource-link" href={`/who-is-jesus/${item.slug}`} key={item.truth}>
+            <span>
+              <h2>{item.truth}</h2>
+              <p>{item.reference}</p>
+            </span>
+            <ArrowRight size={16} />
+          </Link>
         ))}
       </div>
       <div className="callout">
@@ -749,6 +810,23 @@ function WhoIsJesusPage() {
           </Link>
         </div>
       </div>
+    </PageShell>
+  );
+}
+
+function WhoIsJesusScripturePage({ truth }: { truth: (typeof whoIsJesusTruths)[number] }) {
+  return (
+    <PageShell eyebrow="Who Is Jesus?" title={truth.truth} intro={truth.reference}>
+      <div className="scripture-passage">
+        {truth.verses.map(([reference, verse]) => (
+          <p className="body-copy" key={reference}>
+            <strong>{reference}</strong> {verse}
+          </p>
+        ))}
+      </div>
+      <Link className="text-link" href="/who-is-jesus">
+        Back to Who Is Jesus? <ArrowRight size={16} />
+      </Link>
     </PageShell>
   );
 }
