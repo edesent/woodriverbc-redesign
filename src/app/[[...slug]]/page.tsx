@@ -488,10 +488,11 @@ function MensSteakFryPage() {
   );
 }
 
-function EventCard({ event }: { event: (typeof events)[number] }) {
+function EventCard({ event, isPast = false }: { event: (typeof events)[number]; isPast?: boolean }) {
   const url = "url" in event ? event.url : undefined;
   return (
-    <article className="event-card">
+    <article className={`event-card${isPast ? " event-card--past" : ""}`}>
+      {isPast && <div className="event-card__past-overlay">This event has passed</div>}
       <div className="event-date">
         <CalendarDays size={20} />
         <span>{event.date}</span>
@@ -501,7 +502,7 @@ function EventCard({ event }: { event: (typeof events)[number] }) {
         <Clock size={16} /> {event.time}
       </p>
       <p>{event.description}</p>
-      {url ? (
+      {url && !isPast ? (
         url.startsWith("/") ? (
           <Link className="button primary inline" href={url}>
             Learn more &amp; register <ArrowRight size={14} />
