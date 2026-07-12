@@ -332,17 +332,41 @@ function PastorPreview() {
   );
 }
 
-function getEventStartYear(event: (typeof events)[number]) {
-  const match = event.date.match(/\b(20\d{2})\b/);
-  return match ? Number(match[1]) : Number.MAX_SAFE_INTEGER;
+function parseEventStartDate(event: (typeof events)[number]): Date {
+  const segment = event.date.split(/[–-]/)[0].trim();
+  const parsed = new Date(segment);
+  return isNaN(parsed.getTime()) ? new Date(0) : parsed;
+}
+
+function isEventPast(event: (typeof events)[number]): boolean {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return parseEventStartDate(event) < today;
 }
 
 function getUpcomingEvents() {
-  return [...events].sort((a, b) => getEventStartYear(a) - getEventStartYear(b));
+  return [...events]
+    .filter((e) => !isEventPast(e))
+    .sort((a, b) => parseEventStartDate(a).getTime() - parseEventStartDate(b).getTime());
+}
+
+function getPastEvents() {
+  return [...events]
+    .filter((e) => isEventPast(e))
+    .sort((a, b) => parseEventStartDate(b).getTime() - parseEventStartDate(a).getTime());
 }
 
 function EventsPreview() {
-  const upcomingEvents = getUpcomingEvents();
+  const upcoming = getUpcomingEvents();
+  const past = getPastEvents();
+
+  const previewEvents: { event: (typeof events)[number]; isPast: boolean }[] = [
+    ...upcoming.slice(0, 3).map((e) => ({ event: e, isPast: false })),
+  ];
+  if (previewEvents.length < 3) {
+    const needed = 3 - previewEvents.length;
+    past.slice(0, needed).forEach((e) => previewEvents.push({ event: e, isPast: true }));
+  }
 
   return (
     <section className="section events-preview">
@@ -354,8 +378,8 @@ function EventsPreview() {
         </Link>
       </div>
       <div className="event-list">
-        {upcomingEvents.slice(0, 3).map((event) => (
-          <EventCard event={event} key={event.title} />
+        {previewEvents.map(({ event, isPast }) => (
+          <EventCard event={event} key={event.title} isPast={isPast} />
         ))}
       </div>
     </section>
@@ -363,15 +387,26 @@ function EventsPreview() {
 }
 
 function EventsPage() {
-  const upcomingEvents = getUpcomingEvents();
+  const upcoming = getUpcomingEvents();
+  const past = getPastEvents();
 
   return (
     <PageShell eyebrow="Church Calendar" title="Upcoming Events of WRBC" intro="Special services, fellowship meals, seasonal outreach, and church family gatherings.">
       <div className="event-list full">
-        {upcomingEvents.map((event) => (
+        {upcoming.map((event) => (
           <EventCard event={event} key={event.title} />
         ))}
       </div>
+      {past.length > 0 && (
+        <div className="past-events-section">
+          <h2 className="past-events-heading">Past Events</h2>
+          <div className="event-list full">
+            {past.map((event) => (
+              <EventCard event={event} key={event.title} isPast />
+            ))}
+          </div>
+        </div>
+      )}
     </PageShell>
   );
 }
