@@ -333,8 +333,18 @@ function PastorPreview() {
 }
 
 function parseEventStartDate(event: (typeof events)[number]): Date {
-  const segment = event.date.split(/[–-]/)[0].trim();
-  const parsed = new Date(segment);
+  // Take the first segment before any range dash/em-dash
+  const segment = event.date.split(/\s*[–-]\s*/)[0].trim();
+  // Strip leading day-of-week (e.g. "Monday, ")
+  const withoutDay = segment.replace(/^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),?\s*/i, "");
+  // If this segment has no year, pull the year from the full date string
+  const yearMatch = event.date.match(/\b(20\d{2})\b/);
+  const withYear = /\b20\d{2}\b/.test(withoutDay)
+    ? withoutDay
+    : yearMatch
+    ? `${withoutDay} ${yearMatch[1]}`
+    : withoutDay;
+  const parsed = new Date(withYear);
   return isNaN(parsed.getTime()) ? new Date(0) : parsed;
 }
 
