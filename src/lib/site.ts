@@ -227,6 +227,14 @@ export const events = [
     url: "https://www.campnorthfield.com/youth-camp-registration",
   },
   {
+    title: "Sister Swap",
+    date: "Thursday, July 23, 2026",
+    time: "5:30 PM",
+    description: "Location: Wood River Baptist Church, 246 Kingstown Rd, Wyoming, RI 02898. Contact the church for more information: (401) 539-2642.",
+    image: undefined,
+    url: undefined,
+  },
+  {
     title: "Men's Steak Fry",
     date: "Friday, July 24, 2026",
     time: "6:00 PM",
