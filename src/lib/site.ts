@@ -43,6 +43,7 @@ export const navGroups = [
     items: [
       ["About", "/about"],
       ["Connect With Us", "/connect-with-us"],
+      ["Visitor Form", "/visitor-form"],
       ["Pastor", "/pastor"],
       ["Covenant", "/covenant"],
       ["Mission", "/mission"],
