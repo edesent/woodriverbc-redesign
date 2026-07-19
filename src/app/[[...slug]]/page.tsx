@@ -189,6 +189,7 @@ export default async function Page({
   if (key === "pastor") return <PastorPage />;
   if (key === "give") return <GivePage />;
   if (key === "connect-with-us") return <ConnectPage />;
+  if (key === "visitor-form") return <VisitorFormPage />;
 
   const page = textPages[key];
   if (page) return <TextPage page={page} pageKey={key} />;
