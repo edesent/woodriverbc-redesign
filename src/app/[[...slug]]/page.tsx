@@ -31,6 +31,7 @@ import { notFound, permanentRedirect, redirect } from "next/navigation";
 import { BibleSearch } from "./bible-search";
 import { ContactForm } from "./contact-form";
 import { MensSteakFryForm } from "./mens-steak-fry-form";
+import { VisitorForm } from "./visitor-form";
 import {
   aliases,
   bibleBooks,
