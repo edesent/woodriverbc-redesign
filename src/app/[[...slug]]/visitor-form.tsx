@@ -212,12 +212,12 @@ export function VisitorForm() {
         </label>
       </div>
 
-      <button type="submit">
-        Send visitor information <Send size={16} />
+      <button type="submit" disabled={status === "sending"}>
+        {status === "sending" ? "Sending…" : (<>Send visitor information <Send size={16} /></>)}
       </button>
 
       {status === "error" ? (
-        <p className="contact-form-error">Please enter your name and either an email address or phone number.</p>
+        <p className="contact-form-error">{errorMessage}</p>
       ) : null}
 
       <p className="visitor-privacy-note">
