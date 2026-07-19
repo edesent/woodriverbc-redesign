@@ -38,28 +38,9 @@ function csvEscape(value: string) {
 export function VisitorForm() {
   const [form, setForm] = useState<VisitorData>(emptyForm);
   const [website, setWebsite] = useState("");
-  const [status, setStatus] = useState<"idle" | "sent" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const [submitted, setSubmitted] = useState<VisitorData | null>(null);
-
-  const emailBody = useMemo(() => {
-    return [
-      "NEW VISITOR INFORMATION",
-      "",
-      `Name: ${form.name.trim()}`,
-      `Address: ${form.address.trim() || "Not provided"}`,
-      `Email: ${form.email.trim() || "Not provided"}`,
-      `Phone: ${form.phone.trim() || "Not provided"}`,
-      `Church membership / home church: ${form.homeChurch.trim() || "Not provided"}`,
-      `Is this your first visit?: ${form.firstVisit || "Not provided"}`,
-      `Others visiting with you: ${form.household.trim() || "Not provided"}`,
-      `How did you hear about WRBC?: ${form.howHeard.trim() || "Not provided"}`,
-      `Areas of interest: ${form.interests.trim() || "Not provided"}`,
-      `Preferred follow-up: ${form.followUp}`,
-      "",
-      "Prayer request, question, or other information:",
-      form.prayerRequest.trim() || "None provided",
-    ].join("\n");
-  }, [form]);
 
   function update<K extends keyof VisitorData>(field: K, value: VisitorData[K]) {
     setForm((current) => ({ ...current, [field]: value }));
