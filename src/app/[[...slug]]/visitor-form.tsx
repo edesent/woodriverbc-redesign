@@ -47,22 +47,42 @@ export function VisitorForm() {
     if (status === "error") setStatus("idle");
   }
 
-  function onSubmit(event: FormEvent) {
+  async function onSubmit(event: FormEvent) {
     event.preventDefault();
+    if (status === "sending") return;
+
     if (website.trim()) {
       setStatus("sent");
       return;
     }
     if (!form.name.trim() || (!form.email.trim() && !form.phone.trim())) {
+      setErrorMessage("Please enter your name and either an email address or phone number.");
       setStatus("error");
       return;
     }
 
-    setSubmitted(form);
-    window.location.href = `mailto:${RECIPIENT_EMAIL}?subject=${encodeURIComponent(
-      `Visitor Information — ${form.name.trim()}`
-    )}&body=${encodeURIComponent(emailBody)}`;
-    setStatus("sent");
+    setStatus("sending");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/visitor-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, website }),
+      });
+      const result = await response.json();
+
+      if (!response.ok || !result.ok) {
+        throw new Error(result.message || "The form could not be sent.");
+      }
+
+      setSubmitted(form);
+      setForm(emptyForm);
+      setStatus("sent");
+    } catch (error) {
+      setErrorMessage(error instanceof Error ? error.message : "The form could not be sent. Please try again.");
+      setStatus("error");
+    }
   }
 
   function downloadCsv() {
