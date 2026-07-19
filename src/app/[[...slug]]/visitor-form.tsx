@@ -1,9 +1,7 @@
 "use client";
 
 import { Download, Send } from "lucide-react";
-import { useMemo, useState, type FormEvent } from "react";
-
-const RECIPIENT_EMAIL = "pastor@woodriverbc.org";
+import { useState, type FormEvent } from "react";
 
 type VisitorData = {
   name: string;
