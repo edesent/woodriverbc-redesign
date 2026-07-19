@@ -1045,6 +1045,20 @@ function ConnectPage() {
   );
 }
 
+function VisitorFormPage() {
+  return (
+    <PageShell
+      eyebrow="Welcome to WRBC"
+      title="Visitor Information Form"
+      intro="Thank you for visiting Wood River Baptist Church. This information helps us welcome you, answer questions, and serve your family well."
+    >
+      <div className="visitor-form-shell">
+        <VisitorForm />
+      </div>
+    </PageShell>
+  );
+}
+
 function GivePage() {
   return (
     <PageShell
