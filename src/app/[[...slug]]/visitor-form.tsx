@@ -130,10 +130,9 @@ export function VisitorForm() {
   if (status === "sent") {
     return (
       <div className="contact-form-success">
-        <h2>Your visitor information is ready to send.</h2>
+        <h2>Thank you for visiting Wood River Baptist Church.</h2>
         <p>
-          Your email app should open a message addressed to Pastor Jon at {RECIPIENT_EMAIL}.
-          Please send that email to complete your submission.
+          Your information has been sent privately to Pastor Jon. Someone from the church will follow up according to your preference.
         </p>
         {submitted ? (
           <button type="button" onClick={downloadCsv}>
