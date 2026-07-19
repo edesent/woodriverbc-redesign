@@ -1,7 +1,9 @@
 "use client";
 
-import { Download, Send } from "lucide-react";
-import { useState, type FormEvent } from "react";
+import { Send } from "lucide-react";
+import { useEffect, useState, type FormEvent } from "react";
+
+const RECIPIENT_EMAIL = "pastor@woodriverbc.org";
 
 type VisitorData = {
   name: string;
@@ -31,23 +33,34 @@ const emptyForm: VisitorData = {
   followUp: "Email",
 };
 
-function csvEscape(value: string) {
-  return `"${value.replace(/"/g, '""')}"`;
-}
-
 export function VisitorForm() {
   const [form, setForm] = useState<VisitorData>(emptyForm);
   const [website, setWebsite] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
-  const [submitted, setSubmitted] = useState<VisitorData | null>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("submitted") === "1") {
+      setStatus("sent");
+      window.history.replaceState({}, "", window.location.pathname);
+    }
+  }, []);
 
   function update<K extends keyof VisitorData>(field: K, value: VisitorData[K]) {
     setForm((current) => ({ ...current, [field]: value }));
     if (status === "error") setStatus("idle");
   }
 
-  async function onSubmit(event: FormEvent) {
+  function addHiddenField(target: HTMLFormElement, name: string, value: string) {
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = name;
+    input.value = value;
+    target.appendChild(input);
+  }
+
+  function onSubmit(event: FormEvent) {
     event.preventDefault();
     if (status === "sending") return;
 
@@ -55,6 +68,7 @@ export function VisitorForm() {
       setStatus("sent");
       return;
     }
+
     if (!form.name.trim() || (!form.email.trim() && !form.phone.trim())) {
       setErrorMessage("Please enter your name and either an email address or phone number.");
       setStatus("error");
@@ -64,67 +78,29 @@ export function VisitorForm() {
     setStatus("sending");
     setErrorMessage("");
 
-    try {
-      const response = await fetch("/api/visitor-form", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, website }),
-      });
-      const result = await response.json();
+    const deliveryForm = document.createElement("form");
+    deliveryForm.method = "POST";
+    deliveryForm.action = `https://formsubmit.co/${RECIPIENT_EMAIL}`;
+    deliveryForm.style.display = "none";
 
-      if (!response.ok || !result.ok) {
-        throw new Error(result.message || "The form could not be sent.");
-      }
+    addHiddenField(deliveryForm, "_subject", `Visitor Information — ${form.name.trim()}`);
+    addHiddenField(deliveryForm, "_template", "table");
+    addHiddenField(deliveryForm, "_captcha", "false");
+    addHiddenField(deliveryForm, "_next", `${window.location.origin}/visitor-form?submitted=1`);
+    addHiddenField(deliveryForm, "Name", form.name.trim());
+    addHiddenField(deliveryForm, "Address", form.address.trim() || "Not provided");
+    addHiddenField(deliveryForm, "Email", form.email.trim() || "Not provided");
+    addHiddenField(deliveryForm, "Phone", form.phone.trim() || "Not provided");
+    addHiddenField(deliveryForm, "Home Church", form.homeChurch.trim() || "Not provided");
+    addHiddenField(deliveryForm, "First Visit", form.firstVisit || "Not provided");
+    addHiddenField(deliveryForm, "Others Visiting", form.household.trim() || "Not provided");
+    addHiddenField(deliveryForm, "How They Heard About WRBC", form.howHeard.trim() || "Not provided");
+    addHiddenField(deliveryForm, "Areas of Interest", form.interests.trim() || "Not provided");
+    addHiddenField(deliveryForm, "Preferred Follow-up", form.followUp || "Not provided");
+    addHiddenField(deliveryForm, "Prayer Request / Notes", form.prayerRequest.trim() || "None provided");
 
-      setSubmitted(form);
-      setForm(emptyForm);
-      setStatus("sent");
-    } catch (error) {
-      setErrorMessage(error instanceof Error ? error.message : "The form could not be sent. Please try again.");
-      setStatus("error");
-    }
-  }
-
-  function downloadCsv() {
-    if (!submitted) return;
-    const headers = [
-      "Date Submitted",
-      "Name",
-      "Address",
-      "Email",
-      "Phone",
-      "Home Church",
-      "First Visit",
-      "Others Visiting",
-      "How Heard",
-      "Areas of Interest",
-      "Preferred Follow-up",
-      "Prayer Request / Notes",
-    ];
-    const row = [
-      new Date().toLocaleString(),
-      submitted.name,
-      submitted.address,
-      submitted.email,
-      submitted.phone,
-      submitted.homeChurch,
-      submitted.firstVisit,
-      submitted.household,
-      submitted.howHeard,
-      submitted.interests,
-      submitted.followUp,
-      submitted.prayerRequest,
-    ];
-    const csv = `${headers.map(csvEscape).join(",")}\r\n${row.map(csvEscape).join(",")}\r\n`;
-    const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = `wrbc-visitor-${submitted.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "entry"}.csv`;
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(url);
+    document.body.appendChild(deliveryForm);
+    deliveryForm.submit();
   }
 
   if (status === "sent") {
@@ -134,11 +110,6 @@ export function VisitorForm() {
         <p>
           Your information has been sent privately to Pastor Jon. Someone from the church will follow up according to your preference.
         </p>
-        {submitted ? (
-          <button type="button" onClick={downloadCsv}>
-            Download spreadsheet copy <Download size={16} />
-          </button>
-        ) : null}
       </div>
     );
   }
