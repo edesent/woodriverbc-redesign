@@ -1,0 +1,230 @@
+"use client";
+
+import { Download, Send } from "lucide-react";
+import { useMemo, useState, type FormEvent } from "react";
+
+const RECIPIENT_EMAIL = "pastor@woodriverbc.org";
+
+type VisitorData = {
+  name: string;
+  address: string;
+  email: string;
+  phone: string;
+  homeChurch: string;
+  firstVisit: string;
+  household: string;
+  howHeard: string;
+  interests: string;
+  prayerRequest: string;
+  followUp: string;
+};
+
+const emptyForm: VisitorData = {
+  name: "",
+  address: "",
+  email: "",
+  phone: "",
+  homeChurch: "",
+  firstVisit: "",
+  household: "",
+  howHeard: "",
+  interests: "",
+  prayerRequest: "",
+  followUp: "Email",
+};
+
+function csvEscape(value: string) {
+  return `"${value.replace(/"/g, '""')}"`;
+}
+
+export function VisitorForm() {
+  const [form, setForm] = useState<VisitorData>(emptyForm);
+  const [website, setWebsite] = useState("");
+  const [status, setStatus] = useState<"idle" | "sent" | "error">("idle");
+  const [submitted, setSubmitted] = useState<VisitorData | null>(null);
+
+  const emailBody = useMemo(() => {
+    return [
+      "NEW VISITOR INFORMATION",
+      "",
+      `Name: ${form.name.trim()}`,
+      `Address: ${form.address.trim() || "Not provided"}`,
+      `Email: ${form.email.trim() || "Not provided"}`,
+      `Phone: ${form.phone.trim() || "Not provided"}`,
+      `Church membership / home church: ${form.homeChurch.trim() || "Not provided"}`,
+      `Is this your first visit?: ${form.firstVisit || "Not provided"}`,
+      `Others visiting with you: ${form.household.trim() || "Not provided"}`,
+      `How did you hear about WRBC?: ${form.howHeard.trim() || "Not provided"}`,
+      `Areas of interest: ${form.interests.trim() || "Not provided"}`,
+      `Preferred follow-up: ${form.followUp}`,
+      "",
+      "Prayer request, question, or other information:",
+      form.prayerRequest.trim() || "None provided",
+    ].join("\n");
+  }, [form]);
+
+  function update<K extends keyof VisitorData>(field: K, value: VisitorData[K]) {
+    setForm((current) => ({ ...current, [field]: value }));
+    if (status === "error") setStatus("idle");
+  }
+
+  function onSubmit(event: FormEvent) {
+    event.preventDefault();
+    if (website.trim()) {
+      setStatus("sent");
+      return;
+    }
+    if (!form.name.trim() || (!form.email.trim() && !form.phone.trim())) {
+      setStatus("error");
+      return;
+    }
+
+    setSubmitted(form);
+    window.location.href = `mailto:${RECIPIENT_EMAIL}?subject=${encodeURIComponent(
+      `Visitor Information — ${form.name.trim()}`
+    )}&body=${encodeURIComponent(emailBody)}`;
+    setStatus("sent");
+  }
+
+  function downloadCsv() {
+    if (!submitted) return;
+    const headers = [
+      "Date Submitted",
+      "Name",
+      "Address",
+      "Email",
+      "Phone",
+      "Home Church",
+      "First Visit",
+      "Others Visiting",
+      "How Heard",
+      "Areas of Interest",
+      "Preferred Follow-up",
+      "Prayer Request / Notes",
+    ];
+    const row = [
+      new Date().toLocaleString(),
+      submitted.name,
+      submitted.address,
+      submitted.email,
+      submitted.phone,
+      submitted.homeChurch,
+      submitted.firstVisit,
+      submitted.household,
+      submitted.howHeard,
+      submitted.interests,
+      submitted.followUp,
+      submitted.prayerRequest,
+    ];
+    const csv = `${headers.map(csvEscape).join(",")}\r\n${row.map(csvEscape).join(",")}\r\n`;
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `wrbc-visitor-${submitted.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "entry"}.csv`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  }
+
+  if (status === "sent") {
+    return (
+      <div className="contact-form-success">
+        <h2>Your visitor information is ready to send.</h2>
+        <p>
+          Your email app should open a message addressed to Pastor Jon at {RECIPIENT_EMAIL}.
+          Please send that email to complete your submission.
+        </p>
+        {submitted ? (
+          <button type="button" onClick={downloadCsv}>
+            Download spreadsheet copy <Download size={16} />
+          </button>
+        ) : null}
+      </div>
+    );
+  }
+
+  return (
+    <form className="contact-form visitor-form" onSubmit={onSubmit}>
+      <p className="visitor-form-note">
+        Fields marked with an asterisk are required. Please provide either an email address or phone number.
+      </p>
+
+      <div className="visitor-form-grid">
+        <label className="visitor-form-wide">
+          Name *
+          <input name="name" value={form.name} onChange={(e) => update("name", e.target.value)} required autoComplete="name" />
+        </label>
+        <label className="visitor-form-wide">
+          Address
+          <input name="address" value={form.address} onChange={(e) => update("address", e.target.value)} autoComplete="street-address" />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" value={form.email} onChange={(e) => update("email", e.target.value)} autoComplete="email" />
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="phone" value={form.phone} onChange={(e) => update("phone", e.target.value)} autoComplete="tel" />
+        </label>
+        <label className="visitor-form-wide">
+          What church are you a member of or currently attending?
+          <input name="homeChurch" value={form.homeChurch} onChange={(e) => update("homeChurch", e.target.value)} />
+        </label>
+        <label>
+          Is this your first visit?
+          <select name="firstVisit" value={form.firstVisit} onChange={(e) => update("firstVisit", e.target.value)}>
+            <option value="">Choose one</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </label>
+        <label>
+          Preferred follow-up
+          <select name="followUp" value={form.followUp} onChange={(e) => update("followUp", e.target.value)}>
+            <option>Email</option>
+            <option>Phone call</option>
+            <option>Text message</option>
+            <option>No follow-up needed</option>
+          </select>
+        </label>
+        <label className="visitor-form-wide">
+          Who else is visiting with you?
+          <input name="household" value={form.household} onChange={(e) => update("household", e.target.value)} placeholder="Spouse, children, or other guests" />
+        </label>
+        <label className="visitor-form-wide">
+          How did you hear about Wood River Baptist Church?
+          <input name="howHeard" value={form.howHeard} onChange={(e) => update("howHeard", e.target.value)} placeholder="Friend, family, website, social media, sign, etc." />
+        </label>
+        <label className="visitor-form-wide">
+          Are there any ministries or areas you would like to know more about?
+          <input name="interests" value={form.interests} onChange={(e) => update("interests", e.target.value)} placeholder="Children, teens, Bible study, membership, baptism, serving, etc." />
+        </label>
+        <label className="visitor-form-wide">
+          Prayer request, question, or other information
+          <textarea name="prayerRequest" rows={5} value={form.prayerRequest} onChange={(e) => update("prayerRequest", e.target.value)} />
+        </label>
+      </div>
+
+      <div className="hp-field" aria-hidden="true">
+        <label>
+          Website
+          <input type="text" name="website" tabIndex={-1} autoComplete="off" value={website} onChange={(e) => setWebsite(e.target.value)} />
+        </label>
+      </div>
+
+      <button type="submit">
+        Send visitor information <Send size={16} />
+      </button>
+
+      {status === "error" ? (
+        <p className="contact-form-error">Please enter your name and either an email address or phone number.</p>
+      ) : null}
+
+      <p className="visitor-privacy-note">
+        This information is sent privately to the pastor and is used only to welcome you and respond to your request.
+      </p>
+    </form>
+  );
+}
