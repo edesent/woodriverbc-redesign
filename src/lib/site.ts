@@ -106,7 +106,7 @@ export const devotionals = [
   ["Streams In the Desert", "/devotionals/streams-in-the-desert"],
   ["Days of Praise", "https://www.icr.org/days-of-praise"],
   ["Love Worth Finding", "https://www.lwf.org/daily-devotionals"],
-  ["The Valley of Vision", "https://banneroftruth.org/us/devotional/the-valley-of-vision/"],
+  ["The Valley of Vision", "https://banneroftruth.org/us/devotional/"],
 ] as const;
 
 export const scriptureMemory = [
