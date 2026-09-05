@@ -110,6 +110,7 @@ export const devotionals = [
 ] as const;
 
 export const scriptureMemory = [
+  "Co-op Memory Verses",
   "Selections from Psalm 119 Part 1",
   "The Greatest Of These - 1 Corinthians 13",
   "Select Verses On Love",
