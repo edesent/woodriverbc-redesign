@@ -30,7 +30,7 @@ export const scriptureMemoryTextPages: Record<string, TextPage> = {
     intro: "Hebrews 11:1-6",
     bodyClass: "scripture-passage",
     paragraphs: [
-      "1 Now faith is the substance of things hoped for, the evidence of things not seen.",
+      "BOLD:1 Now faith is the substance of things hoped for, the evidence of things not seen.",
       "2 For by it the elders obtained a good report.",
       "3 Through faith we understand that the worlds were framed by the word of God, so that things which are seen were not made of things which do appear.",
       "4 By faith Abel offered unto God a more excellent sacrifice than Cain, by which he obtained witness that he was righteous, God testifying of his gifts: and by it he being dead yet speaketh.",
