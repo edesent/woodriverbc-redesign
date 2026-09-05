@@ -1118,8 +1118,14 @@ function RomansVerseDetailPage({ detail }: { detail: (typeof romansRoadDetails)[
 function renderScriptureParagraph(paragraph: string, isScripturePassage?: boolean) {
   if (!isScripturePassage) return paragraph;
 
-  const match = paragraph.match(/^((?:(?:[1-3]|I{1,3})\s+)?[A-Z][A-Za-z]+(?:\s+(?:of|the|[A-Z][A-Za-z]+))*\s+\d+:\d+(?:[-–]\d+)?(?:,\s*\d+)?|\d+)\s+(.*)$/);
-  if (!match) return paragraph;
+  const boldWholeVerse = paragraph.startsWith("BOLD:");
+  const displayParagraph = boldWholeVerse ? paragraph.slice("BOLD:".length) : paragraph;
+  const match = displayParagraph.match(/^((?:(?:[1-3]|I{1,3})\s+)?[A-Z][A-Za-z]+(?:\s+(?:of|the|[A-Z][A-Za-z]+))*\s+\d+:\d+(?:[-–]\d+)?(?:,\s*\d+)?|\d+)\s+(.*)$/);
+  if (!match) return displayParagraph;
+
+  if (boldWholeVerse) {
+    return <strong>{displayParagraph}</strong>;
+  }
 
   return (
     <>
