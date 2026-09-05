@@ -24,6 +24,21 @@ export const scriptureMemoryLinks: Record<string, string> = {
 };
 
 export const scriptureMemoryTextPages: Record<string, TextPage> = {
+  "co-op-memory-verses": {
+    title: "Co-op Memory Verses",
+    eyebrow: "Scripture Memory",
+    intro: "Hebrews 11:1-6",
+    bodyClass: "scripture-passage",
+    paragraphs: [
+      "1 Now faith is the substance of things hoped for, the evidence of things not seen.",
+      "2 For by it the elders obtained a good report.",
+      "3 Through faith we understand that the worlds were framed by the word of God, so that things which are seen were not made of things which do appear.",
+      "4 By faith Abel offered unto God a more excellent sacrifice than Cain, by which he obtained witness that he was righteous, God testifying of his gifts: and by it he being dead yet speaketh.",
+      "5 By faith Enoch was translated that he should not see death; and was not found, because God had translated him: for before his translation he had this testimony, that he pleased God.",
+      "6 But without faith it is impossible to please him: for he that cometh to God must believe that he is, and that he is a rewarder of them that diligently seek him."
+    ],
+    cta: ["Back to Scripture Memory", "/scripture-memory-1"],
+  },
   "psalm-119-part-1": {
     title: "Selections From Psalm 119",
     eyebrow: "Scripture Memory",
