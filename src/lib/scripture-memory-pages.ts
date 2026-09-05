@@ -1,6 +1,7 @@
 import type { TextPage } from "./site";
 
 export const scriptureMemoryLinks: Record<string, string> = {
+  "Co-op Memory Verses": "/co-op-memory-verses",
   "Selections from Psalm 119 Part 1": "/psalm-119-part-1",
   "The Greatest Of These - 1 Corinthians 13": "/1-corinthians-13",
   "Select Verses On Love": "/select-verses-on-love",
