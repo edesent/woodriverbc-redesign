@@ -314,6 +314,7 @@ function PastorPreview() {
             width={900}
             height={900}
             sizes="(max-width: 880px) 100vw, 50vw"
+            style={{ objectFit: "contain" }}
           />
         </div>
         <div className="pastor-bio">
@@ -938,6 +939,7 @@ function PastorPage() {
             width={900}
             height={900}
             sizes="(max-width: 880px) 100vw, 50vw"
+            style={{ objectFit: "contain" }}
             priority
           />
         </div>
