@@ -309,7 +309,7 @@ function PastorPreview() {
       <div className="pastor-feature">
         <div className="pastor-photo">
           <Image
-            src="/pastor-family-2026.jpeg"
+            src="/img-8551.jpeg"
             alt="Pastor Jon Juneau with his wife Heather and their five children"
             width={900}
             height={900}
@@ -933,7 +933,7 @@ function PastorPage() {
       <div className="pastor-feature">
         <div className="pastor-photo">
           <Image
-            src="/pastor-family-2026.jpeg"
+            src="/img-8551.jpeg"
             alt="Pastor Jon Juneau with his wife Heather and their five children"
             width={900}
             height={900}
