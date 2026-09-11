@@ -13,7 +13,7 @@ export default function ChatWidget() {
         onClick={() => setIsOpen(true)}
         aria-label="Ask Pastor Jon a question"
       >
-        <img src="/woodriver/juneau-family.jpg" alt="" />
+        <span className="wbc-chat-question-mark" aria-hidden="true">?</span>
         <span>Ask Pastor Jon</span>
       </button>
 
