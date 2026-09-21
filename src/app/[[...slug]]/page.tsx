@@ -30,6 +30,7 @@ import Script from "next/script";
 import { notFound, permanentRedirect, redirect } from "next/navigation";
 import { BibleSearch } from "./bible-search";
 import { ContactForm } from "./contact-form";
+import { EventDetailsModal } from "./event-details-modal";
 import { MensSteakFryForm } from "./mens-steak-fry-form";
 import { VisitorForm } from "./visitor-form";
 import {
@@ -503,6 +504,7 @@ function MensSteakFryPage() {
 
 function EventCard({ event, isPast = false }: { event: (typeof events)[number]; isPast?: boolean }) {
   const url = "url" in event ? event.url : undefined;
+  const details = "details" in event ? event.details : undefined;
   return (
     <article className={`event-card${isPast ? " event-card--past" : ""}`}>
       {isPast && <div className="event-card__past-overlay">This event has passed</div>}
@@ -515,7 +517,17 @@ function EventCard({ event, isPast = false }: { event: (typeof events)[number]; 
         <Clock size={16} /> {event.time}
       </p>
       <p>{event.description}</p>
-      {url && !isPast ? (
+      {isPast ? null : details ? (
+        // The registration link lives inside the modal so the card keeps a
+        // single call to action.
+        <EventDetailsModal
+          title={event.title}
+          date={event.date}
+          time={event.time}
+          url={url}
+          details={details}
+        />
+      ) : url ? (
         url.startsWith("/") ? (
           <Link className="button primary inline" href={url}>
             Learn more &amp; register <ArrowRight size={14} />

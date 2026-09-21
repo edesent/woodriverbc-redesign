@@ -210,6 +210,24 @@ export const bibleStudies = [
   },
 ] as const;
 
+export type EventDetails = {
+  readonly flyer?: string;
+  readonly flyerAlt?: string;
+  readonly flyerWidth?: number;
+  readonly flyerHeight?: number;
+  readonly intro?: string;
+  readonly audience?: string;
+  readonly speaker?: string;
+  readonly location?: string;
+  readonly address?: string;
+  readonly cost?: string;
+  readonly includes?: readonly string[];
+  readonly notes?: string;
+  readonly contactPhone?: string;
+  readonly contactEmail?: string;
+  readonly registerLabel?: string;
+};
+
 export const events = [
   {
     title: "Movie Viewing — \"Young Washington\"",
@@ -296,9 +314,31 @@ export const events = [
     title: "Youth Fest",
     date: "Saturday, October 10, 2026",
     time: "8:30 AM – 4:30 PM",
-    description: "A one-day event for all teens 7th grade and up featuring competitions, games, prizes, food, and preaching. Guest preacher: Rob Treloar. Location: Central Baptist Church & New England Baptist College campus, Southington, CT. Cost: $25 per teen.",
+    description: "A one-day event for all teens 7th grade and up featuring competitions, games, prizes, food, and preaching. Guest preacher: Rob Treloar.",
     image: undefined,
     url: "https://centralbaptistchurch.net/youth-fest/",
+    // Hosted by Central Baptist Church; details and flyer taken from
+    // https://centralbaptistchurch.net/youth-fest/ on 2026-09-20.
+    details: {
+      flyer: "/events/youth-fest-2026.webp",
+      flyerAlt:
+        "Youth Fest flyer — Saturday, October 10, 8:30 AM to 4:30 PM, guest preacher Rob Treloar.",
+      flyerWidth: 1024,
+      flyerHeight: 686,
+      intro:
+        "Youth Fest is a full day of competitions, games, prizes, food, and solid Bible preaching and music, hosted by Central Baptist Church for teens from churches across New England.",
+      audience: "All teens, 7th grade and up",
+      speaker: "Rob Treloar",
+      location: "Central Baptist Church & New England Baptist College",
+      address: "1505 West Street, Southington, CT 06489",
+      cost: "$25 per teen",
+      includes: ["Competitions", "Games", "Prizes", "Food", "Preaching"],
+      notes:
+        "Registration and medical forms are handled by Central Baptist Church, and group registration is available. Talk with Pastor Jon if your teen would like to ride with the church group.",
+      contactPhone: "(860) 621-6701",
+      contactEmail: "mail@centralbaptistchurch.net",
+      registerLabel: "Register on the Central Baptist Church site",
+    },
   },
   {
     title: "Fall Festival",
