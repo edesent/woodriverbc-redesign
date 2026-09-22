@@ -69,7 +69,7 @@ export function EventDetailsModal({
           setOpen(true);
         }}
       >
-        View details &amp; flyer <Info size={14} />
+        {details.formEmbedUrl ? "View details & register" : "View details & flyer"} <Info size={14} />
       </button>
 
       <dialog
