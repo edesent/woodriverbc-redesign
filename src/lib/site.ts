@@ -310,6 +310,12 @@ export const events = [
     description: "A fun-filled family day trip to Plymouth, MA — visit the National Monument to the Forefathers, the Mayflower II, and Plymouth Rock. Pack a lunch and enjoy a day of history together. Departing from Wood River Baptist Church at 9:30 AM.",
     image: undefined,
     url: undefined,
+    details: {
+      intro: "Join us for a family field trip to Plymouth, Massachusetts. Please complete the registration form below if you plan to attend.",
+      location: "Plymouth, Massachusetts",
+      notes: "Pack a lunch for the day. The group will depart from Wood River Baptist Church at 9:30 AM.",
+      formEmbedUrl: "https://forms.cloud.microsoft/r/AK0gn7vMaK?embed=true",
+    },
   },
   {
     title: "Youth Fest",
