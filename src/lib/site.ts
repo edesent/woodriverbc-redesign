@@ -226,6 +226,7 @@ export type EventDetails = {
   readonly contactPhone?: string;
   readonly contactEmail?: string;
   readonly registerLabel?: string;
+  readonly formEmbedUrl?: string;
 };
 
 export const events = [
