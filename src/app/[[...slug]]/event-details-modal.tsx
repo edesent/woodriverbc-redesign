@@ -173,6 +173,17 @@ export function EventDetailsModal({
 
               {details.notes && <p className="event-modal__notes">{details.notes}</p>}
 
+              {details.formEmbedUrl && (
+                <iframe
+                  title={`${title} registration form`}
+                  src={details.formEmbedUrl}
+                  width="640"
+                  height="480"
+                  style={{ border: "none", width: "100%", maxWidth: "100%", minHeight: "480px" }}
+                  allowFullScreen
+                />
+              )}
+
               {(details.contactPhone || details.contactEmail) && (
                 <ul className="event-modal__facts">
                   {details.contactPhone && (
