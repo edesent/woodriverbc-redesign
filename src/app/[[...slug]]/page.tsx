@@ -1151,6 +1151,17 @@ function renderScriptureParagraph(paragraph: string, isScripturePassage?: boolea
 function TextPage({ page, pageKey }: { page: (typeof textPages)[string]; pageKey: string }) {
   return (
     <PageShell eyebrow={page.eyebrow} title={page.title} intro={page.intro} image={page.image}>
+      {pageKey === "good-news-club" ? (
+        <div className="button-row" style={{ marginTop: 0, marginBottom: "32px" }}>
+          <a
+            className="button primary"
+            style={{ fontSize: "1.35rem", padding: "18px 32px" }}
+            href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=M68d6wb9a0aeGv72CpANg12li6sYh39JhUY3YmKMIjJUNjRGQ1VEV0NaS1hOR0FCR1BXVzZIWVVEUC4u&route=shorturl"
+          >
+            Sign-up Today! <ArrowRight size={22} aria-hidden />
+          </a>
+        </div>
+      ) : null}
       {pageKey === "services" ? <ServicesBand /> : null}
       {page.paragraphs?.length ? (
         <div className={page.bodyClass}>
