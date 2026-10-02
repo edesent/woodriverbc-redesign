@@ -1216,6 +1216,28 @@ export type TextPage = {
 };
 
 export const textPages: Record<string, TextPage> = {
+  "good-news-club": {
+    title: "Good News Club® (GNC™)",
+    eyebrow: "Wood River Baptist Church",
+    intro: "An exciting, fun-filled weekly club for kids in which the Bible is clearly taught with songs, stories, games…",
+    paragraphs: [
+      "SECTION:Children will learn:",
+      "• God loves them",
+      "• Every person has value",
+      "• How God can help them do the right thing, find victory in hard times, show love to others, etc.",
+      "SECTION:Who teaches the club?",
+      "GNC teachers are specially trained Christians who are concerned for the well-being of your child. All club workers are screened as required by Child Evangelism Fellowship® Child Protection Policy to ensure your child’s safety.",
+      "SECTION:When and where",
+      "Clubs are conducted each Tuesday after school at Richmond Elementary from 3:30 PM until 5:30 PM (Only on full days of school).",
+      "Clubs begin on October 14 and will run until May 19.",
+      "SECTION:Who can attend?",
+      "All boys and girls from Kindergarten to 6th grade are welcome regardless of religious background. Parents are welcome to attend with their child.",
+      "SECTION:Contact us",
+      "Wood River Baptist Church: (401) 539-2642",
+      "Pastor Jon Juneau: (401) 206-9378",
+      "CEF Director Alan Snow: (860) 464-4391",
+    ],
+  },
   "about": {
     title: "About Wood River Baptist Church",
     intro: "Our church ministries are varied and are designed for a three-fold purpose.",
