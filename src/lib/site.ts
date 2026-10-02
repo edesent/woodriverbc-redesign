@@ -1229,7 +1229,7 @@ export const textPages: Record<string, TextPage> = {
       "GNC teachers are specially trained Christians who are concerned for the well-being of your child. All club workers are screened as required by Child Evangelism Fellowship® Child Protection Policy to ensure your child’s safety.",
       "SECTION:When and where",
       "Clubs are conducted each Tuesday after school at Richmond Elementary from 3:30 PM until 5:00 PM (Only on full days of school).",
-      "Starting Tuesday, November 11.",
+      "Starting Tuesday, November 10.",
       "SECTION:Who can attend?",
       "All boys and girls from Kindergarten to 6th grade are welcome regardless of religious background. Parents are welcome to attend with their child.",
       "SECTION:Contact us",
