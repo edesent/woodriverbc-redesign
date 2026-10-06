@@ -516,6 +516,9 @@ function EventCard({ event, isPast = false }: { event: (typeof events)[number]; 
       <p className="event-time">
         <Clock size={16} /> {event.time}
       </p>
+      {"departureNote" in event && event.departureNote ? (
+        <p className="event-time">{event.departureNote}</p>
+      ) : null}
       <p>{event.description}</p>
       {isPast ? null : details ? (
         // The registration link lives inside the modal so the card keeps a
