@@ -321,7 +321,8 @@ export const events = [
     title: "Youth Fest",
     date: "Saturday, October 10, 2026",
     time: "8:30 AM – 4:30 PM",
-    description: "A one-day event for all teens 7th grade and up featuring competitions, games, prizes, food, and preaching. Guest preacher: Rob Treloar.\nLeaving the church at 7AM",
+    description: "A one-day event for all teens 7th grade and up featuring competitions, games, prizes, food, and preaching. Guest preacher: Rob Treloar.",
+    departureNote: "Leaving the church at 7AM",
     image: undefined,
     url: "https://centralbaptistchurch.net/youth-fest/",
     // Hosted by Central Baptist Church; details and flyer taken from
